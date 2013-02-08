@@ -57,8 +57,11 @@
 @import "bootstrap/carousel.less";
 @import "bootstrap/hero-unit.less";
 
-// mx3 proper styles
-@import "theme.less";
-
 // Utility classes
 @import "bootstrap/utilities.less"; // Has to be last to override when necessary
+
+// Overwrites Bootstrap rules for further customization
+@import "boostrap-custom.less";
+
+// mx3 styles
+@import "mx3.less";

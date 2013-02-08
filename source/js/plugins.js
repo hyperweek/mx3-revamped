@@ -12,3 +12,34 @@ if (!(window.console && console.log)) {
 }
 
 // Place any jQuery/helper plugins in here.
+
+;(function($){
+
+    $.fn.extend({
+
+        compactSearch: function(options) {
+            options = $.extend({speed: 'fast'}, options);
+
+            return this.each(function() {
+                var $form = $(this),
+                    $toggle = $form.find('a.search-toggle'),
+                    $input = $form.find('input.search-input');
+
+                $toggle.on('click', function() {
+                    $toggle.fadeOut(options.speed, function() {
+                        $input.fadeIn(options.speed).addClass('is-visible').focus();
+                    });
+                });
+
+                $input.on('blur', function() {
+                    $input.removeClass('is-visible').fadeOut(options.speed, function() {
+                        $input.val('');
+                        $toggle.fadeIn(options.speed);
+                    });
+                });
+            });
+        }
+
+    });
+
+})(jQuery);
