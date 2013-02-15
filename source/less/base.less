@@ -1,14 +1,17 @@
 
-@htmlBackground: @grayDark;
+@htmlBackground: #DDD;
 
 @headerBackground: white;
 @contentBackground: white;
 @footerBackground: @htmlBackground;
 
-@headerBorderColor: #CCC;
+@linkColorDarkBg: lighten(@linkColor,10%);
+@linkColorDarkBgHover: lighten(@linkColorDarkBg,5%);
 
 @playerTimelineBackground: #CCC;
 @playerTimelineColor: @linkColor;
+
+
 
 //
 // Sections
@@ -21,6 +24,11 @@ html {
 #content {
     background: @contentBackground;
     min-height: 500px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 940px;
 }
 
 //
@@ -37,11 +45,10 @@ html {
 
 #header {
     background: @headerBackground;
-    border-bottom: 1px solid @headerBorderColor;
-    height: 62px;
     position: relative;
     z-index: 2;
-    .box-shadow(~'0 1px 2px rgba(0,0,0,.1)');
+    .box-shadow(0 1px 4px rgba(0,0,0,.35));
+    .clearfix();
 }
 
 .logo {
@@ -57,41 +64,48 @@ html {
     float: left;
     font-size: @baseFontSize + 1;
     text-transform: uppercase;
-    margin: 17px 0 0 200px;
+    margin: 0 0 0 184px;
     ul {
         list-style: none;
         margin: 0;
     }
     li {
         float: left;
-        padding: 4px 20px;
         &.active {
-            a {
+            a, .caret {
+                border-top-color: @linkColor;
                 color: @linkColor;
-                font-weight: bold;
             }
         }
     }
     a {
         color: @gray;
+        display: block;
+        height: 62px;
+        line-height: 62px;
+        padding: 0 18px;
         &:hover {
-            color: @linkColor;
+            color: @linkColorHover;
             text-decoration: none;
         }
+    }
+    .caret {
+        margin: 28px 0 0 5px;
     }
     .form-search {
         margin: 0;
         position: relative;
         z-index: 3;
         .icon-search {
-            font-size: @baseFontSize + 4;
+            font-size: @baseFontSize + 6;
         }
         .search-input {
+            .box-shadow(~'inset 0 1px 1px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,0.15)');
             display: none;
-            left: 0;
+            left: 15px;
             position: absolute;
-            top: -5px;
-            width: 10px;
+            top: 16px;
+            width: 8px;
             .transition(width .3s ease);
             &.is-visible {
                 width: 250px;
@@ -100,19 +114,42 @@ html {
     }
 }
 
+.lang {
+    float: right;
+    margin: 16px 15px 0 0;
+    .dropdown-menu {
+        left: auto;
+        min-width: 110px;
+        right: -5px;
+    }
+    .caret {
+        border-top-color: @linkColor;
+        margin-left: 3px;
+    }
+}
+
+.btn-signup {
+    float: right;
+    margin: 16px 10px 0 0;
+}
+
+.btn-signin {
+    display: inline-block;
+    float: right;
+    margin: 16px 0 0 0;
+}
+
 .user-menu {
     float: right;
-    margin: 10px 10px 0 0;
+    margin: 0;
     .user-avatar {
         margin-left: 10px;
     }
     a.dropdown-toggle {
         background: @headerBackground;
-        border: 1px solid @headerBackground;
-        .border-radius(@baseBorderRadius);
         display: block;
         outline: none;
-        padding: 0 5px 0 10px;
+        padding: 11px 5px 11px 10px;
         .caret {
             border-top-color: @grayLight;
             margin-top: 18px;
@@ -153,7 +190,7 @@ html {
 // a feature-detection class for rotate should be added
 .oblique {
     background: rgba(255,255,255,.1);
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    //border-bottom: 1px solid rgba(0,0,0,.1);
     height: 100px;
     left: -50%;
     position: absolute;
@@ -171,101 +208,23 @@ html {
 
 #footer {
     background: @footerBackground;
-    color: @white;
+    color: @gray;
     padding: 20px 40px;
 }
 
 
 //
-// Components
+// Badges
 // --------------------------------------------------
 
-// Jumbotron
-
-.jumbotron {
-    background: #111;
-    height: 300px;
+.radio-badge {
+    background: url(../img/badge-on-air.png) left top no-repeat;
+    display: block;
+    height: 49px;
+    text-indent: -10000px;
+    width: 85px;
 }
 
-
-// Player
-
-.player {
-    border-left: 1px solid @grayLight;
-    .clearfix();
-    float: right;
-    height: 62px;
-    margin: 0 5px 0 0;
-    position: relative;
-    width: 250px;
-}
-
-.player-song-cover {
-    float: left;
-    height: 62px;
-    margin: 0 10px 0 0;
-    width: 62px;
-}
-
-.player-song-name {
-    float: left;
-    font-size: @baseFontSize - 1;
-    font-weight: bold;
-    height: 20px;
-    margin: 5px 0 1px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 150px;
-    a {
-
-    }
-}
-
-.player-song-artist {
-    color: @grayLight;
-    float: left;
-    font-size: @baseFontSize - 2;
-    height: 20px;
-    margin-bottom: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 150px;
-    a {
-        color: @grayLight;
-    }
-}
-
-.player-song-timeline {
-    background: @playerTimelineBackground;
-    .box-shadow(~'inset 0 1px 1px rgba(0,0,0,.2)');
-    float: left;
-    height: 4px;
-    width: 150px;
-}
-
-.player-song-timeline-pct {
-    background: @playerTimelineColor;
-    height: 4px;
-    width: 34%;
-}
-
-.player-actions {
-    font-size: @baseFontSize + 1;
-    height: 50px;
-    padding: 5px 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 20px;
-    a {
-        color: @grayLight;
-        display: block;
-        line-height: 25px;
-        text-decoration: none;
-        text-align: center;
-        width: 20px;
-        &:hover {
-            color: @gray;
-        }
-    }
+.radio-badge-couleur3 {
+    background: url(../img/badge-couleur3.png) left top no-repeat;
 }

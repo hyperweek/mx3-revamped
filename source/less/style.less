@@ -25,7 +25,9 @@
 
 // Components: common
 //@import "bootstrap/sprites.less";
-@import "font-awesome.less"; // use Font Awesome for icons
+//@import "font-awesome.less"; // use Font Awesome for icons
+@import "font-entypo.less";
+
 @import "bootstrap/dropdowns.less";
 @import "bootstrap/wells.less";
 @import "bootstrap/component-animations.less";
@@ -61,7 +63,9 @@
 @import "bootstrap/utilities.less"; // Has to be last to override when necessary
 
 // Overwrites Bootstrap rules for further customization
-@import "boostrap-custom.less";
+@import "bootstrap-custom.less";
 
 // mx3 styles
-@import "mx3.less";
+@import "base.less"; // Header and footer
+@import "home.less";
+@import "player.less";
