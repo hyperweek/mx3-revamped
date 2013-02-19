@@ -77,3 +77,9 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.clean = true # clean before the build
+  deploy.after_build = true # deploy automatically after build
+end
