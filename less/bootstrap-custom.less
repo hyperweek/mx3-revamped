@@ -1,0 +1,158 @@
+//
+// Boostrap customization that cannot be done solely with variables.less
+//
+
+.navbar-inner {
+    border: 0;
+}
+
+// Buttons
+
+.btn {
+    .box-shadow(~"none");
+    &:hover {
+        background-position: 0;
+        border-color: rgba(0,0,0,.35) rgba(0,0,0,.35) rgba(0,0,0,.45);
+        .box-shadow(~"0 1px 2px rgba(0,0,0,.15)");
+        .transition(background-position .0s linear);
+    }
+    &:active {
+        background-position: 0 -15px;
+        .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.15)");
+    }
+    &.btn-link:hover,
+    &.btn-link:active {
+        border-color: transparent;
+        .box-shadow(~"none");
+    }
+    &.btn-warning {
+        color: @textColor;
+        text-shadow: 0 1px 0 rgba(255,255,255,.25);
+    }
+}
+
+// Forms
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    .border-radius(0);
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.1));
+    // Focus state
+    &:focus {
+        border-color: lighten(@gray,20%);
+        .box-shadow(inset 0 1px 1px rgba(0,0,0,.1));
+    }
+}
+
+
+// Dropdown
+
+.btn-group.open {
+    .dropdown-toggle {
+        .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.1)");
+    }
+}
+
+.dropdown-menu {
+    .border-radius(@baseBorderRadius);
+    .box-shadow(0 2px 5px rgba(0,0,0,.2));
+    li > a {
+        padding: 3px 15px;
+        &:hover {
+            background: @dropdownLinkBackgroundActive;
+        }
+    }
+    .divider {
+        margin: 5px 0;
+    }
+}
+
+
+// Nav tabs
+
+.nav-tabs {
+    border: 0;
+    font-size: @baseFontSize;
+    text-transform: uppercase;
+    > li {
+        > a {
+            border: 0;
+            color: @textColor;
+            margin-right: 30px;
+            padding: 4px 0;
+            &:hover {
+                background: none;
+                border: 0;
+                border-bottom: 1px solid transparent;
+                color: @linkColorHover;
+            }
+        }
+    }
+    > .active {
+        > a {
+            background: none;
+            border: 0;
+            border-bottom: 1px solid @linkColor;
+            color: @linkColor;
+            font-weight: bold;
+            &:hover {
+                background: none;
+                border: 0;
+                border-bottom: 1px solid @linkColorHover;
+                color: @linkColorHover;
+            }
+        }
+    }
+    .dropdown-toggle {
+        .caret {
+            border-top-color: @textColor;
+        }
+    }
+    .dropdown-menu {
+        text-transform: none;
+    }
+    .open {
+        .dropdown-toggle {
+            background: none;
+            border: 0;
+            color: @linkColorHover;
+            .caret {
+                border-top-color: @linkColorHover;
+            }
+        }
+    }
+}
+
+.dark-section {
+    .nav-tabs {
+        > li > a {
+            color: @white;
+            &:hover {
+                border-bottom: 1px solid transparent;
+                color: @linkColorDarkBgHover;
+            }
+        }
+        > .active > a {
+            border-color: @linkColorDarkBg;
+            color: @linkColorDarkBg;
+            &:hover {
+                border-bottom: 1px solid @linkColorDarkBgHover;
+                color: @linkColorDarkBgHover;
+            }
+        }
+    }
+}
