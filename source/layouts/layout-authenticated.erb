@@ -1,3 +1,5 @@
+<% content_for :bodyclass do %>user-is-authenticated<% end %>
+
 <% wrap_layout :layout do %>
 
     <header id="header">
@@ -24,7 +26,7 @@
                     <i class="icon-pause"></i>
                 </div>
                 <img class="player-track-cover" src="img/fake-content/track-cover3.jpg" width="68" height="68" alt="cover">
-                <div class="player-track-title"><a href="#">Pieces Form the Whole</a></div>
+                <div class="player-track-title"><a href="#">Pieces Form the Whole<i class="icon-video"></i></a></div>
                 <div class="player-track-artist"><a href="#">Dead Horses</a></div>
                 <div class="player-track-time">01:37</div>
                 <div class="player-track-timeline">
