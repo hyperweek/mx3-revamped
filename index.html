@@ -13,6 +13,8 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+        <link rel="stylesheet" href="css/animations.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
     </head>
@@ -44,40 +46,46 @@
             </ul>
         </nav>
 
-                <!--
-                <div class="player">
-                    <div class="player-song">
-                        <img class="player-song-cover" src="http://placehold.it/62x62" alt="cover">
-                        <div class="player-song-name"><a href="#">Song Title</a></div>
-                        <div class="player-song-artist"><a href="#">Artist</a></div>
-                        <div class="player-song-timeline">
-                            <div class="player-song-timeline-pct"></div>
-                        </div>
-                    </div>
-                    <div class="player-actions">
-                        <a href="#" class="player-playlist-toggle icon-volume-up"></a>
-                        <a href="#" class="player-playlist-toggle icon-resize-full"></a>
-                    </div>
+        <div class="player">
+            <div class="player-song">
+                <div class="btn-play btn-play-medium on-pause">
+                    <i class="icon-pause"></i>
                 </div>
-            -->
-
-            <div class="user-menu dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="user-name">Gaël Zoppi</span>
-                    <img src="img/fake-content/user-avatar.png" class="user-avatar" width="40" height="40" alt="">
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href=""><i class="icon-user"></i> Your profile</a></li>
-                    <li><a href=""><i class="icon-music"></i> Your music</a></li>
-                    <li><a href=""><i class="icon-list"></i> Your playlists</a></li>
-                    <li><a href=""><i class="icon-calendar"></i> Your concerts</a></li>
-                    <li><a href=""><i class="icon-heart"></i> Your favorites</a></li>
-                    <li><a href=""><i class="icon-cog"></i> Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a href=""><i class="icon-logout"></i> Sign out</a></li>
-                </ul>
+                <img class="player-song-cover" src="img/fake-content/track-cover3.jpg" width="68" height="68" alt="cover">
+                <!--
+                <div class="player-song-name"><a href="#">Song Title</a></div>
+                <div class="player-song-artist"><a href="#">Artist</a></div>
+                -->
+                <div class="player-song-timeline">
+                    <div class="player-song-timeline-pct"></div>
+                </div>
             </div>
+            <div class="player-actions">
+                <a href="#" class="player-playlist-toggle icon-volume"></a>
+                <a href="#" class="player-playlist-toggle icon-heart-empty"></a>
+                <a href="#" class="player-playlist-toggle icon-resize-full"></a>
+            </div>
+        </div>
+
+        <div class="user-menu dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="user-name">Gaël Zoppi</span>
+                <img src="img/fake-content/user-avatar.png" class="user-avatar" width="40" height="40" alt="">
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a href=""><i class="icon-user"></i> Your profile</a></li>
+                <li><a href=""><i class="icon-music"></i> Your music</a></li>
+                <li><a href=""><i class="icon-list"></i> Your playlists</a></li>
+                <li><a href=""><i class="icon-calendar"></i> Your concerts</a></li>
+                <li><a href=""><i class="icon-heart"></i> Your favorites</a></li>
+                <li><a href=""><i class="icon-cog"></i> Settings</a></li>
+                <li class="divider"></li>
+                <li><a href=""><i class="icon-logout"></i> Sign out</a></li>
+            </ul>
+        </div>
+
+        <a href="#" class="btn btn-primary btn-upload">Upload a track</a>
 
     </header>
 
@@ -126,7 +134,7 @@
             <div>
             <header>
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#">New singles</a></li>
+                    <li class="active"><a href="#">New tracks</a></li>
                     <li><a href="#"><i class="icon-signal"></i> On Air Now</a></li>
                     <li><a href="#">New Bands</a></li>
                 </ul>
@@ -318,8 +326,8 @@
                 footer content
                 <h2 class="title">We are also on</h2>
                 <ul class="unstyled">
-                    <li><a href="#"><i class="icon-twitter margin-r"></i>Twitter</a></li>
-                    <li><a href="#"><i class="icon-facebook-squared margin-r"></i>Facebook</a></li>
+                    <li><a href="#" class="twitter-color"><i class="icon-twitter margin-r"></i>Twitter</a></li>
+                    <li><a href="#" class="facebook-color"><i class="icon-facebook-squared margin-r"></i>Facebook</a></li>
                 </ul>
             </div>
         </footer>

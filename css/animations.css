@@ -1,0 +1,55 @@
+@-webkit-keyframes logo-drop {
+   0%{
+      width: 0;
+   }
+   100% {
+      width: 168px;
+   }
+}
+@-moz-keyframes logo-drop {
+   0%{
+      width: 0;
+   }
+   100% {
+      width: 168px;
+   }
+}
+@keyframes logo-drop {
+   0%{
+      width: 0;
+   }
+   100% {
+      width: 168px;
+   }
+}
+
+@-webkit-keyframes badge-drop {
+   0%{
+      opacity: 0;
+      width: 80px;
+   }
+   100% {
+      opacity: 1;
+      width: 85px;
+   }
+}
+@-moz-keyframes logo-drop {
+   0%{
+      opacity: 0;
+      width: 80px;
+   }
+   100% {
+      opacity: 1;
+      width: 85px;
+   }
+}
+@keyframes logo-drop {
+   0%{
+      opacity: 0;
+      width: 80px;
+   }
+   100% {
+      opacity: 1;
+      width: 85px;
+   }
+}
