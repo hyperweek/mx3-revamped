@@ -38,6 +38,46 @@ if (!(window.console && console.log)) {
                     });
                 });
             });
+        },
+
+        player: function(options) {
+            options = $.extend({speed: 'fast'}, options);
+
+            return this.each(function() {
+                var $player = $(this),
+                    $toggle = $player.find('a.player-toggle'),
+                    $drawer = $player.find('.player-drawer'),
+
+                    expandPlayer = function() {
+                        $toggle.removeClass('icon-resize-full').addClass('icon-resize-small');
+                        $player.removeClass('is-compact').addClass('is-large');
+                        $drawer.slideDown(options.speed);
+                    },
+
+                    contractPlayer = function() {
+                        $toggle.addClass('icon-resize-full').removeClass('icon-resize-small');
+                        $drawer.hide();
+                        $player.removeClass('is-large').addClass('is-compact');
+                    };
+
+                $toggle.on('click', function() {
+                    if ($player.hasClass('is-compact')) {
+                        expandPlayer();
+                    } else {
+                        contractPlayer();
+                    }
+                });
+
+                $('html').click('click', function() {
+                    // Make player compact
+                    contractPlayer();
+                });
+
+                $player.on('click', function(event) {
+                    event.stopPropagation();
+                });
+
+            });
         }
 
     });

@@ -1,7 +1,6 @@
 $(function() {
 
-    // Add here js code
-
+    $('div.player').player();
     $('form.compact-search').compactSearch();
 
 });
