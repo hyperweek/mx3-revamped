@@ -103,6 +103,7 @@
     margin: 5px 0 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     width: 290px;
     a {
         color: @textColor;
@@ -191,10 +192,8 @@
     border-color: rgba(0,0,0,.3);
     border-top: 1px solid darken(@grayLighter,5%);
     border-right: 0;
-    .border-radius(0 0 2px 2px);
     .box-shadow(0 2px 5px rgba(0,0,0,.2));
     display: none;
-    height: 250px;
     left: -1px;
     position: absolute;
     top: 68px;
@@ -243,6 +242,96 @@
         margin-right: 5px;
         width: 33px;
     }
+}
+
+.player-track-list {
+    label {
+        border-bottom: 1px solid darken(@grayLighter,10%);
+        color: @gray;
+        display: block;
+        margin: 0;
+        font-size: @baseFontSize - 4;
+        font-weight: bold;
+        padding: 2px 10px;
+        text-transform: uppercase;
+    }
+    ul {
+        margin: 0;
+        li {
+            list-style: none;
+        }
+    }
+}
+
+.player-track-list-item {
+    border-bottom: 1px solid darken(@grayLighter,10%);
+    font-size: @baseFontSize - 1;
+    line-height: 16px;
+    padding: 6px 10px;
+    position: relative;
+    img {
+        height: 35px;
+        float: left;
+        margin-right: 10px;
+        width: 35px;
+    }
+    .delete {
+        background: @grayLighter;
+        color: @gray;
+        display: none;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+        right: 6px;
+        text-align: center;
+        top: 6px;
+        width: 20px;
+        &:hover {
+            background: @gray;
+            color: @white;
+            text-decoration: none;
+        }
+    }
+    &:hover {
+        background: @white;
+        cursor: pointer;
+        .delete {
+            display: block;
+        }
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.player-track-list-item-title,
+.player-track-list-item-artist {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 290px;
+}
+
+.player-track-list-item-title {
+    font-weight: bold;
+    margin: 1px 0 2px 0;
+    .btn-video {
+        display: inline-block;
+        font-size: @baseFontSize + 2;
+        height: 13px;
+        margin-left: 5px;
+        position: relative;
+        top: -1px;
+        &.hover {
+            color: @linkColorHover;
+            text-decoration: none;
+        }
+    }
+}
+
+.player-track-list-item-artist {
+    color: @grayLight;
+    font-size: @baseFontSize - 2;
 }
 
 
