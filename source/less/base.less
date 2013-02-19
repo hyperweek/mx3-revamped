@@ -14,6 +14,9 @@
 
 @trackBackground: #EEE;
 
+@twitterColor: #1DACED;
+@facebookColor: #3B5998;
+
 
 
 //
@@ -91,12 +94,19 @@ html {
 
 .logo {
     left: -3px;
+    height: 101px;
     position: absolute;
-    top: 20px;
+    top: 26px;
     &:hover {
         left: 0;
     }
 }
+/*.cssanimations {
+    .logo {
+        width: 0;
+        .animation(logo-drop .1s ease-in .5s forwards);
+    }
+}*/
 
 .main-nav {
     float: left;
@@ -119,8 +129,8 @@ html {
     a {
         color: @gray;
         display: block;
-        height: 62px;
-        line-height: 62px;
+        height: 68px;
+        line-height: 68px;
         padding: 0 18px;
         &:hover {
             color: @linkColorHover;
@@ -128,7 +138,7 @@ html {
         }
     }
     .caret {
-        margin: 28px 0 0 5px;
+        margin: 33px 0 0 5px;
     }
     .form-search {
         margin: 0;
@@ -142,7 +152,7 @@ html {
             display: none;
             left: 15px;
             position: absolute;
-            top: 16px;
+            top: 19px;
             width: 8px;
             .transition(width .3s ease);
             &.is-visible {
@@ -154,7 +164,7 @@ html {
 
 .lang {
     float: right;
-    margin: 16px 15px 0 0;
+    margin: 19px 15px 0 0;
     .dropdown-menu {
         left: auto;
         min-width: 110px;
@@ -168,13 +178,18 @@ html {
 
 .btn-signup {
     float: right;
-    margin: 16px 10px 0 0;
+    margin: 19px 10px 0 0;
 }
 
 .btn-signin {
     display: inline-block;
     float: right;
-    margin: 16px 0 0 0;
+    margin: 19px 0 0 0;
+}
+
+.btn-upload {
+    float: right;
+    margin: 19px 20px 0 0;
 }
 
 .user-menu {
@@ -187,7 +202,7 @@ html {
         background: @headerBackground;
         display: block;
         outline: none;
-        padding: 11px 5px 11px 10px;
+        padding: 14px 5px 14px 10px;
         .caret {
             border-top-color: @grayLight;
             margin-top: 18px;
@@ -257,15 +272,25 @@ html {
 // --------------------------------------------------
 
 .radio-badge {
-    background: url(../img/badge-on-air.png) left top no-repeat;
+    background: url(../img/badge-on-air.png) right top no-repeat;
     display: block;
-    height: 49px;
+    height: 50px;
     text-indent: -10000px;
     width: 85px;
 }
 
+.cssanimations {
+    .radio-badge {
+        opacity: 0;
+        .animation(badge-drop .2s linear .6s forwards);
+        &:last-child {
+            .animation(badge-drop .2s linear 1s forwards);
+        }
+    }
+}
+
 .radio-badge-couleur3 {
-    background: url(../img/badge-couleur3.png) left top no-repeat;
+    background-image: url(../img/badge-couleur3.png);
 }
 
 
@@ -380,3 +405,12 @@ a [class*=" icon-"] {
     margin-top: 4px;
     text-transform: uppercase;
 }
+
+.twitter-color {
+    color: @twitterColor;
+}
+
+.facebook-color {
+    color: @facebookColor;
+}
+
