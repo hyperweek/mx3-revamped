@@ -143,7 +143,7 @@ html {
     .form-search {
         margin: 0;
         position: relative;
-        z-index: 3;
+        z-index: 5;
         .icon-search {
             font-size: @baseFontSize + 6;
         }
@@ -194,7 +194,7 @@ html {
 
 .user-menu {
     float: right;
-    margin: 0 10px 0 0;
+    margin: 0 110px 0 0;
     .user-avatar {
         margin-left: 10px;
     }
@@ -379,10 +379,10 @@ html {
 a [class^="icon-"],
 a [class*=" icon-"] {
     &.margin-r {
-        margin-right: 3px;
+        margin-right: 4px;
     }
     &.margin-l {
-        margin-left: 3px;
+        margin-left: 4px;
     }
 }
 
@@ -404,6 +404,10 @@ a [class*=" icon-"] {
     font-weight: bold;
     margin-top: 4px;
     text-transform: uppercase;
+}
+
+.user-avatar {
+    .border-radius(2px);
 }
 
 .twitter-color {

@@ -46,30 +46,39 @@
             </ul>
         </nav>
 
-        <div class="player">
-            <div class="player-song">
+        <div class="player is-compact">
+            <div class="player-track">
                 <div class="btn-play btn-play-medium on-pause">
                     <i class="icon-pause"></i>
                 </div>
-                <img class="player-song-cover" src="img/fake-content/track-cover3.jpg" width="68" height="68" alt="cover">
-                <!--
-                <div class="player-song-name"><a href="#">Song Title</a></div>
-                <div class="player-song-artist"><a href="#">Artist</a></div>
-                -->
-                <div class="player-song-timeline">
-                    <div class="player-song-timeline-pct"></div>
+                <img class="player-track-cover" src="img/fake-content/track-cover3.jpg" width="68" height="68" alt="cover">
+                <div class="player-track-title"><a href="#">Pieces Form the Whole</a></div>
+                <div class="player-track-artist"><a href="#">Dead Horses</a></div>
+                <div class="player-track-time">01:37</div>
+                <div class="player-track-timeline">
+                    <div class="player-track-timeline-pct"></div>
                 </div>
             </div>
             <div class="player-actions">
-                <a href="#" class="player-playlist-toggle icon-volume"></a>
-                <a href="#" class="player-playlist-toggle icon-heart-empty"></a>
-                <a href="#" class="player-playlist-toggle icon-resize-full"></a>
+                <a href="#" class="icon-volume"></a>
+                <a href="#" class="icon-heart-empty"></a>
+                <a href="#" class="player-toggle icon-resize-full"></a>
+            </div>
+            <div class="player-drawer">
+                <div class="player-more-actions">
+                    <a href="#" class="btn-previous-track icon-to-start"></a>
+                    <a href="#" class="btn-next-track icon-to-end"></a>
+                    <a href="#"><i class="icon-basket margin-r"></i>Buy</a>
+                    <a href="#" class="is-disabled"><i class="icon-download margin-r"></i>Download</a>
+                    <a href="#" data-toggle="tooltip" title="Smartlist: play all tracks that are in playlisted along this track."><i class="icon-note-beamed margin-r"></i>Smartlist</a>
+                    <a href="#"><i class="icon-export margin-r"></i>Share</a>
+                </div>
             </div>
         </div>
 
         <div class="user-menu dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="user-name">Gaël Zoppi</span>
+                <span class="user-name">Gaël Zuccini</span>
                 <img src="img/fake-content/user-avatar.png" class="user-avatar" width="40" height="40" alt="">
                 <b class="caret"></b>
             </a>
