@@ -56,8 +56,9 @@ if (!(window.console && console.log)) {
 
                     contractPlayer = function() {
                         $toggle.addClass('icon-resize-full').removeClass('icon-resize-small');
-                        $drawer.hide();
-                        $player.removeClass('is-large').addClass('is-compact');
+                        $drawer.slideUp(options.speed, function() {
+                            $player.removeClass('is-large').addClass('is-compact');
+                        });
                     };
 
                 $toggle.on('click', function() {
