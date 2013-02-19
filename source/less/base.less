@@ -1,15 +1,18 @@
 
 @htmlBackground: #DDD;
+@darkBackground: #111;
 
 @headerBackground: white;
 @contentBackground: white;
 @footerBackground: @htmlBackground;
 
-@linkColorDarkBg: lighten(@linkColor,10%);
+@linkColorDarkBg: #B2290D;
 @linkColorDarkBgHover: lighten(@linkColorDarkBg,5%);
 
 @playerTimelineBackground: #CCC;
 @playerTimelineColor: @linkColor;
+
+@trackBackground: #EEE;
 
 
 
@@ -31,12 +34,47 @@ html {
     width: 940px;
 }
 
+.section {
+    .clearfix();
+    position: relative;
+    .col1 {
+        left: 0;
+        padding: 20px 20px 20px 40px;
+        position: absolute;
+        top: 0;
+        width: 225px;
+    }
+    .col2 {
+        width: 100%;
+        > div {
+            padding: 20px 20px 20px 285px;
+        }
+    }
+}
+
+.dark-section {
+    background: @darkBackground;
+    color: @white;
+    -webkit-font-smoothing: antialiased;
+    a {
+        color: @linkColorDarkBg;
+        &:hover {
+            color: @linkColorDarkBgHover;
+        }
+    }
+}
+
+.oblique-ddd-bottom {
+    background: transparent url(../img/oblique-ddd.png) left bottom repeat-x;
+    padding-bottom: 50px;
+}
+
 //
 // Header
 // --------------------------------------------------
 
 .ad-space-top {
-    background: @black;
+    background: @darkBackground;
     padding: 15px 0;
     position: relative;
     text-align: center;
@@ -47,7 +85,7 @@ html {
     background: @headerBackground;
     position: relative;
     z-index: 2;
-    .box-shadow(0 1px 4px rgba(0,0,0,.35));
+    .box-shadow(0 1px 4px rgba(0,0,0,.25));
     .clearfix();
 }
 
@@ -141,7 +179,7 @@ html {
 
 .user-menu {
     float: right;
-    margin: 0;
+    margin: 0 10px 0 0;
     .user-avatar {
         margin-left: 10px;
     }
@@ -171,7 +209,7 @@ html {
     }
     .dropdown-menu {
         left: auto;
-        right: 0;
+        right: -1px;
         li > a {
             padding-left: 10px;
         }
@@ -187,17 +225,16 @@ html {
     position: relative;
 }
 
-// a feature-detection class for rotate should be added
-.oblique {
+.csstransforms .oblique {
     background: rgba(255,255,255,.1);
     //border-bottom: 1px solid rgba(0,0,0,.1);
     height: 100px;
     left: -50%;
     position: absolute;
-    top: -42px;
+    top: -45px;
     width: 150%;
     z-index: 1;
-    .rotate(354deg);
+    .skew(0,-6deg);
 }
 
 
@@ -207,9 +244,11 @@ html {
 
 
 #footer {
-    background: @footerBackground;
-    color: @gray;
-    padding: 20px 40px;
+    > div {
+        background: @footerBackground;
+        color: @gray;
+        padding: 20px 40px;
+    }
 }
 
 
@@ -227,4 +266,117 @@ html {
 
 .radio-badge-couleur3 {
     background: url(../img/badge-couleur3.png) left top no-repeat;
+}
+
+
+//
+// Track item
+// --------------------------------------------------
+
+.track {
+    background: @trackBackground;
+    .clearfix();
+    height: 76px;
+    margin: 0 30px 20px 0;
+    position: relative;
+    width: 285px;
+    .btn-play {
+        display: none;
+        left: 22px;
+        position: absolute;
+        top: 22px;
+    }
+    .track-cover {
+        float: left;
+        height: 76px;
+        width: 76px;
+    }
+    .track-info {
+        //background-size: 100%;
+        float: right;
+        height: 76px;
+        overflow: hidden;
+        width: 209px;
+        a {
+            display: block;
+            line-height: 16px;
+        }
+        .track-title {
+            color: @textColor;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .track-artist {
+            font-size: @baseFontSize - 1;
+        }
+        .track-genre {
+            color: @gray;
+            font-size: @baseFontSize - 4;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+    }
+    .track-info-overlay {
+        background: rgba(255,255,255,.9);
+        height: 64px;
+        padding: 7px 5px 5px 10px;
+        width: 194px;
+    }
+    .btn-options {
+        bottom: 1px;
+        color: @grayLight;
+        display: none;
+        position: absolute;
+        right: 1px;
+        &:hover {
+            background: @white;
+            color: @gray;
+        }
+        &:active {
+            background: @gray;
+            color: @white;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .btn-play,
+        .btn-options {
+            display: block;
+        }
+    }
+}
+
+
+//
+// Base styles
+// --------------------------------------------------
+
+a [class^="icon-"],
+a [class*=" icon-"] {
+    &.margin-r {
+        margin-right: 3px;
+    }
+    &.margin-l {
+        margin-left: 3px;
+    }
+}
+
+.btn-options {
+    background: transparent;
+    border: 1px solid transparent;
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    width: 24px !important;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.title {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    font-weight: bold;
+    margin-top: 4px;
+    text-transform: uppercase;
 }

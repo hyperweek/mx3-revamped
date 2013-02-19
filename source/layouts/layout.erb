@@ -25,85 +25,18 @@
             <img src="http://placehold.it/728x90" alt="ad">
         </div>
 
-        <header id="header">
-
-            <a href="/"><img src="img/mx3-logo.png" class="logo" alt="mx3"></a>
-
-            <nav class="main-nav">
-                <ul>
-                    <li class="active"><a href="#">Bands<b class="caret"></b></a></li>
-                    <li><a href="#">Concerts</a></li>
-                    <li><a href="#">Supporters</a></li>
-                    <li>
-                        <form class="form-search compact-search">
-                            <input id="" type="text" class="search-input" placeholder="Find artists, songs, playlists…">
-                            <a href="#" class="search-toggle"><i class="icon-search"></i></a>
-                        </form>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="lang dropdown">
-                <a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#">En<b class="caret"></b></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href="#">Français</a></li>
-                    <li><a href="#">Deutsch</a></li>
-                    <li><a href="#">Italiano</a></li>
-                    <li><a href="#">Rumantsch</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
-
-            <a href="#" class="btn btn-link btn-signin">Sign in</a>
-            <a href="#" class="btn btn-warning btn-signup">Sign up</a>
-
-            <!--
-            <div class="player">
-                <div class="player-song">
-                    <img class="player-song-cover" src="http://placehold.it/62x62" alt="cover">
-                    <div class="player-song-name"><a href="#">Song Title</a></div>
-                    <div class="player-song-artist"><a href="#">Artist</a></div>
-                    <div class="player-song-timeline">
-                        <div class="player-song-timeline-pct"></div>
-                    </div>
-                </div>
-                <div class="player-actions">
-                    <a href="#" class="player-playlist-toggle icon-volume-up"></a>
-                    <a href="#" class="player-playlist-toggle icon-resize-full"></a>
-                </div>
-            </div>
-            -->
-
-            <!--
-            <div class="user-menu dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="user-name">Samuel Vuillermoz</span>
-                    <img src="http://placehold.it/40x40" class="user-avatar" width="40" height="40" alt="">
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                    <li><a href=""><i class="icon-user"></i> My profile</a></li>
-                    <li><a href=""><i class="icon-music"></i> My music</a></li>
-                    <li><a href=""><i class="icon-list"></i> My playlists</a></li>
-                    <li><a href=""><i class="icon-calendar"></i> My concerts</a></li>
-                    <li><a href=""><i class="icon-heart"></i> My favorites</a></li>
-                    <li><a href=""><i class="icon-cog"></i> My Settings</a></li>
-                    <li class="divider"></li>
-                    <li><a href=""><i class="icon-logout"></i> Sign out</a></li>
-                </ul>
-            </div>
-            -->
-
-        </header>
-
-        <div id="content">
-            <div class="oblique"></div>
-            <%= yield %>
-        </div>
+        <%= yield %>
 
         <footer id="footer">
-            <img src="img/srg-ssr-logo.png" alt="SRG SSR">
-            footer content
+            <div>
+                <img src="img/srg-ssr-logo.png" alt="SRG SSR">
+                footer content
+                <h2 class="title">We are also on</h2>
+                <ul class="unstyled">
+                    <li><a href="#"><i class="icon-twitter margin-r"></i>Twitter</a></li>
+                    <li><a href="#"><i class="icon-facebook-squared margin-r"></i>Facebook</a></li>
+                </ul>
+            </div>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
