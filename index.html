@@ -35,12 +35,12 @@
 
         <nav class="main-nav">
             <ul>
-                <li class="active"><a href="#">Bands<b class="caret"></b></a></li>
+                <li class="-active"><a href="#">Groupes<b class="caret"></b></a></li>
                 <li><a href="#">Concerts</a></li>
                 <li><a href="#">Supporters</a></li>
                 <li>
                     <form class="form-search compact-search">
-                        <input id="" type="text" class="search-input" placeholder="Find artists, songs, playlists…">
+                        <input id="" type="text" class="search-input" placeholder="Trouver des artistes, morceaux, playlists…">
                         <a href="#" class="search-toggle"><i class="icon-search"></i></a>
                     </form>
                 </li>
@@ -72,14 +72,14 @@
                 <div class="player-more-actions">
                     <a href="#" class="btn-previous-track icon-to-start"></a>
                     <a href="#" class="btn-next-track icon-to-end"></a>
-                    <a href="#"><i class="icon-basket margin-r"></i>Buy</a>
-                    <a href="#" class="is-disabled"><i class="icon-download margin-r"></i>Download</a>
-                    <a href="#" title="Smartlist: play all tracks that are playlisted along this track."><i class="icon-note-beamed margin-r"></i>Smartlist</a>
-                    <a href="#"><i class="icon-list-add margin-r"></i>Add</a>
-                    <a href="#"><i class="icon-export margin-r"></i>Share</a>
+                    <a href="#" title="Acheter"><i class="icon-basket margin-r"></i></a>
+                    <a href="#" class="is-disabled" title="Télécharger"><i class="icon-download margin-r"></i></a>
+                    <a href="#" title="Smartlist: morceaux qui figurent avec ce morceaux dans les playlists"><i class="icon-note-beamed margin-r"></i>Smartlist</a>
+                    <a href="#"><i class="icon-list-add margin-r" title="Ajouter dans une playlist"></i>Ajouter</a>
+                    <a href="#"><i class="icon-export margin-r"></i>Partager</a>
                 </div>
                 <div class="player-track-list">
-                    <label>Next tracks in <a href="#">Bandz on air</a> by <a href="#">SRF3</a></label>
+                    <label>Prochains morceaux dans <a href="#">Bandz on air</a> de <a href="#">SRF3</a></label>
                     <ul>
                         <li class="player-track-list-item">
                             <img src="img/fake-content/track-cover3.jpg" alt="">
@@ -153,18 +153,17 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a href=""><i class="icon-user"></i> Your profile</a></li>
-                <li><a href=""><i class="icon-music"></i> Your music</a></li>
-                <li><a href=""><i class="icon-list"></i> Your playlists</a></li>
-                <li><a href=""><i class="icon-calendar"></i> Your concerts</a></li>
-                <li><a href=""><i class="icon-heart"></i> Your favorites</a></li>
-                <li><a href=""><i class="icon-cog"></i> Settings</a></li>
+                <li><a href=""><i class="icon-user"></i> Ton profil</a></li>
+                <li><a href=""><i class="icon-music"></i> Ta musique</a></li>
+                <li><a href=""><i class="icon-list"></i> Tes playlists</a></li>
+                <li><a href=""><i class="icon-calendar"></i> Tes concerts</a></li>
+                <li><a href=""><i class="icon-cog"></i> Réglages</a></li>
                 <li class="divider"></li>
-                <li><a href=""><i class="icon-logout"></i> Sign out</a></li>
+                <li><a href=""><i class="icon-logout"></i> Se déconnecter</a></li>
             </ul>
         </div>
 
-        <a href="#" class="btn btn-primary btn-upload">Upload a track</a>
+        <a href="#" class="btn btn-primary btn-upload" title="Ajouter un morceau">Ajouter</a>
 
     </header>
 
@@ -176,7 +175,8 @@
             <h1>The swiss music portal</h1>
             <p>MX3 c’est le lieu incontournable de la musique actuelle suisse. Un carrefour où se rencontrent musiciens, professionnels, fans, labels, clubs, festivals, associations et radios !</p>
             <p><a href="">Learn more about MX3</a></p>
-            <p class="signup"><a href="" class="btn btn-warning btn-large">Sign up</a></p>
+            <p class="signup"><a href="" class="btn btn-warning btn-large">S’inscrire</a></p>
+            <p>19573 groupes suisses déjà inscrits !</p>
         </div>
         <div class="band-carousel">
             <div class="band-featured active" style="background-image: url(img/fake-content/band-pic.jpg)">
@@ -186,7 +186,7 @@
                         <span class="radio-badge radio-badge-on-air">On Air</span>
                     </div>
                     <a href="#" class="btn-play btn-play-large"><i class="icon-play"></i></a>
-                    <a href="#" class="band-featured-name" title="Visit the artist's profile"><span class="band-featured-genre">Rock</span>The Dead Experience</a>
+                    <a href="#" class="band-featured-name" title="Aller sur le profil de The Dead Experience"><span class="band-featured-genre">Rock</span>The Dead Experience</a>
                 </div>
             </div>
             <div class="band-featured" style="background-image: url(img/fake-content/band2-pic.jpg)">
@@ -207,7 +207,7 @@
 <div class="section">
 
     <div class="col1 home-radio-list">
-        <h2 class="title">Our Live Radios</h2>
+        <h2 class="title">Nos Radios Live</h2>
         <ul class="unstyled">
             <li><a href="#">COULEUR3</a></li>
             <li><a href="#">SRF3</a></li>
@@ -221,9 +221,9 @@
             <div>
             <header>
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#">New tracks</a></li>
+                    <li class="active"><a href="#">Nouveaux morceaux</a></li>
                     <li><a href="#"><i class="icon-signal"></i> On Air Now</a></li>
-                    <li><a href="#">New Bands</a></li>
+                    <li><a href="#">Nouveaux groupes inscrits</a></li>
                 </ul>
             </header>
 
