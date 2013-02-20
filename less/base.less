@@ -42,7 +42,7 @@ html {
     position: relative;
     .col1 {
         left: 0;
-        padding: 20px 20px 20px 40px;
+        padding: 30px 20px 0 40px;
         position: absolute;
         top: 0;
         width: 225px;
@@ -50,7 +50,7 @@ html {
     .col2 {
         width: 100%;
         > div {
-            padding: 20px 20px 20px 285px;
+            padding: 30px 20px 0 285px;
         }
     }
 }
@@ -88,7 +88,7 @@ html {
     background: @headerBackground;
     position: relative;
     z-index: 2;
-    .box-shadow(0 1px 4px rgba(0,0,0,.25));
+    .box-shadow(0 1px 2px rgba(0,0,0,.25));
     .clearfix();
 }
 
@@ -263,18 +263,21 @@ html {
     > .footer-wrapper {
         color: @gray;
         .clearfix();
-        padding: 20px 40px;
         position: relative;
     }
 }
 
 .footer-logo {
+    background: #A22E2B;
     float: left;
+    padding: 20px 71px;
+    text-align: center;
 }
 
 .footer-links {
-    float: left;
-    padding: 15px 0 0 40px;
+    font-size: @baseFontSize - 1;
+    padding: 22px 0 0 305px;
+    text-transform: uppercase;
     a {
         display: inline-block;
         margin-right: 15px;
@@ -283,13 +286,19 @@ html {
 
 .footer-notes {
     font-size: @baseFontSize - 2;
-    float: right;
-    padding: 16px 0;
+    padding: 8px 0 0 305px;
     a {
         color: @textColor;
         display: inline-block;
         margin-left: 10px;
     }
+}
+
+.footer-social {
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 
@@ -392,6 +401,15 @@ html {
         &:active {
             background: @gray;
             color: @white;
+        }
+    }
+    .btn-video {
+        font-size: 18px;
+        position: absolute;
+        right: 5px;
+        top: 3px;
+        &:hover {
+            text-decoration: none;
         }
     }
     &:hover {
