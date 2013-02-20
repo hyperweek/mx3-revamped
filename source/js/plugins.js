@@ -47,6 +47,8 @@ if (!(window.console && console.log)) {
                 var $player = $(this),
                     $toggle = $player.find('a.player-toggle'),
                     $drawer = $player.find('.player-drawer'),
+                    $volumeToggle = $player.find('a.volume-toggle'),
+                    $volumeBar = $player.find('.player-volume'),
 
                     expandPlayer = function() {
                         $toggle.removeClass('icon-resize-full').addClass('icon-resize-small');
@@ -61,7 +63,8 @@ if (!(window.console && console.log)) {
                         });
                     };
 
-                $toggle.on('click', function() {
+                $toggle.on('click', function(event) {
+                    event.preventDefault();
                     if ($player.hasClass('is-compact')) {
                         expandPlayer();
                     } else {
@@ -69,9 +72,14 @@ if (!(window.console && console.log)) {
                     }
                 });
 
+                $volumeToggle.on('click', function() {
+                    $volumeBar.toggle();
+                });
+
                 $('html').click('click', function() {
                     // Make player compact
                     contractPlayer();
+                    $volumeBar.hide();
                 });
 
                 $player.on('click', function(event) {
