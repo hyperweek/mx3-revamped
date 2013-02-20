@@ -25,7 +25,8 @@ if (!(window.console && console.log)) {
                     $toggle = $form.find('a.search-toggle'),
                     $input = $form.find('input.search-input');
 
-                $toggle.on('click', function() {
+                $toggle.on('click', function(event) {
+                    event.preventDefault();
                     $toggle.fadeOut(options.speed, function() {
                         $input.fadeIn(options.speed).addClass('is-visible').focus();
                     });
@@ -72,7 +73,8 @@ if (!(window.console && console.log)) {
                     }
                 });
 
-                $volumeToggle.on('click', function() {
+                $volumeToggle.on('click', function(event) {
+                    event.preventDefault();
                     $volumeBar.toggle();
                 });
 
