@@ -42,6 +42,10 @@ html {
 .section {
     .clearfix();
     position: relative;
+    &.sep { // bottom separator
+        border-bottom: 1px solid darken(@grayLighter,5%);
+        padding-bottom: 30px;
+    }
     .col1 {
         left: 0;
         padding: 30px 20px 0 40px;
