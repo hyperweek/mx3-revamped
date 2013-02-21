@@ -83,13 +83,13 @@ html {
     padding: 15px 0;
     position: relative;
     text-align: center;
-    z-index: 2;
+    z-index: 11;
 }
 
 #header {
     background: @headerBackground;
     position: relative;
-    z-index: 2;
+    z-index: 10;
     .box-shadow(0 1px 2px rgba(0,0,0,.25));
     .clearfix();
 }
@@ -99,6 +99,7 @@ html {
     height: 101px;
     position: absolute;
     top: 26px;
+    z-index: 1000px;
     &:hover {
         left: 0;
     }
@@ -113,19 +114,18 @@ html {
 .main-nav {
     float: left;
     font-size: @baseFontSize + 1;
-    text-transform: uppercase;
     margin: 0 0 0 184px;
+    text-transform: uppercase;
     ul {
         list-style: none;
         margin: 0;
     }
     li {
         float: left;
-        &.active {
-            a, .caret {
-                border-top-color: @linkColor;
-                color: @linkColor;
-            }
+        a.active,
+        a.active .caret {
+            border-top-color: @linkColor;
+            color: @linkColor;
         }
     }
     a {
@@ -137,6 +137,9 @@ html {
         &:hover {
             color: @linkColorHover;
             text-decoration: none;
+            .caret {
+                border-top-color: @linkColorHover;
+            }
         }
     }
     .caret {
@@ -191,6 +194,7 @@ html {
 
 .btn-upload {
     float: right;
+    //font-size: @baseFontSize + 5;
     margin: 19px 20px 0 0;
 }
 
@@ -229,6 +233,113 @@ html {
         right: -1px;
         li > a {
             padding-left: 10px;
+        }
+    }
+}
+
+
+.bands-menu {
+    background: @darkBackground;
+    color: @white;
+    display: none;
+    height: 450px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    header {
+        float: left;
+        margin: 205px 0 0 40px;
+        position: relative;
+        width: 245px;
+        z-index: 11;
+        .counter {
+            color: @linkColorDarkBg;
+            display: block;
+            font-size: @baseFontSize + 15;
+            line-height: 1.2;
+        }
+        .bands-menu-title {
+            font-size: @baseFontSize + 20;
+            line-height: 1.2;
+            margin-bottom: 17px;
+            text-transform: uppercase;
+        }
+        .bands-menu-filters {
+            margin: 0;
+            list-style: none;
+            a {
+                color: @grayLight;
+                &:hover {
+                    color: @white;
+                }
+            }
+        }
+    }
+    .bands-menu-categories {
+        .clearfix();
+        padding-left: 285px;
+        position: relative;
+        z-index: 10;
+        > ul {
+            float: left;
+            list-style: none;
+            margin-left: 0;
+        }
+        a {
+            color: @white;
+        }
+    }
+    .bands-menu-genre-list {
+        font-size: @baseFontSize + 6;
+        margin-top: 28px;
+        width: 50%;
+        li {
+            line-height: 1.5;
+        }
+        .counter {
+            color: @linkColorDarkBg;
+            font-size: @baseFontSize + 2;
+        }
+        a:hover {
+            color: @linkColorDarkBg;
+            text-decoration: none;
+        }
+    }
+    .bands-menu-tag-list {
+        text-transform: lowercase;
+    }
+    .bands-menu-tag-list,
+    .bands-menu-location-list {
+        width: 25%;
+        font-size: @baseFontSize - 1;
+        margin-top: 25px;
+        li {
+            line-height: 17px;
+        }
+        a {
+            color: @grayLight;
+            &:hover {
+                color: @white;
+            }
+        }
+    }
+    .close {
+        color: @white;
+        display: block;
+        font-size: 30px;
+        height: 30px;
+        line-height: 30px;
+        .opacity(80);
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        top: 10px;
+        width: 30px;
+        z-index: 12;
+        &:hover {
+            .opacity(100);
         }
     }
 }
@@ -368,7 +479,8 @@ html {
         }
         .track-title {
             font-weight: bold;
-            margin-bottom: 3px;
+            line-height: 17px;
+            margin: 0 20px 0 0;
             a {
                 color: @textColor;
             }
@@ -404,6 +516,7 @@ html {
         }
     }
     .btn-video {
+        float: right;
         font-size: 18px;
         position: absolute;
         right: 5px;
@@ -544,12 +657,14 @@ a [class*=" icon-"] {
     }
 }
 
-.title {
-    font-size: @baseFontSize;
-    line-height: @baseLineHeight;
-    font-weight: bold;
-    margin-top: 4px;
-    text-transform: uppercase;
+.section {
+    .title {
+        font-size: @baseFontSize;
+        line-height: @baseLineHeight;
+        font-weight: bold;
+        margin-top: 4px;
+        text-transform: uppercase;
+    }
 }
 
 .user-avatar {
