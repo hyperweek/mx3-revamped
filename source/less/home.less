@@ -53,7 +53,7 @@
         .opacity(80);
         padding-left: 50px;
         position: absolute;
-        width: 150px;
+        width: 50px;
         &:hover {
             color: @white;
             .opacity(100);
@@ -154,6 +154,16 @@
     margin: 0;
     > li {
         float: left;
+        width: 33%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .track-grid,
+    .concert-grid {
+        > li {
+            width: 50%;
+        }
     }
 }
 
