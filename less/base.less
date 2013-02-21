@@ -13,6 +13,8 @@
 @playerTimelineColor: @linkColor;
 
 @trackBackground: #EEE;
+@concertBackground: #EEE;
+@concertDateBackground: #111;
 
 @twitterColor: #1DACED;
 @facebookColor: #3B5998;
@@ -67,10 +69,6 @@ html {
     }
 }
 
-.oblique-ddd-bottom {
-    background: transparent url(../img/oblique-ddd.png) left bottom repeat-x;
-    padding-bottom: 120px;
-}
 
 //
 // Header
@@ -340,7 +338,7 @@ html {
 .track {
     background: @trackBackground;
     .clearfix();
-    height: 76px;
+    height: 80px;
     margin: 0 30px 20px 0;
     position: relative;
     width: 285px;
@@ -351,24 +349,26 @@ html {
         top: 22px;
     }
     .track-cover {
-        float: left;
-        height: 76px;
-        width: 76px;
+        height: 80px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 80px;
     }
     .track-info {
-        //background-size: 100%;
-        float: right;
-        height: 76px;
+        height: 73px;
         overflow: hidden;
-        width: 209px;
+        padding: 7px 5px 0 90px;
         a {
-            display: block;
+            display: inline-block;
             line-height: 16px;
         }
         .track-title {
-            color: @textColor;
             font-weight: bold;
             margin-bottom: 3px;
+            a {
+                color: @textColor;
+            }
         }
         .track-artist {
             font-size: @baseFontSize - 1;
@@ -382,25 +382,22 @@ html {
             text-transform: uppercase;
         }
     }
-    .track-info-overlay {
-        background: rgba(255,255,255,.9);
-        height: 64px;
-        padding: 7px 5px 5px 10px;
-        width: 194px;
-    }
     .btn-options {
+        background: @white;
         bottom: 1px;
-        color: darken(@grayLight,10%);
+        color: @gray;
         display: none;
         position: absolute;
         right: 1px;
         &:hover {
-            background: @white;
-            color: @gray;
+            color: @grayDark;
         }
         &:active {
             background: @gray;
             color: @white;
+        }
+        &.is-selected {
+            color: @green;
         }
     }
     .btn-video {
@@ -427,11 +424,85 @@ html {
 // --------------------------------------------------
 
 .concert-date {
-    height:
+    background: @concertDateBackground;
+    color: @white;
+    height: 80px;
+    text-align: center;
+    width: 80px;
+    .concert-date-weekday {
+        display: block;
+        font-size: @baseFontSize - 2;
+        padding-top: 8px;
+    }
+    .concert-date-day-month {
+        display: block;
+        font-size: @baseFontSize + 5;
+        font-weight: bold;
+        margin: 0 0 2px 0;
+    }
+    .concert-date-year {
+        display: block;
+        margin-top: -2px;
+    }
 }
 
 .concert {
-
+    background: @concertBackground;
+    height: 80px;
+    width: 285px;
+    position: relative;
+    .btn-options {
+        background: @white;
+        bottom: 1px;
+        color: @gray;
+        position: absolute;
+        right: 1px;
+        &:hover {
+            color: @grayDark;
+        }
+        &:active {
+            background: @gray;
+            color: @white;
+        }
+        &.is-selected {
+            color: @green;
+        }
+    }
+    .concert-cover {
+        height: 80px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 80px;
+    }
+    .concert-hour {
+        background: @concertDateBackground;
+        bottom: 0;
+        color: @white;
+        font-size: @baseFontSize - 3;
+        font-weight: bold;
+        left: 0;
+        padding: 1px 4px;
+        position: absolute;
+    }
+    .concert-info {
+        height: 73px;
+        padding: 7px 5px 0 90px;
+    }
+    .concert-artist {
+        a {
+            color: @textColor;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+    }
+    .concert-venue {
+        font-size: @baseFontSize - 1;
+    }
+    .concert-venue-location {
+        color: @gray;
+        font-size: @baseFontSize - 2;
+    }
 }
 
 
@@ -453,11 +524,21 @@ a [class*=" icon-"] {
     background: transparent;
     border: 1px solid transparent;
     display: inline-block;
+    font-weight: bold;
     line-height: 24px;
     text-align: center;
     width: 24px !important;
     &:hover {
         text-decoration: none;
+    }
+    &:hover {
+        background: @white;
+        color: @gray;
+        text-decoration: none;
+    }
+    &:active {
+        background: @gray;
+        color: @white;
     }
 }
 
