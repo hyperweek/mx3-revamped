@@ -17,6 +17,36 @@ if (!(window.console && console.log)) {
 
     $.fn.extend({
 
+        mainNav: function(options) {
+            options = $.extend({speed: 'fast'}, options);
+
+            return this.each(function() {
+                var $menuItem = $(this).find('a[rel]');
+
+                $menuItem.on('click', function(event) {
+                    var $subMenu = $('#' + $menuItem.attr('rel'));
+
+                    event.preventDefault();
+                    if (!$menuItem.hasClass('is-open')) {
+                        // Open the menu
+                        var $closeBtn = $subMenu.find('a.close');
+
+                        $subMenu.slideDown(options.speed);
+                        $menuItem.addClass('active is-open');
+
+                        $closeBtn.on('click', function() {
+                            $subMenu.slideUp(options.speed);
+                            $menuItem.removeClass('active is-open');
+                        });
+                    } else {
+                        // Close the menu
+                        $subMenu.slideUp(options.speed);
+                        $menuItem.removeClass('active is-open');
+                    }
+                });
+            });
+        },
+
         compactSearch: function(options) {
             options = $.extend({speed: 'fast'}, options);
 
