@@ -31,16 +31,16 @@ if (!(window.console && console.log)) {
                         // Open the menu
                         var $closeBtn = $subMenu.find('a.close');
 
-                        $subMenu.slideDown(options.speed);
+                        $subMenu.fadeIn(options.speed);
                         $menuItem.addClass('active is-open');
 
                         $closeBtn.on('click', function() {
-                            $subMenu.slideUp(options.speed);
+                            $subMenu.fadeOut(options.speed);
                             $menuItem.removeClass('active is-open');
                         });
                     } else {
                         // Close the menu
-                        $subMenu.slideUp(options.speed);
+                        $subMenu.fadeOut(options.speed);
                         $menuItem.removeClass('active is-open');
                     }
                 });
