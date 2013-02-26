@@ -134,6 +134,9 @@ html {
         height: 68px;
         line-height: 68px;
         padding: 0 18px;
+        .caret {
+            border-top-color: @gray;
+        }
         &:hover {
             color: @linkColorHover;
             text-decoration: none;
@@ -279,7 +282,7 @@ html {
     }
     .bands-menu-categories {
         .clearfix();
-        padding-left: 285px;
+        padding: 0 20px 0 285px;
         position: relative;
         z-index: 10;
         > ul {
@@ -679,3 +682,45 @@ a [class*=" icon-"] {
     color: @facebookColor;
 }
 
+
+//
+// Nice scrollbar for webkit
+// --------------------------------------------------
+
+.nice-scrollbar() {
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-button:start:increment,
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment,
+    &::-webkit-scrollbar-button:end:decrement {
+        width: 9px;
+        height: 9px;
+        display: none;
+    }
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment {
+        display: block;
+    }
+    &::-webkit-scrollbar-track {
+        border: 2px solid transparent;
+        border-radius: 4.5px;
+        background: rgba(0, 0, 0, .15);
+        :disabled {
+            display: none;
+        }
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4.5px;
+        background: rgba(0, 0, 0, .25);
+        -webkit-transition: background-color 2.5s linear;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, .35);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, .55);
+    }
+
+}
