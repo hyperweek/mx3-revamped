@@ -80,6 +80,8 @@ if (!(window.console && console.log)) {
                     $drawer = $player.find('.player-drawer'),
                     $volumeToggle = $player.find('a.volume-toggle'),
                     $volumeBar = $player.find('.player-volume'),
+                    $trackList = $player.find('.player-track-list > ul'),
+                    $trackListMaxHeight = $(window).height() - 250;
 
                     expandPlayer = function() {
                         $toggle.removeClass('icon-resize-full').addClass('icon-resize-small');
@@ -93,6 +95,8 @@ if (!(window.console && console.log)) {
                             $player.removeClass('is-large').addClass('is-compact');
                         });
                     };
+
+                $trackList.css({ 'max-height': $trackListMaxHeight + 'px' });
 
                 $toggle.on('click', function(event) {
                     event.preventDefault();
