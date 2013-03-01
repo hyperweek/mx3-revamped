@@ -16,8 +16,8 @@
 @concertBackground: #EEE;
 @concertDateBackground: #111;
 
-@twitterColor: #1DACED;
-@facebookColor: #3B5998;
+@twitterColor: @linkColor; //#1DACED;
+@facebookColor: @linkColor; //#3B5998;
 
 
 
@@ -51,12 +51,12 @@ html {
         padding: 30px 20px 0 40px;
         position: absolute;
         top: 0;
-        width: 225px;
+        width: 300px;
     }
     .col2 {
         width: 100%;
         > div {
-            padding: 30px 20px 0 285px;
+            padding: 30px 20px 0 340px;
         }
     }
 }
@@ -70,6 +70,16 @@ html {
         &:hover {
             color: @linkColorDarkBgHover;
         }
+    }
+}
+
+.col1-ad-space {
+    margin: -10px 0 30px -20px;
+    width: 300px;
+    .ad-space-caption {
+        color: @grayLight;
+        font-size: 10px;
+        line-height: 14px;
     }
 }
 
@@ -199,6 +209,26 @@ html {
     float: right;
     //font-size: @baseFontSize + 5;
     margin: 19px 20px 0 0;
+}
+
+.btn-play-now {
+    border: 0;
+    .border-radius(0);
+    display: block;
+    float: right;
+    font-size: @baseFontSize - 2;
+    height: 58px;
+    line-height: 16px;
+    padding: 10px 16px 0 48px;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    i {
+        font-size: 34px;
+        left: 15px;
+        position: absolute;
+        top: 14px;
+    }
 }
 
 .user-menu {
