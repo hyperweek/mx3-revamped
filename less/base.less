@@ -182,21 +182,39 @@ html {
 
 .lang {
     float: right;
-    margin: 19px 15px 0 0;
+    margin: 19px 10px 0 0;
+    .dropdown-toggle {
+        font-size: @baseFontSize - 1;
+        text-transform: uppercase;
+        outline: none;
+    }
     .dropdown-menu {
         left: auto;
+        margin-top: -1px;
         min-width: 110px;
-        right: -5px;
+        //right: -5px;
     }
     .caret {
         border-top-color: @linkColor;
         margin-left: 3px;
     }
+    &.open {
+        .dropdown-toggle {
+            background: @white;
+            .border-radius(2px 2px 0 0);
+            border: 1px solid #ccc; // Fallback
+            border: 1px solid @dropdownBorder;
+            border-bottom: 0;
+            position: relative;
+            z-index: @zindexDropdown + 1;
+        }
+    }
 }
 
 .btn-signup {
+    border-right: 1px solid @grayLighter !important;
     float: right;
-    margin: 19px 10px 0 0;
+    margin: 19px 0 0 0;
 }
 
 .btn-signin {
