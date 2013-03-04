@@ -33,7 +33,7 @@
       width: 85px;
    }
 }
-@-moz-keyframes logo-drop {
+@-moz-keyframes badge-drop {
    0%{
       opacity: 0;
       width: 70px;
@@ -43,7 +43,7 @@
       width: 85px;
    }
 }
-@keyframes logo-drop {
+@keyframes badge-drop {
    0%{
       opacity: 0;
       width: 70px;
@@ -52,4 +52,29 @@
       opacity: 1;
       width: 85px;
    }
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
 }

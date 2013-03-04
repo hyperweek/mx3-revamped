@@ -13,9 +13,11 @@
 @playerTimelineColor: @linkColor;
 
 @trackBackground: #EEE;
+@bandBackground: #EEE;
 @concertBackground: #EEE;
 @concertDateBackground: #111;
 
+@mx3Red: @linkColor;
 @twitterColor: @linkColor; //#1DACED;
 @facebookColor: @linkColor; //#3B5998;
 
@@ -74,7 +76,7 @@ html {
 }
 
 .col1-ad-space {
-    margin: -10px 0 30px -20px;
+    margin: 8px 0 30px -40px;
     width: 300px;
     .ad-space-caption {
         color: @grayLight;
@@ -505,17 +507,18 @@ html {
     background: @trackBackground;
     .clearfix();
     height: 80px;
-    margin: 0 30px 20px 0;
+    margin: 0 30px 20px 40px;
     position: relative;
     .btn-play {
         display: none;
-        left: 22px;
+        left: -16px;
         position: absolute;
-        top: 22px;
+        top: 23px;
     }
     .track-cover {
+        .border-radius(40px);
         height: 80px;
-        left: 0;
+        left: -40px;
         position: absolute;
         top: 0;
         width: 80px;
@@ -523,7 +526,7 @@ html {
     .track-info {
         height: 73px;
         overflow: hidden;
-        padding: 7px 5px 0 90px;
+        padding: 7px 5px 0 50px;
         a {
             display: inline-block;
             line-height: 16px;
@@ -531,7 +534,7 @@ html {
         .track-title {
             font-weight: bold;
             line-height: 17px;
-            margin: 0 20px 0 0;
+            margin: 0 24px 1px 0;
             a {
                 color: @textColor;
             }
@@ -571,14 +574,90 @@ html {
         font-size: 18px;
         position: absolute;
         right: 5px;
-        top: 3px;
+        top: 4px;
         &:hover {
             text-decoration: none;
+        }
+    }
+    &.playing {
+        .track-cover {
+            .animation(rotating 2s linear infinite);
+        }
+        .btn-play {
+            display: block;
         }
     }
     &:hover {
         //cursor: pointer;
         .btn-play,
+        .btn-options {
+            display: block;
+        }
+    }
+}
+
+
+//
+// Band item
+// --------------------------------------------------
+
+.band {
+    background: @bandBackground;
+    .clearfix();
+    height: 80px;
+    margin: 0 30px 20px 0;
+    position: relative;
+    .band-cover {
+        height: 80px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 80px;
+    }
+    .band-info {
+        height: 73px;
+        overflow: hidden;
+        padding: 7px 5px 0 90px;
+        a {
+            display: inline-block;
+            line-height: 16px;
+        }
+        .band-name {
+            font-weight: bold;
+            line-height: 17px;
+            margin: 0 30px 1px 0;
+            a {
+                color: @textColor;
+            }
+        }
+        .band-genre {
+            color: @gray;
+            font-size: @baseFontSize - 4;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+        .onair {
+            position: absolute;
+            right: 3px;
+            top: 3px;
+        }
+    }
+    .btn-options {
+        background: @white;
+        bottom: 1px;
+        color: @gray;
+        display: none;
+        position: absolute;
+        right: 1px;
+        &:hover {
+            color: @grayDark;
+        }
+        &:active {
+            background: @gray;
+            color: @white;
+        }
+    }
+    &:hover {
         .btn-options {
             display: block;
         }
@@ -683,6 +762,23 @@ a [class*=" icon-"] {
     }
     &.margin-l {
         margin-left: 4px;
+    }
+}
+
+.onair {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 30px;
+    i {
+        color: @mx3Red;
+        display: block;
+        font-size: @baseFontSize + 1;
+        text-align: center;
+        width: 30px;
     }
 }
 
