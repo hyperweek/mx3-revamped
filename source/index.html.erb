@@ -52,151 +52,228 @@ layout: layout-not-authenticated
     </div>
 
     <div class="col2">
-            <div>
+        <div>
             <header>
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#">Nouveaux morceaux</a></li>
-                    <li><a href="#"><i class="icon-signal"></i> On Air Now</a></li>
-                    <li><a href="#">Nouveaux groupes inscrits</a></li>
+                    <li class="active"><a href="#new-tracks" data-toggle="tab">Nouveaux morceaux</a></li>
+                    <li><a href="#bands-onair" data-toggle="tab"><i class="icon-signal"></i> On Air Now</a></li>
+                    <li><a href="#bands-new" data-toggle="tab">Nouveaux groupes inscrits</a></li>
                 </ul>
             </header>
 
-            <ul class="track-grid">
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover1.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
-                        </div>
-                        <div class="track-info">
-                            <div class="track-info-overlay">
-                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Sudden Attraction</a></div>
-                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Aurell</a></div>
-                                <div class="track-genre">Rock</div>
+            <div class="tab-content">
+
+                <ul id="new-tracks" class="track-grid tab-pane active">
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover1.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
                             </div>
-                        </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
-                        </div>
-                        <div class="track-info">
-                            <div class="track-info-overlay">
-                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Pussy Kat Kill Kill</a></div>
-                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Chetah Woman</a></div>
-                                <div class="track-genre">Electro</div>
+                            <div class="track-info">
+                                <div class="track-info-overlay">
+                                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Sudden Attraction</a></div>
+                                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Aurell</a></div>
+                                    <div class="track-genre">Rock</div>
+                                </div>
                             </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <div class="track-info-overlay">
+                                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Pussy Kat Kill Kill</a></div>
+                                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Chetah Woman</a></div>
+                                    <div class="track-genre">Electro</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <div class="track-info-overlay">
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <div class="track-info-overlay">
+                                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                                    <div class="track-genre">Pop</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover4.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
                                 <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
                                 <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
                                 <div class="track-genre">Pop</div>
                             </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover4.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover1.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <a href="#" class="btn-video icon-video" title="View the video"></a>
+                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Sudden Attraction</a></div>
+                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Aurell</a></div>
+                                <div class="track-genre">Rock</div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
-                            <div class="track-genre">Pop</div>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Pussy Kat Kill Kill</a></div>
+                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Chetah Woman</a></div>
+                                <div class="track-genre">Electro</div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover1.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover1.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <a href="#" class="btn-video icon-video" title="View the video"></a>
+                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Sudden Attraction For The Moon March WTF Is Th…</a></div>
+                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Aurell</a></div>
+                                <div class="track-genre">Rock</div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <a href="#" class="btn-video icon-video" title="View the video"></a>
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Sudden Attraction</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Aurell</a></div>
-                            <div class="track-genre">Rock</div>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Pussy Kat Kill Kill</a></div>
+                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Chetah Woman And The Awesome Indian Riders</a></div>
+                                <div class="track-genre">Electro</div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="track" data-href="#">
+                            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+                            <div class="btn-play btn-play-medium">
+                                <i class="icon-play"></i>
+                            </div>
+                            <div class="track-info">
+                                <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                                <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                                <div class="track-genre">Pop</div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Pussy Kat Kill Kill</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Chetah Woman</a></div>
-                            <div class="track-genre">Electro</div>
+                    </li>
+                </ul>
+
+                <ul id="bands-new" class="track-grid tab-pane">
+                    <li>
+                        <div class="band" data-href="#">
+                            <img src="img/fake-content/track-cover3.jpg" class="band-cover" alt="">
+                            <div class="band-info">
+                                <span class="onair"><i class="icon-signal"></i>On Air</span>
+                                <div class="band-name"><a href="#" title="Aller sur la page du morceau">Chetah Woman</a></div>
+                                <div class="band-genre">Punk</div>
+                                <div class="band-stats"></div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover1.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="band" data-href="#">
+                            <img src="img/fake-content/track-cover2.jpg" class="band-cover" alt="">
+                            <div class="band-info">
+                                <span class="onair"><i class="icon-signal"></i>On Air</span>
+                                <div class="band-name"><a href="#" title="Aller sur la page du morceau">Chetah Woman</a></div>
+                                <div class="band-genre">Punk</div>
+                                <div class="band-stats"></div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <a href="#" class="btn-video icon-video" title="View the video"></a>
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Sudden Attraction For The Moon March WTF Is Th…</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Aurell</a></div>
-                            <div class="track-genre">Rock</div>
+                    </li>
+                    <li>
+                        <div class="band" data-href="#">
+                            <img src="img/fake-content/track-cover2.jpg" class="band-cover" alt="">
+                            <div class="band-info">
+                                <div class="band-name"><a href="#" title="Aller sur la page du morceau">Chetah Woman</a></div>
+                                <div class="band-genre">Punk</div>
+                                <div class="band-stats"></div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="band" data-href="#">
+                            <img src="img/fake-content/track-cover4.jpg" class="band-cover" alt="">
+                            <div class="band-info">
+                                <div class="band-name"><a href="#" title="Aller sur la page du morceau">Chetah Woman</a></div>
+                                <div class="band-genre">Punk</div>
+                                <div class="band-stats"></div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Pussy Kat Kill Kill</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Chetah Woman And The Awesome Indian Riders</a></div>
-                            <div class="track-genre">Electro</div>
+                    </li>
+                    <li>
+                        <div class="band" data-href="#">
+                            <img src="img/fake-content/track-cover3.jpg" class="band-cover" alt="">
+                            <div class="band-info">
+                                <span class="onair"><i class="icon-signal"></i>On Air</span>
+                                <div class="band-name"><a href="#" title="Aller sur la page du morceau">Chetah Woman</a></div>
+                                <div class="band-genre">Punk</div>
+                                <div class="band-stats"></div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="track" data-href="#" data-title="Listen to this track">
-                        <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
-                        <div class="btn-play btn-play-medium">
-                            <i class="icon-play"></i>
+                    </li>
+                    <li>
+                        <div class="band" data-href="#">
+                            <img src="img/fake-content/track-cover2.jpg" class="band-cover" alt="">
+                            <div class="band-info">
+                                <div class="band-name"><a href="#" title="Aller sur la page du morceau">Chetah Woman</a></div>
+                                <div class="band-genre">Punk</div>
+                                <div class="band-stats"></div>
+                            </div>
+                            <a href="#" class="btn-options icon-dot-3"></a>
                         </div>
-                        <div class="track-info">
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
-                            <div class="track-genre">Pop</div>
-                        </div>
-                        <a href="#" class="btn-options icon-dot-3"></a>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+
+            </div>
+
         </div>
     </div>
 
