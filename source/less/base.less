@@ -9,6 +9,8 @@
 @linkColorDarkBg: #B2290D;
 @linkColorDarkBgHover: lighten(@linkColorDarkBg,5%);
 
+@pageHeaderBackground: #111;
+
 @playerTimelineBackground: #CCC;
 @playerTimelineColor: @linkColor;
 
@@ -102,7 +104,7 @@ html {
     background: @headerBackground;
     position: relative;
     z-index: 10;
-    .box-shadow(0 1px 2px rgba(0,0,0,.25));
+    .box-shadow(0 1px 2px rgba(0,0,0,.2));
     .clearfix();
 }
 
@@ -283,9 +285,16 @@ html {
     }
     .dropdown-menu {
         left: auto;
-        right: -1px;
+        margin: 0;
+        right: 0;
         li > a {
-            padding-left: 10px;
+            padding: 3px 10px;
+        }
+        .title {
+            color: @grayLight;
+            font-size: @baseFontSize - 3;
+            text-transform: uppercase;
+            padding: 0 10px;
         }
     }
 }
@@ -469,6 +478,62 @@ html {
 
 
 //
+// Page
+// --------------------------------------------------
+
+.page-header {
+    background: @pageHeaderBackground;
+    border: 0;
+    color: @white;
+    margin: 0;
+    padding: 38px 0 12px 290px;
+    -webkit-font-smoothing: antialiased;
+    h1 {
+        font-weight: normal;
+        font-size: 28px;
+        margin: 0;
+    }
+}
+
+.page-nav {
+    left: 0;
+    padding: 0 0 0 60px;
+    position: absolute;
+    top: 130px;
+    width: 200px;
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+    a {
+        display: block;
+        font-size: @baseFontSize + 2;
+        padding: 10px;
+        &:hover {
+            background: @grayLighter;
+            text-decoration: none;
+        }
+    }
+    .active {
+        a {
+            background: @linkColor;
+            .border-radius(2px 0 0 2px);
+            color: @white;
+        }
+    }
+}
+
+.page-content {
+    width: 100%;
+    > div {
+        border-left: 1px solid @grayLighter;
+        margin-left: 259px;
+        padding: 20px 30px;
+    }
+}
+
+
+//
 // Badges
 // --------------------------------------------------
 
@@ -507,18 +572,18 @@ html {
     background: @trackBackground;
     .clearfix();
     height: 80px;
-    margin: 0 30px 20px 40px;
+    margin: 0 30px 20px 0;
     position: relative;
     .btn-play {
         display: none;
-        left: -16px;
+        left: 24px;
         position: absolute;
         top: 23px;
     }
     .track-cover {
-        .border-radius(40px);
+        //.border-radius(40px);
         height: 80px;
-        left: -40px;
+        left: 0;
         position: absolute;
         top: 0;
         width: 80px;
@@ -526,7 +591,7 @@ html {
     .track-info {
         height: 73px;
         overflow: hidden;
-        padding: 7px 5px 0 50px;
+        padding: 7px 5px 0 90px;
         a {
             display: inline-block;
             line-height: 16px;
@@ -865,6 +930,25 @@ a [class*=" icon-"] {
     }
     &::-webkit-scrollbar-thumb:hover {
         background: rgba(0, 0, 0, .55);
+    }
+
+}
+
+
+//
+// Mediaqueries
+// --------------------------------------------------
+
+@media screen and (max-width: 1000px) {
+
+    .main-nav a {
+        padding: 0 15px;
+    }
+
+    .user-menu {
+        .user-name {
+            display: none;
+        }
     }
 
 }
