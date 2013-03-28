@@ -1,5 +1,9 @@
 $(function() {
 
+    $('#header').affix({
+        offset: $('.ad-space-top').outerHeight()
+    });
+
     $('.main-nav').mainNav();
 
     $('div.player').player();
