@@ -5,6 +5,7 @@
 @headerBackground: white;
 @contentBackground: white;
 @footerBackground: @htmlBackground;
+@adSpaceBackground: #DDD;
 
 @linkColorDarkBg: #B2290D;
 @linkColorDarkBgHover: lighten(@linkColorDarkBg,5%);
@@ -255,7 +256,7 @@ html {
 // --------------------------------------------------
 
 .ad-space {
-    background: @darkBackground;
+    background: @adSpaceBackground;
     padding: 15px 0;
     position: relative;
     text-align: center;
@@ -619,6 +620,7 @@ html {
 #footer {
     background: @footerBackground;
     > .footer-wrapper {
+        border-bottom: 1px solid @white;
         color: @gray;
         .clearfix();
         position: relative;
