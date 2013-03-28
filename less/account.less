@@ -1,0 +1,108 @@
+.account-profile-form {
+    margin-bottom: 40px;
+}
+
+.account-profile-gallery {
+    .clearfix();
+    list-style: none;
+    margin: 0 0 10px -1px;
+    li {
+        float: left;
+        width: 20%;
+        position: relative;
+        &:hover {
+            img {
+                //border: 1px solid @linkColorHover;
+                position: relative;
+            }
+            .select-image {
+                display: block;
+                .opacity(100);
+            }
+            .btn-delete {
+                display: block;
+            }
+        }
+    }
+    figure,
+    img {
+        border: 1px solid @white;
+        .box-sizing(border-box);
+        margin: 0;
+        width: 100%;
+    }
+    .is-chosen,
+    .select-image {
+        background: @white;
+        .border-radius(2px);
+        .box-sizing(border-box);
+        bottom: 5px;
+        display: block;
+        font-size: 12px;
+        left: 50%;
+        line-height: 14px;
+        margin-left: -46%;
+        .opacity(80);
+        padding: 8px 0;
+        position: absolute;
+        text-align: center;
+        width: 92%;
+        i {
+            //font-size: 24px;
+        }
+    }
+    .select-image {
+        display: none;
+    }
+    .btn-delete {
+        display: none;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+}
+
+.account-profile-url {
+    display: inline-block;
+    font-size: @baseFontSize + 7;
+    line-height: @baseLineHeight + 8;
+    margin-bottom: 10px;
+}
+
+.account-link-list {
+    list-style: none;
+    margin: 0;
+    label {
+        float: left;
+        margin: 5px 0;
+    }
+    li {
+        margin: 0 0 0 -8px;
+        padding: 8px 8px;
+        &:hover {
+            background: @grayLighter;
+            .btn-delete {
+                display: block;
+            }
+        }
+    }
+    .btn-delete {
+        .border-radius(2px);
+        color: @red;
+        display: none;
+        float: right;
+        margin: -4px -4px 0 0;
+    }
+    select {
+        width: 140px;
+    }
+    input,
+    select {
+        margin-bottom: 0;
+    }
+}
+
+.account-link-service {
+    display: inline-block;
+    width: 140px;
+}
