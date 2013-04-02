@@ -173,14 +173,12 @@ a [class*=" icon-"] {
     }
 }
 
-.section {
-    .title {
-        font-size: @baseFontSize;
-        line-height: @baseLineHeight;
-        font-weight: bold;
-        margin-top: 4px;
-        text-transform: uppercase;
-    }
+.section-title {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    font-weight: bold;
+    margin-top: 4px;
+    text-transform: uppercase;
 }
 
 .user-avatar {
@@ -206,36 +204,20 @@ html {
     width: 940px;
 }
 
-.section {
+.content-wrapper {
     .clearfix();
     position: relative;
-    &.sep { // bottom separator
-        border-bottom: 1px solid darken(@grayLighter,5%);
-        padding-bottom: 30px;
-    }
     .col1 {
         left: 0;
-        padding: 30px 20px 0 40px;
+        padding: 30px;
         position: absolute;
         top: 0;
-        width: 300px;
+        width: 280px;
     }
     .col2 {
         width: 100%;
         > div {
             padding: 30px 20px 0 340px;
-        }
-    }
-}
-
-.dark-section {
-    background: @darkBackground;
-    color: @white;
-    -webkit-font-smoothing: antialiased;
-    a {
-        color: @linkColorDarkBg;
-        &:hover {
-            color: @linkColorDarkBgHover;
         }
     }
 }
@@ -873,6 +855,29 @@ html {
     }
 }
 
+// track grid
+
+.track-grid,
+.concert-grid {
+    .clearfix();
+    list-style: none;
+    margin: 0;
+    > li {
+        float: left;
+        width: 33%;
+    }
+}
+
+// 2 cols grid for w < 1200px
+@media (max-width: 1200px) {
+    .track-grid,
+    .concert-grid {
+        > li {
+            width: 50%;
+        }
+    }
+}
+
 
 //
 // Band item
@@ -1077,13 +1082,41 @@ html {
 
 @media screen and (max-width: 1000px) {
 
-    .main-nav a {
-        padding: 0 15px;
+    header {
+        .btn-upload {
+            display: none;
+        }
+    }
+
+    .logo {
+        height: 90px;
+        top: 30px;
+    }
+
+    .main-nav {
+        margin-left: 155px;
+        a {
+            padding: 0 15px;
+        }
     }
 
     .user-menu {
         .user-name {
             display: none;
+        }
+    }
+
+    .page-header {
+        padding-left: 250px;
+    }
+
+    .page-nav {
+        width: 190px;
+    }
+
+    .page-content {
+        > div {
+            margin-left: 219px;
         }
     }
 
