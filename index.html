@@ -65,12 +65,94 @@
     </header>
 
     <div id="content">
-        <div class="oblique"></div>
+
+        <div id="genres-menu" class="genres-menu">
+            <header>
+                <div class="genres-menu-title"><span class="counter">19573</span> Groupes</div>
+                <ul class="genres-menu-filters">
+                    <li><a href="#">Hot Today</a></li>
+                    <li><a href="#">Les plus populaires</a></li>
+                    <li><a href="#">Les plus écoutés</a></li>
+                    <li><a href="#">Les derniers inscrits</a></li>
+                    <li><a href="#">Par ordre alphabétique</a></li>
+                    <li><a href="#">Par ordre aléatoire</a></li>
+                </ul>
+            </header>
+            <div class="genres-menu-categories">
+                <ul class="genres-menu-genre-list">
+                    <li><a href="#">Chanson <span class="counter">1219</span></a></li>
+                    <li><a href="#">Electro <span class="counter">1459</span></a></li>
+                    <li><a href="#">Folk/Country <span class="counter">762</span></a></li>
+                    <li><a href="#">Funk <span class="counter">646</span></a></li>
+                    <li><a href="#">Metal/Punk <span class="counter">1302</span></a></li>
+                    <li><a href="#">Hip Hop <span class="counter">3258</span></a></li>
+                    <li><a href="#">Jazz <span class="counter">723</span></a></li>
+                    <li><a href="#">Reggae <span class="counter">488</span></a></li>
+                    <li><a href="#">Rock <span class="counter">4932</span></a></li>
+                    <li><a href="#">Pop <span class="counter">2564</span></a></li>
+                    <li><a href="#">Techno <span class="counter">1294</span></a></li>
+                    <li><a href="#">World <span class="counter">429</span></a></li>
+                    <li><a href="#">Easy/Film <span class="counter">396</span></a></li>
+                </ul>
+                <ul class="genres-menu-tag-list">
+                    <li><a href="#">Acoustic</a></li>
+                    <li><a href="#">Alternative</a></li>
+                    <li><a href="#">Ambient</a></li>
+                    <li><a href="#">Blues</a></li>
+                    <li><a href="#">Chillout</a></li>
+                    <li><a href="#">Chanson</a></li>
+                    <li><a href="#">Dance</a></li>
+                    <li><a href="#">Dub</a></li>
+                    <li><a href="#">Festival</a></li>
+                    <li><a href="#">Groove</a></li>
+                    <li><a href="#">Guitar</a></li>
+                    <li><a href="#">House</a></li>
+                    <li><a href="#">Indie</a></li>
+                    <li><a href="#">Instrumental</a></li>
+                    <li><a href="#">Live</a></li>
+                    <li><a href="#">Metal</a></li>
+                    <li><a href="#">Minimal</a></li>
+                    <li><a href="#">Mundart</a></li>
+                    <li><a href="#">Punk</a></li>
+                    <li><a href="#">Party</a></li>
+                    <li><a href="#">Ska</a></li>
+                    <li><a href="#">Songwriter</a></li>
+                    <li><a href="#">Soul</a></li>
+                </ul>
+                <ul class="genres-menu-location-list">
+                    <li><a href="#">Argau</a></li>
+                    <li><a href="#">Appenzel</a></li>
+                    <li><a href="#">Bern</a></li>
+                    <li><a href="#">Basel</a></li>
+                    <li><a href="#">Fribourg</a></li>
+                    <li><a href="#">Genève</a></li>
+                    <li><a href="#">Glaris</a></li>
+                    <li><a href="#">Jura</a></li>
+                    <li><a href="#">Lucerne</a></li>
+                    <li><a href="#">Neuchâtel</a></li>
+                    <li><a href="#">Nidwald</a></li>
+                    <li><a href="#">Obwald</a></li>
+                    <li><a href="#">Saint-Gall</a></li>
+                    <li><a href="#">Schaffhouse</a></li>
+                    <li><a href="#">Soleure</a></li>
+                    <li><a href="#">Schwyz</a></li>
+                    <li><a href="#">Thurgovie</a></li>
+                    <li><a href="#">Ticino</a></li>
+                    <li><a href="#">Uri</a></li>
+                    <li><a href="#">Vaud</a></li>
+                    <li><a href="#">Valais</a></li>
+                    <li><a href="#">Zug</a></li>
+                    <li><a href="#">Zurich</a></li>
+                </ul>
+            </div>
+            <a href="#" class="close">&times;</a>
+        </div>
+
         <div class="banner dark-section">
     <div class="banner-wrapper">
 
         <div class="site-intro">
-            <h1>Music!</h1>
+            <h1>Music</h1>
             <p>MX3 c’est le lieu incontournable de la musique actuelle suisse. Un carrefour où se rencontrent musiciens, professionnels, fans, labels, clubs, festivals, associations et radios !</p>
             <p><a href="">Learn more about MX3</a></p>
             <p class="signup"><a href="" class="btn btn-warning btn-large">S’inscrire</a></p>
@@ -149,7 +231,14 @@
                                         <div class="track-genre">Rock</div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn-options icon-dot-3"></a>
+                                <div class="track-options item-options dropdown">
+                                    <a href="#" class="btn-options icon-dot-3 dropdown-toggle" data-toggle="dropdown"></a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li><a href=""><i class="icon-list-add"></i> Ajouter à une playlist</a></li>
+                                        <li><a href=""><i class="icon-note-beamed"></i> Smarlist</a></li>
+                                        <li><a href=""><i class="icon-export"></i> Partager</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -351,7 +440,7 @@
             <section class="home-concerts">
 
                 <header>
-                    <h2 class="section-title">Prochains Concerts<i class="icon-right-open-big"></i></h2>
+                    <h2 class="section-title">Prochains Concerts</h2>
                     <ul class="nav nav-tabs nav-tabs-upper">
                         <li class="active"><a href="#">Suisse romande</a></li>
                         <li><a href="#">Suisse allemande</a></li>
@@ -491,21 +580,11 @@
                         <img alt="SRG SSR" src="img/logos/srg-ssr.png">
                     </a>
                     <div class="right">
-                        <a target="_blank" href="http://www.retetre.rtsi.ch">
-                            <img alt="Retetre" src="img/logos/retetre.png">
-                        </a>
-                        <a target="_blank" href="http://www.srf3.ch/">
-                            <img alt="Srf3" src="img/logos/srf3.png">
-                        </a>
-                        <a target="_blank" href="http://www.rts.ch/couleur3/">
-                            <img alt="Couleur3" src="img/logos/couleur3.png">
-                        </a>
-                        <a target="_blank" href="http://www.virus.ch/">
-                            <img alt="Srfvirus" src="img/logos/srf-virus.png">
-                        </a>
-                        <a target="_blank" href="http://www.rtr.ch/">
-                            <img alt="Radio_rumantsch" src="img/logos/rtr.png">
-                        </a>
+                        <a target="_blank" href="http://www.retetre.rtsi.ch"><img alt="Retetre" src="img/logos/retetre.png"></a>
+                        <a target="_blank" href="http://www.srf3.ch/"><img alt="Srf3" src="img/logos/srf3.png"></a>
+                        <a target="_blank" href="http://www.rts.ch/couleur3/"><img alt="Couleur3" src="img/logos/couleur3.png"></a>
+                        <a target="_blank" href="http://www.virus.ch/"><img alt="Srfvirus" src="img/logos/srf-virus.png"></a>
+                        <a target="_blank" href="http://www.rtr.ch/"><img alt="Radio_rumantsch" src="img/logos/rtr.png"></a>
                     </div>
                 </div>
             <div class="footer-wrapper">
