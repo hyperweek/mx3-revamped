@@ -15,6 +15,7 @@ section {
 
 .btn {
     .box-shadow(~"none");
+    padding: 5px 12px;
     &:hover {
         background-position: 0;
         border-color: rgba(0,0,0,.35) rgba(0,0,0,.35) rgba(0,0,0,.45);
@@ -39,6 +40,22 @@ section {
         margin: 0 5px 0 -3px;
     }
 }
+.btn-primary {
+    font-weight: bold;
+}
+.btn-link {
+    font-weight: normal;
+}
+.btn-large {
+    padding: @paddingLarge;
+}
+.btn-small {
+    padding: @paddingSmall;
+}
+.btn-mini {
+    padding: @paddingMini;
+}
+
 
 // Forms
 
@@ -58,13 +75,17 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-    .border-radius(0);
-    .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+    border-width: 2px;
+    .box-shadow(none);
     // Focus state
     &:focus {
         border-color: lighten(@gray,20%);
-        .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+        .box-shadow(none);
     }
+}
+
+select {
+    border-width: 2px;
 }
 
 fieldset {

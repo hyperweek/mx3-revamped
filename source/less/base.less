@@ -107,6 +107,21 @@ a [class*=" icon-"] {
     border-bottom: 0;
     margin-bottom: 0;
     position: relative;
+    > li {
+        margin-bottom: -2px;
+        > a {
+            border-width: 2px !important;
+            border-bottom: 0 !important;
+            &:hover {
+                border-color: @grayLighter;
+            }
+        }
+    }
+    > li.active {
+        > a {
+            border-color: @inputBorder !important;
+        }
+    }
     .empty {
         color: @grayLight;
     }
@@ -134,7 +149,6 @@ a [class*=" icon-"] {
 .btn-delete {
     background: @white;
     .border-radius(2px);
-    .box-shadow(0 1px 1px rgba(0,0,0,.15));
     color: @red;
     display: inline-block;
     font-size: 22px;
@@ -381,7 +395,7 @@ html {
 .btn-upload {
     float: right;
     //font-size: @baseFontSize + 5;
-    margin: 19px 15px 0 0;
+    margin: 18px 15px 0 0;
 }
 
 .btn-play-now {
@@ -474,7 +488,7 @@ html {
 }
 
 
-.bands-menu {
+.genres-menu {
     background: @darkBackground;
     color: @white;
     display: none;
@@ -496,13 +510,13 @@ html {
             font-size: @baseFontSize + 15;
             line-height: 1.2;
         }
-        .bands-menu-title {
+        .genres-menu-title {
             font-size: @baseFontSize + 20;
             line-height: 1.2;
             margin-bottom: 17px;
             text-transform: uppercase;
         }
-        .bands-menu-filters {
+        .genres-menu-filters {
             margin: 0;
             list-style: none;
             a {
@@ -513,7 +527,7 @@ html {
             }
         }
     }
-    .bands-menu-categories {
+    .genres-menu-categories {
         .clearfix();
         padding: 0 20px 0 285px;
         position: relative;
@@ -527,7 +541,7 @@ html {
             color: @white;
         }
     }
-    .bands-menu-genre-list {
+    .genres-menu-genre-list {
         font-size: @baseFontSize + 6;
         margin-top: 28px;
         width: 50%;
@@ -543,11 +557,11 @@ html {
             text-decoration: none;
         }
     }
-    .bands-menu-tag-list {
+    .genres-menu-tag-list {
         text-transform: lowercase;
     }
-    .bands-menu-tag-list,
-    .bands-menu-location-list {
+    .genres-menu-tag-list,
+    .genres-menu-location-list {
         width: 25%;
         font-size: @baseFontSize - 1;
         margin-top: 25px;
@@ -757,6 +771,52 @@ html {
 
 .radio-badge-srf3 {
     background-image: url(../img/badge-srf3.png);
+}
+
+
+//
+// Item: track, playlist, concert
+// --------------------------------------------------
+
+.item-options {
+    bottom: 0;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    &.open {
+        .btn-options {
+            display: block;
+        }
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+            &:before {
+                position: absolute;
+                top: -7px;
+                right: 6px;
+                display: inline-block;
+                border-right: 7px solid rgba(0,0,0,0);
+                border-bottom: 7px solid #CCC;
+                border-left: 7px solid rgba(0,0,0,0);
+                border-bottom-color: rgba(0,0,0,.4);
+                content: '';
+            }
+            &:after {
+                position: absolute;
+                top: -6px;
+                right: 7px;
+                display: inline-block;
+                border-right: 6px solid rgba(0,0,0,0);
+                border-bottom: 6px solid #FFF;
+                border-left: 6px solid rgba(0,0,0,0);
+                content: '';
+            }
+            li > a {
+                padding: 3px 10px;
+            }
+        }
+    }
 }
 
 
