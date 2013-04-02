@@ -1,4 +1,4 @@
 mx3
 ===
 
-mx3 prototype
+Use http://middlemanapp.com/ to run the site.
