@@ -5,6 +5,7 @@
 @headerBackground: white;
 @contentBackground: white;
 @footerBackground: @htmlBackground;
+@adSpaceBackground: #DDD;
 
 @linkColorDarkBg: #B2290D;
 @linkColorDarkBgHover: lighten(@linkColorDarkBg,5%);
@@ -133,7 +134,7 @@ a [class*=" icon-"] {
 .btn-delete {
     background: @white;
     .border-radius(2px);
-    .box-shadow(0 1px 1px rgba(0,0,0,.2));
+    .box-shadow(0 1px 1px rgba(0,0,0,.15));
     color: @red;
     display: inline-block;
     font-size: 22px;
@@ -146,7 +147,7 @@ a [class*=" icon-"] {
         text-decoration: none;
     }
     &:active {
-        .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
+        .box-shadow(inset 0 1px 1px rgba(0,0,0,.15));
     }
 }
 
@@ -172,14 +173,12 @@ a [class*=" icon-"] {
     }
 }
 
-.section {
-    .title {
-        font-size: @baseFontSize;
-        line-height: @baseLineHeight;
-        font-weight: bold;
-        margin-top: 4px;
-        text-transform: uppercase;
-    }
+.section-title {
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    font-weight: bold;
+    margin-top: 4px;
+    text-transform: uppercase;
 }
 
 .user-avatar {
@@ -205,36 +204,20 @@ html {
     width: 940px;
 }
 
-.section {
+.content-wrapper {
     .clearfix();
     position: relative;
-    &.sep { // bottom separator
-        border-bottom: 1px solid darken(@grayLighter,5%);
-        padding-bottom: 30px;
-    }
     .col1 {
         left: 0;
-        padding: 30px 20px 0 40px;
+        padding: 30px;
         position: absolute;
         top: 0;
-        width: 300px;
+        width: 280px;
     }
     .col2 {
         width: 100%;
         > div {
             padding: 30px 20px 0 340px;
-        }
-    }
-}
-
-.dark-section {
-    background: @darkBackground;
-    color: @white;
-    -webkit-font-smoothing: antialiased;
-    a {
-        color: @linkColorDarkBg;
-        &:hover {
-            color: @linkColorDarkBgHover;
         }
     }
 }
@@ -255,26 +238,32 @@ html {
 // --------------------------------------------------
 
 .ad-space {
-    background: @darkBackground;
+    background: @adSpaceBackground;
     padding: 15px 0;
     position: relative;
     text-align: center;
-    z-index: 11;
+    //z-index: 11;
 }
 
 #header {
     background: @headerBackground;
-    position: relative;
-    z-index: 10;
-    .box-shadow(0 1px 2px rgba(0,0,0,.2));
+    .box-shadow(0 1px 2px rgba(0,0,0,.15));
     .clearfix();
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    &.affix {
+        border-bottom: 1px solid lighten(@grayLight,10%);
+        position: fixed;
+        top: 0;
+    }
 }
 
 .logo {
     left: -3px;
     height: 101px;
     position: absolute;
-    top: 26px;
+    top: 25px;
     z-index: 1000px;
     &:hover {
         left: 0;
@@ -392,7 +381,7 @@ html {
 .btn-upload {
     float: right;
     //font-size: @baseFontSize + 5;
-    margin: 19px 20px 0 0;
+    margin: 19px 15px 0 0;
 }
 
 .btn-play-now {
@@ -458,7 +447,7 @@ html {
     }
     &.open .dropdown-toggle {
         background: @grayLighter;
-        .box-shadow(~'inset 0 1px 3px rgba(0,0,0,.15)');
+        .box-shadow(~'inset 0 0 1px rgba(0,0,0,.15)');
         .caret {
             border-top-color: @gray;
         }
@@ -466,7 +455,7 @@ html {
     .dropdown-menu {
         left: auto;
         margin: 0;
-        right: 0;
+        right: -1px;
         li > a {
             padding: 3px 10px;
         }
@@ -595,12 +584,14 @@ html {
 // --------------------------------------------------
 
 #content {
+    margin-top: 68px; // header height
     position: relative;
 }
 
 .csstransforms .oblique {
     background: rgba(255,255,255,.1);
     //border-bottom: 1px solid rgba(0,0,0,.1);
+    display: none;
     height: 100px;
     left: -50%;
     position: absolute;
@@ -619,6 +610,7 @@ html {
 #footer {
     background: @footerBackground;
     > .footer-wrapper {
+        border-bottom: 1px solid @white;
         color: @gray;
         .clearfix();
         position: relative;
@@ -678,21 +670,23 @@ html {
     border: 0;
     color: @white;
     margin: 0;
-    padding: 38px 0 12px 290px;
+    padding: 36px 0 10px 270px;
     -webkit-font-smoothing: antialiased;
     h1 {
         font-weight: normal;
-        font-size: 28px;
+        font-size: 24px;
         margin: 0;
+        text-transform: uppercase;
+        word-spacing: 0.2em;
     }
 }
 
 .page-nav {
     left: 0;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 30px;
     position: absolute;
-    top: 130px;
-    width: 220px;
+    top: 120px;
+    width: 210px;
     ul {
         list-style: none;
         margin: 0 0 20px 0;
@@ -706,7 +700,7 @@ html {
         .border-radius(2px 0 0 2px);
         display: block;
         font-size: @baseFontSize + 2;
-        padding: 10px;
+        padding: 8px 10px;
         &:hover {
             background: @grayLighter;
             text-decoration: none;
@@ -727,7 +721,7 @@ html {
     width: 100%;
     > div {
         border-left: 1px solid @grayLighter;
-        margin-left: 259px;
+        margin-left: 239px;
         padding: 20px 30px;
     }
 }
@@ -857,6 +851,29 @@ html {
         .btn-play,
         .btn-options {
             display: block;
+        }
+    }
+}
+
+// track grid
+
+.track-grid,
+.concert-grid {
+    .clearfix();
+    list-style: none;
+    margin: 0;
+    > li {
+        float: left;
+        width: 33%;
+    }
+}
+
+// 2 cols grid for w < 1200px
+@media (max-width: 1200px) {
+    .track-grid,
+    .concert-grid {
+        > li {
+            width: 50%;
         }
     }
 }
@@ -1065,13 +1082,41 @@ html {
 
 @media screen and (max-width: 1000px) {
 
-    .main-nav a {
-        padding: 0 15px;
+    header {
+        .btn-upload {
+            display: none;
+        }
+    }
+
+    .logo {
+        height: 90px;
+        top: 30px;
+    }
+
+    .main-nav {
+        margin-left: 155px;
+        a {
+            padding: 0 15px;
+        }
     }
 
     .user-menu {
         .user-name {
             display: none;
+        }
+    }
+
+    .page-header {
+        padding-left: 250px;
+    }
+
+    .page-nav {
+        width: 190px;
+    }
+
+    .page-content {
+        > div {
+            margin-left: 219px;
         }
     }
 
