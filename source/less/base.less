@@ -377,11 +377,11 @@ html {
             font-size: @baseFontSize + 6;
         }
         .search-input {
-            .box-shadow(~'inset 0 1px 1px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,0.15)');
+            .box-shadow(0 1px 3px rgba(0,0,0,0.15));
             display: none;
             left: 15px;
             position: absolute;
-            top: 19px;
+            top: 18px;
             width: 8px;
             .transition(width .3s ease);
             &.is-visible {
@@ -675,16 +675,9 @@ html {
     }
 }
 
-.footer-logo {
-    background: #A22E2B;
-    float: left;
-    padding: 20px 112px 20px 21px;
-    text-align: center;
-}
-
 .footer-links {
     font-size: @baseFontSize - 1;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 30px 10px 30px;
     text-transform: uppercase;
     a {
         display: inline-block;
@@ -694,7 +687,7 @@ html {
 
 .footer-notes {
     font-size: @baseFontSize - 1;
-    padding: 0 20px 20px 20px;
+    padding: 0 30px 20px 30px;
     a {
         color: @textColor;
         display: inline-block;
@@ -705,14 +698,14 @@ html {
 .footer-social {
     font-size: 40px;
     position: absolute;
-    right: 20px;
+    right: 26px;
     top: 20px;
 }
 
 .footer-radio-logos {
     background: @white;
     border-top: 1px solid @footerBackground;
-    padding: 20px;
+    padding: 24px 30px;
     a {
         margin-right: 20px;
     }
@@ -1201,12 +1194,54 @@ html {
 // Mediaqueries
 // --------------------------------------------------
 
+// 1200
+
+@media screen and (max-width: 1200px) {
+
+
+
+}
+
+// 1000
+
 @media screen and (max-width: 1000px) {
 
-    header {
+    #header {
         .btn-upload {
             display: none;
         }
+        .btn-signup {
+            display: none;
+        }
+        .btn-signin {
+            margin: 0;
+            position: absolute;
+            right: 111px;
+            top: 6px;
+        }
+        .lang {
+            margin: 0;
+            position: absolute;
+            right: 111px;
+            top: 32px;
+        }
+    }
+
+    // move columns top-down
+    .content-wrapper {
+        .col1,
+        .col2 {
+            float: none;
+            width: 100%;
+            > div {
+                padding: 20px 30px;
+            }
+        }
+    }
+
+    // hide ad
+    .col1-ad-space {
+        display: none;
     }
 
     .logo {
