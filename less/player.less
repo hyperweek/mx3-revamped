@@ -3,23 +3,30 @@
 // -----------------------------------------------------
 
 .btn-play {
-    background: @white;
-    .border-radius(10px);
-    .box-shadow(0 0 2px rgba(0,0,0,.2));
-    color: @textColor !important;
+    //background: rgba(0,0,0,.2);
+    border: 2px solid @white;
+    .border-radius(12px);
+    .box-shadow(0 0 2px rgba(0,0,0,1));
+    color: @white !important;
     cursor: pointer;
     display: inline-block;
     height: 22px;
     line-height: 22px;
     padding-left: 2px;
     text-align: center;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
     width: 20px;
     &.negative {
         background: @grayDarker;
+        border-color: @grayDarker;
         color: @white;
     }
     &:hover {
+        background: @white;
+        border-color: @white;
+        .box-shadow(none);
         color: @linkColorHover !important;
+        text-shadow: none;
         //.scale(1.1);
     }
     &:active {
@@ -33,7 +40,7 @@
 }
 
 .btn-play-medium {
-    .border-radius(17px);
+    .border-radius(19px);
     font-size: 24px;
     height: 34px;
     line-height: 34px;
@@ -49,7 +56,7 @@
 }
 
 .btn-play-large {
-    .border-radius(22px);
+    .border-radius(24px);
     font-size: 34px;
     height: 44px;
     line-height: 44px;
@@ -82,9 +89,9 @@
     width: 440px;
     z-index: 4;
     .btn-play {
-        left: 18px;
+        left: 16px;
         position: absolute;
-        top: 18px;
+        top: 16px;
     }
 }
 
