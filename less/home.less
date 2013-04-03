@@ -14,25 +14,28 @@
         height: 430px;
         width: 25%;
         z-index: 2;
+    }
+    .site-intro-content {
+        margin: 80px 20px 10px 40px;
         h1 {
             font-size: @baseFontSize + 20;
             font-weight: bold;
             line-height: @baseLineHeight + 20;
-            margin: 80px 20px 10px 40px;
             text-transform: uppercase;
         }
         p {
-            margin: 0 20px 10px 40px;
+            margin-bottom: 10px;
         }
-        .signup {
-            margin: 20px 0 30px 40px;
-        }
+    }
+    .site-intro-action {
+        margin: 20px 20px 10px 40px;
         .btn {
             border: 0;
             color: @textColor !important;
             font-weight: bold;
         }
     }
+
     .band-featured {
         background-position: center center;
         background-repeat: no-repeat;
@@ -154,7 +157,7 @@
     .news {
         .clearfix();
         margin-bottom: 20px;
-        min-height: 80px;
+        min-height: 84px;
         position: relative;
     }
     a:hover {
@@ -229,4 +232,69 @@
     .concert {
         margin: 0 30px 20px 0;
     }
+}
+
+
+//
+// Mediaqueries
+// --------------------------------------------------
+
+// 1200
+
+@media screen and (max-width: 1200px) {
+
+    .banner {
+        .site-intro {
+            font-size: @baseFontSize - 1;
+        }
+    }
+
+}
+
+
+// 1000
+
+@media screen and (max-width: 1000px) {
+
+    .banner {
+        height: 560px;
+        .site-intro {
+            float: none;
+            height: 130px;
+            width: 100%;
+        }
+        .site-intro-content {
+            float: left;
+            margin: 20px 20px 0 170px;
+            width: 40%;
+            h1 {
+                display: none;
+            }
+        }
+        .site-intro-action {
+            float: right;
+            margin: 25px 20px 0 0;
+            text-align: center;
+        }
+    }
+
+    .carousel {
+        width: 70%;
+    }
+    .carousel-nav {
+        width: 30%;
+    }
+
+    .home-news {
+        margin: 0;
+    }
+    .home-news-list {
+        .clearfix();
+        margin: 0;
+        li {
+            float: left;
+            width: 50%;
+        }
+    }
+
 }
