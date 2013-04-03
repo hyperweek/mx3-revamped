@@ -220,29 +220,71 @@ html {
 
 .content-wrapper {
     .clearfix();
-    position: relative;
     .col1 {
-        left: 0;
-        padding: 30px;
-        position: absolute;
-        top: 0;
-        width: 280px;
+        float: left;
+        width: 25%;
+        > div {
+            padding: 30px 20px 0 30px;
+        }
     }
     .col2 {
-        width: 100%;
+        float: left;
+        width: 75%;
         > div {
-            padding: 30px 20px 0 340px;
+            padding: 30px 20px 0 20px;
         }
     }
 }
 
 .col1-ad-space {
-    margin: 8px 0 30px -40px;
-    width: 300px;
     .ad-space-caption {
         color: @grayLight;
         font-size: 10px;
         line-height: 14px;
+        padding: 2px 0;
+    }
+}
+
+
+//
+// Carousel
+// --------------------------------------------------
+
+.carousel {
+    float: left;
+    height: 430px;
+    width: 50%;
+}
+.carousel-nav {
+    float: left;
+    height: 430px;
+    width: 25%;
+}
+.carousel-item-mini {
+    a {
+        display: block;
+        height: 87px;
+        padding: 10px;
+    }
+}
+.carousel-next {
+    color: @white;
+    display: block;
+    font-size: 50px;
+    left: 920px;
+    line-height: 430px;
+    height: 430px;
+    .opacity(80);
+    padding-left: 30px;
+    position: absolute;
+    width: 50px;
+    &:hover {
+        color: @white;
+        .opacity(100);
+        text-decoration: none;
+    }
+    &:active {
+        left: 922px;
     }
 }
 
@@ -919,8 +961,7 @@ html {
 
 // track grid
 
-.track-grid,
-.concert-grid {
+.track-grid {
     .clearfix();
     list-style: none;
     margin: 0;
@@ -932,8 +973,7 @@ html {
 
 // 2 cols grid for w < 1200px
 @media (max-width: 1200px) {
-    .track-grid,
-    .concert-grid {
+    .track-grid {
         > li {
             width: 50%;
         }
@@ -1091,6 +1131,25 @@ html {
     .concert-venue-location {
         color: @gray;
         font-size: @baseFontSize - 2;
+    }
+}
+
+.concert-grid {
+    .clearfix();
+    list-style: none;
+    margin: 0;
+    > li {
+        float: left;
+        width: 50%;
+    }
+}
+
+// 2 cols grid for w < 1200px
+@media (min-width: 1400px) {
+    .track-grid {
+        > li {
+            width: 33%;
+        }
     }
 }
 

@@ -7,23 +7,18 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    .banner-wrapper {
-        margin-left: 340px;
-        width: 30000px;
-    }
+
     .site-intro {
         color: white;
-        left: 0;
+        float: left;
         height: 430px;
-        position: absolute;
-        top: 0;
-        width: 340px;
+        width: 25%;
         z-index: 2;
         h1 {
             font-size: @baseFontSize + 20;
             font-weight: bold;
             line-height: @baseLineHeight + 20;
-            margin: 90px 20px 10px 40px;
+            margin: 80px 20px 10px 40px;
             text-transform: uppercase;
         }
         p {
@@ -38,37 +33,13 @@
             font-weight: bold;
         }
     }
-    .band-carousel {
-        float: left;
-        height: 430px;
-    }
-    .band-carousel-next {
-        color: @white;
-        display: block;
-        font-size: 50px;
-        left: 920px;
-        line-height: 430px;
-        height: 430px;
-        .opacity(80);
-        padding-left: 30px;
-        position: absolute;
-        width: 50px;
-        &:hover {
-            color: @white;
-            .opacity(100);
-            text-decoration: none;
-        }
-        &:active {
-            left: 922px;
-        }
-    }
     .band-featured {
         background-position: center center;
         background-repeat: no-repeat;
         float: left;
         height: 430px;
         position: relative;
-        width: 580px;
+        width: 100%;
         .opacity(25);
         &.active {
             .opacity(100);
@@ -89,7 +60,7 @@
         display: none;
         left: 0;
         position: absolute;
-        width: 580px;
+        width: 100%;
     }
     .btn-play {
         left: 18px;
@@ -116,6 +87,38 @@
             text-decoration: none;
         }
     }
+
+    .band-featured-mini {
+        background-position: center center;
+        background-repeat: no-repeat;
+        .background-size(100%);
+        margin: 0 0 1px 1px;
+        //.opacity(80);
+        &:hover {
+            //.opacity(100);
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+    .band-featured-mini-name {
+        background: rgba(0,0,0,.5);
+        color: @white;
+        display: block;
+        font-size: 24px;
+        line-height: 1;
+        &:hover {
+            background: rgba(0,0,0,.3);
+        }
+    }
+    .band-featured-mini-genre {
+        color: lighten(@grayLight,10%);
+        display: block;
+        font-size: 11px;
+        font-weight: bold;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
 }
 
 .cssgradients {
@@ -133,27 +136,78 @@
         .btn-play {
             top: 123px;
         }
+
+        .band-featured-mini-name {
+            #gradient > .vertical(rgba(0,0,0,.8), rgba(0,0,0,.3));
+            background-color: transparent;
+            &:hover {
+                #gradient > .vertical(rgba(0,0,0,.7), rgba(0,0,0,.1));
+                background-color: transparent;
+            }
+        }
     }
 }
 
-
-.home-radio-list {
-    .title {
-        margin-bottom: 25px;
+.home-news-list {
+    list-style: none;
+    margin: 0 0 40px 0;
+    .news {
+        .clearfix();
+        margin-bottom: 20px;
+        min-height: 80px;
+        position: relative;
+    }
+    a:hover {
+        text-decoration: none;
+        .news-title {
+            text-decoration: underline;
+        }
+    }
+    .news-date {
+        color: @grayLight;
+        display: block;
+        font-size: @baseFontSize - 2;
+    }
+    .news-image {
+        height: 60px;
+        left: 0;
+        position: absolute;
+        top: 24px;
+        width: 60px;
+    }
+    .news-info {
+        display: block;
+        padding: 2px 0 2px 70px;
+    }
+    .news-author {
+        display: block;
+        margin-bottom: 2px;
+    }
+    .news-title {
+        color: @textColor;
+        display: block;
+        line-height: @baseLineHeight - 2;
     }
 }
 
 
 .home-concerts {
     margin-bottom: 60px;
+    header {
+        .clearfix();
+        .nav {
+            float: right;
+        }
+    }
     .section-title {
-        margin: 4px 20px 4px 0;
+        float: left;
+        margin: 4px 0;
     }
 }
 
 .concert-list {
     .clearfix();
-    margin: 0 0 0 -100px;
+    margin: 0;
     > li {
         list-style: none;
         margin-bottom: 25px;
@@ -170,7 +224,7 @@
         top: 0;
     }
     ul {
-        margin: 0 0 0 100px;
+        margin: 0 0 0 110px;
     }
     .concert {
         margin: 0 30px 20px 0;
