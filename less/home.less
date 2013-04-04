@@ -18,7 +18,7 @@
         z-index: 2;
     }
     .site-intro-content {
-        margin: 80px 20px 10px 40px;
+        margin: 80px 20px 10px 30px;
         h1 {
             font-size: @baseFontSize + 20;
             font-weight: bold;
@@ -30,7 +30,7 @@
         }
     }
     .site-intro-action {
-        margin: 20px 20px 10px 40px;
+        margin: 20px 20px 10px 30px;
         .btn {
             border: 0;
             color: @textColor !important;
@@ -202,37 +202,12 @@
         .clearfix();
         .nav {
             float: right;
+            margin-right: -30px;
         }
     }
     .section-title {
         float: left;
         margin: 4px 0;
-    }
-}
-
-.concert-list {
-    .clearfix();
-    margin: 0;
-    > li {
-        list-style: none;
-        margin-bottom: 25px;
-        position: relative;
-        &:hover {
-            .concert-date {
-                background: @linkColor;
-            }
-        }
-    }
-    .concert-date {
-        left: 0;
-        position: absolute;
-        top: 0;
-    }
-    ul {
-        margin: 0 0 0 110px;
-    }
-    .concert {
-        margin: 0 30px 20px 0;
     }
 }
 
