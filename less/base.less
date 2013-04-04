@@ -1147,6 +1147,34 @@ html {
             right: 111px;
             top: 32px;
         }
+        .logo {
+            height: 90px;
+            top: 30px;
+        }
+
+        .main-nav {
+            margin-left: 155px;
+            > ul {
+                > li {
+                    > a {
+                        padding: 0 15px;
+                    }
+                }
+            }
+            .form-search {
+                .search-input {
+                    &.is-visible {
+                        width: 240px;
+                    }
+                }
+            }
+        }
+
+        .user-menu {
+            .user-name {
+                display: none;
+            }
+        }
     }
 
     // move columns top-down
@@ -1163,24 +1191,6 @@ html {
     // hide ad
     .sidebar-ad-space {
         display: none;
-    }
-
-    .logo {
-        height: 90px;
-        top: 30px;
-    }
-
-    .main-nav {
-        margin-left: 155px;
-        a {
-            padding: 0 15px;
-        }
-    }
-
-    .user-menu {
-        .user-name {
-            display: none;
-        }
     }
 
     .page-header {
