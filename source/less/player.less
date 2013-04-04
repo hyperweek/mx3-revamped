@@ -71,6 +71,35 @@
     }
 }
 
+.play-music-link {
+    color: @linkColorHover;
+    display: table-cell;
+    font-size: @baseFontSize + 4;
+    height: 40px;
+    line-height: 1.2;
+    position: relative;
+    padding: 13px 10px 13px 60px;
+    text-align: left;
+    vertical-align: middle;
+    .btn-play { // use btn-play btn-play-large for the right size
+        border-color: @linkColorHover;
+        left: 0;
+        position: absolute;
+        top: 10px;
+        i {
+            color: @linkColorHover;
+            margin: 0;
+            text-shadow: none;
+        }
+    }
+    &:hover {
+        .btn-play {
+            background: @white;
+            border-color: @white;
+        }
+    }
+}
+
 
 //
 // Player

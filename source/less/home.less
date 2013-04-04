@@ -10,14 +10,14 @@
     width: 100%;
     -webkit-font-smoothing: antialiased;
 
-    .site-intro {
+    .banner-intro {
         color: white;
         float: left;
         height: 430px;
         width: 25%;
         z-index: 2;
     }
-    .site-intro-content {
+    .banner-intro-content {
         margin: 80px 20px 10px 30px;
         h1 {
             font-size: @baseFontSize + 20;
@@ -29,9 +29,9 @@
             margin-bottom: 10px;
         }
     }
-    .site-intro-action {
+    .banner-intro-action {
         margin: 20px 20px 10px 30px;
-        .btn {
+        .btn-signup {
             border: 0;
             color: @textColor !important;
             font-weight: bold;
@@ -56,6 +56,11 @@
             position: absolute;
             top: -110px;
         }
+        .btn-play {
+            left: 18px;
+            top: 23px;
+            position: absolute;
+        }
     }
     .band-featured-info {
         background: #333;
@@ -66,11 +71,6 @@
         left: 0;
         position: absolute;
         width: 100%;
-    }
-    .btn-play {
-        left: 18px;
-        top: 23px;
-        position: absolute;
     }
     .band-featured-genre {
         color: lighten(@grayLight,10%);
@@ -132,14 +132,14 @@
             .radio-badges {
                 top: 0;
             }
+            .btn-play {
+                top: 122px;
+            }
         }
         .band-featured-info {
             #gradient > .vertical(rgba(0,0,0,0), rgba(0,0,0,.8));
             background-color: transparent;
             padding-top: 100px;
-        }
-        .btn-play {
-            top: 122px;
         }
 
         .band-featured-mini-name {
@@ -221,7 +221,7 @@
 @media screen and (max-width: 1200px) {
 
     .banner {
-        .site-intro {
+        .banner-intro {
             font-size: @baseFontSize - 1;
         }
     }
@@ -235,24 +235,27 @@
 
     .banner {
         height: 560px;
-        .site-intro {
+        .banner-intro {
             float: none;
             height: 130px;
             width: 100%;
         }
-        .site-intro-content {
+        .banner-intro-content {
             float: left;
-            margin: 20px 20px 0 170px;
+            margin: 20px 20px 0 202px;
             width: 40%;
-            h1 {
-                display: none;
-            }
         }
-        .site-intro-action {
+        .banner-intro-action {
             float: right;
             margin: 25px 0 0 0;
             text-align: center;
             width: 30%;
+        }
+
+        .site-intro {
+            h1 {
+                display: none;
+            }
         }
     }
 
