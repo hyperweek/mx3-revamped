@@ -220,23 +220,10 @@ html {
 
 .content-wrapper {
     .clearfix();
-    .col1 {
-        float: left;
-        width: 25%;
-        > div {
-            padding: 30px 20px 0 30px;
-        }
-    }
-    .col2 {
-        float: left;
-        width: 75%;
-        > div {
-            padding: 30px 20px 0 20px;
-        }
-    }
+    padding: 30px 30px 20px 30px;
 }
 
-.col1-ad-space {
+.sidebar-ad-space {
     .ad-space-caption {
         color: @grayLight;
         font-size: 10px;
@@ -821,33 +808,19 @@ html {
     width: 24px;
     &.open {
         .btn-options {
+            background: @darkBackground;
+            color: @white !important;
             display: block;
         }
         .dropdown-menu {
+            background: @darkBackground;
+            border: 0;
+            .border-radius(0);
             left: auto;
-            right: 0;
-            &:before {
-                position: absolute;
-                top: -7px;
-                right: 6px;
-                display: inline-block;
-                border-right: 7px solid rgba(0,0,0,0);
-                border-bottom: 7px solid #CCC;
-                border-left: 7px solid rgba(0,0,0,0);
-                border-bottom-color: rgba(0,0,0,.4);
-                content: '';
-            }
-            &:after {
-                position: absolute;
-                top: -6px;
-                right: 7px;
-                display: inline-block;
-                border-right: 6px solid rgba(0,0,0,0);
-                border-bottom: 6px solid #FFF;
-                border-left: 6px solid rgba(0,0,0,0);
-                content: '';
-            }
+            right: 1px;
+            top: 21px;
             li > a {
+                color: @white;
                 padding: 3px 10px;
             }
         }
@@ -957,7 +930,7 @@ html {
 .track-grid {
     .clearfix();
     list-style: none;
-    margin: 0;
+    margin: 0 -30px 0 0;
     > li {
         float: left;
         width: 33%;
@@ -1127,10 +1100,35 @@ html {
     }
 }
 
+.concert-list {
+    .clearfix();
+    margin: 0;
+    > li {
+        list-style: none;
+        margin-bottom: 25px;
+        position: relative;
+        &:hover {
+            .concert-date {
+                background: @linkColor;
+            }
+        }
+    }
+    .concert-date {
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+    .concert-grid {
+        margin: 0 -30px 0 110px;
+    }
+    .concert {
+        margin: 0 30px 20px 0;
+    }
+}
+
 .concert-grid {
     .clearfix();
     list-style: none;
-    margin: 0;
     > li {
         float: left;
         width: 50%;
@@ -1228,19 +1226,18 @@ html {
     }
 
     // move columns top-down
-    .content-wrapper {
-        .col1,
-        .col2 {
+    .mq {
+        .span3,
+        .span9 {
             float: none;
+            margin: 0 0 60px 0;
             width: 100%;
-            > div {
-                padding: 20px 30px;
-            }
         }
     }
 
+
     // hide ad
-    .col1-ad-space {
+    .sidebar-ad-space {
         display: none;
     }
 
