@@ -150,6 +150,11 @@
     }
 }
 
+.home-radio-playlists-list {
+    list-style: none;
+    margin: 29px 0 0 0;
+}
+
 .home-news-list {
     list-style: none;
     margin: 0 0 40px 0;
@@ -170,7 +175,7 @@
         display: block;
         font-size: @baseFontSize - 2;
     }
-    .news-image {
+    .news-pic {
         height: 60px;
         left: 0;
         position: absolute;
@@ -226,9 +231,9 @@
 }
 
 
-// 1000
+// 900
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
     .banner {
         .banner-intro {
@@ -264,7 +269,8 @@
     .home-news {
         margin: 20px 0 0 0;
     }
-    .home-news-list {
+    .home-news-list,
+    .home-radio-playlists-list {
         .clearfix();
         margin: 0;
         li {

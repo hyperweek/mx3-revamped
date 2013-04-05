@@ -7,7 +7,7 @@
     border: 2px solid @white;
     .border-radius(12px);
     .box-shadow(0 0 2px rgba(0,0,0,1));
-    color: @white !important;
+    color: @white;
     cursor: pointer;
     display: inline-block;
     height: 22px;
@@ -17,9 +17,16 @@
     text-shadow: 0 0 1px rgba(0,0,0,1);
     width: 20px;
     &.negative {
-        background: @grayDarker;
+        background: rgba(255,255,255,.6);
+        .box-shadow(none);
         border-color: @grayDarker;
-        color: @white;
+        color: @grayDarker;
+        text-shadow: none;
+        &:hover {
+            background: @white;
+            border-color: @white;
+            color: @linkColorHover !important;
+        }
     }
     &:hover {
         background: @white;
