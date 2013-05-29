@@ -84,6 +84,7 @@
     margin: 0 0 10px -1px;
     li {
         float: left;
+        max-width: 150px;
         width: 20%;
         position: relative;
         &:hover {
@@ -168,7 +169,7 @@
         color: @red;
         display: none;
         float: right;
-        margin: -4px -4px 0 0;
+        margin: -5px -4px 0 0;
     }
     select {
         width: 140px;
@@ -182,4 +183,28 @@
 .account-link-service {
     display: inline-block;
     width: 140px;
+}
+
+
+//
+// Account news
+// --------------------------------------------------
+
+.account-news-add {
+    margin: 20px 0 60px 0;
+}
+
+.account-news-add-form {
+    display: none;
+    &.is-open {
+        display: block;
+    }
+}
+
+.account-news-list {
+    .news-title {
+        font-size: @baseFontSize + 6;
+        line-height: 1.2em;
+        margin: 2px 0 5px 0;
+    }
 }

@@ -12,6 +12,8 @@ $(function() {
 
     $('a.tip').tooltip();
 
+    $('.toggle-block').toggleBlock();
+
     $('.nav-tabs a').click(function (e) {
         e.preventDefault();
         $(this).tab('show');
