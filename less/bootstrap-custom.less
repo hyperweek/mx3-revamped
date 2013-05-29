@@ -6,6 +6,10 @@ section {
     margin-bottom: 60px;
 }
 
+p {
+  margin: 0 0 @baseLineHeight / 1.5;
+}
+
 .navbar-inner {
     border: 0;
 }
@@ -42,6 +46,7 @@ section {
 }
 .btn-primary {
     font-weight: bold;
+    -webkit-font-smoothing: antialiased;
 }
 .btn-link {
     font-weight: normal;
@@ -136,6 +141,8 @@ form .required {
         }
     }
     .divider {
+        background: @grayLighter;
+        border: 0;
         margin: 5px 0;
     }
 }
@@ -152,4 +159,11 @@ form .required {
 
 .tab-content {
     overflow: visible;
+}
+
+.tab-content-wrapper {
+    border: 2px solid @inputBorder;
+    .border-radius(@inputBorderRadius);
+    margin-bottom: 20px;
+    padding: 10px;
 }

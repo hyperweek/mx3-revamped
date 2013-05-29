@@ -7,7 +7,7 @@
 @footerBackground: @htmlBackground;
 @adSpaceBackground: #DDD;
 
-@linkColorDarkBg: #B2290D;
+@linkColorDarkBg: #E42B2B;
 @linkColorDarkBgHover: lighten(@linkColorDarkBg,5%);
 
 @pageHeaderBackground: #111;
@@ -30,6 +30,13 @@
 //
 // Base styles
 // --------------------------------------------------
+
+a.link-dark-bg {
+    color: @linkColorDarkBg;
+    &:hover {
+        color: @linkColorDarkBgHover;
+    }
+}
 
 a [class^="icon-"],
 a [class*=" icon-"] {
@@ -141,25 +148,34 @@ a [class*=" icon-"] {
     text-transform: uppercase;
 }
 
-// Delete button
+// Action buttons
 
+.btn-icon-action,
 .btn-delete {
-    background: @white;
+    background: darken(@white,3%);
+    border: 1px solid @grayLight;
+    border-color: rgba(0,0,0,.2);
     .border-radius(2px);
-    color: @red;
     display: inline-block;
-    font-size: 22px;
     font-weight: bold;
     height: 28px;
     line-height: 28px;
     text-align: center;
-    width: 28px;
+    width: 28px !important;
     &:hover {
+        border-color: rgba(0,0,0,.3);
+        .box-shadow(0 1px 1px rgba(0,0,0,.1));
         text-decoration: none;
     }
     &:active {
+        background: rgba(0,0,0,.05);
         .box-shadow(inset 0 1px 1px rgba(0,0,0,.15));
     }
+}
+
+.btn-delete {
+    color: @red;
+    font-size: 22px;
 }
 
 .btn-options {
@@ -636,8 +652,16 @@ html {
         font-weight: normal;
         font-size: 24px;
         margin: 0;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         word-spacing: 0.2em;
+        i {
+            padding: 0 6px;
+            position: relative;
+            top: 3px;
+        }
+        em {
+            font-style: normal;
+        }
     }
 }
 
@@ -645,7 +669,7 @@ html {
     left: 0;
     padding: 0 0 0 30px;
     position: absolute;
-    top: 120px;
+    top: 118px;
     width: 210px;
     ul {
         list-style: none;
@@ -744,6 +768,16 @@ html {
             -webkit-font-smoothing: antialiased;
             li > a {
                 color: @white;
+                &.delete {
+                    color: lighten(@red,10%);
+                }
+                &:hover {
+                    background: @linkColor;
+                    color: @white;
+                }
+            }
+            .divider {
+                background: lighten(@darkBackground,20%);
             }
         }
     }
@@ -1128,6 +1162,78 @@ html {
         }
     }
 }
+
+
+//
+// News item
+// --------------------------------------------------
+
+.news-list {
+    list-style: none;
+    margin: 0 0 40px 0;
+
+    a:hover {
+        text-decoration: none;
+        .news-title {
+            text-decoration: underline;
+        }
+        .news-excerpt {
+            color: @gray;
+        }
+    }
+}
+
+.news {
+    .clearfix();
+    margin-bottom: 20px;
+    min-height: 84px;
+    position: relative;
+}
+
+.news-actions {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    a {
+        margin: 0 2px;
+        vertical-align: top;
+    }
+}
+
+.news-date {
+    color: @grayLight;
+    display: block;
+    font-size: @baseFontSize - 2;
+}
+
+.news-pic {
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 24px;
+    width: 60px;
+}
+
+.news-info {
+    display: block;
+    padding: 2px 0 2px 70px;
+}
+
+.news-author {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.news-title {
+    color: @textColor;
+    display: block;
+    line-height: @baseLineHeight - 2;
+}
+
+.news-excerpt {
+    color: @grayLight;
+}
+
 
 
 //

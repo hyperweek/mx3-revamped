@@ -17,6 +17,22 @@ if (!(window.console && console.log)) {
 
     $.fn.extend({
 
+        toggleBlock: function(options) {
+            options = $.extend({}, options);
+
+            return this.each(function() {
+                var $this = $(this),
+                    $el = $('#' + $this.attr('rel'));
+
+                $this.on('click', function(event) {
+                    event.preventDefault();
+
+                    $this.toggleClass('is-open');
+                    $el.toggleClass('is-open');
+                });
+            });
+        },
+
         mainNav: function(options) {
             options = $.extend({speed: 'fast'}, options);
 
