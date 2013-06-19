@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Use title if it's in the page YAML frontmatter -->
-        <title>ton compte</title>
+        <title>Ta musique > Singles</title>
         <meta name="description" content="">
         <meta name="viewport" content="">
 
@@ -261,6 +261,98 @@
                 <span class="help-block">Les fichiers <strong>audio ou vidéo</strong> sont acceptés. 1 Go maximum. 5 singles par année maximum.</span>
             </a>
         </div>
+
+        <form class="account-track-upload-form hide">
+            <a href="#" class="form-cancel">&times;</a>
+            <div class="track-filename">
+                ibre9838ef94fbieqbr.mp3
+                <span class="track-filename-size">(8.3 MB)</span>
+            </div>
+            <div class="progress progress-striped active">
+                <div class="bar" style="width: 40%;"></div>
+            </div>
+
+            <p>
+                <label for="">Titre du single <span class="required">*</span></label>
+                <input type="text" class="input-block-level input-text-large" placeholder="" value="">
+            </p>
+            <p>
+                <label for="">Image pour ce single <span class="required">*</span></label>
+                <input type="file" class="input-block-level" placeholder="" value="">
+                <span class="help-block">Choisis de préférence une image de format carré et de grande taille, elle sera redimensionnée automatiquement.</span>
+            </p>
+            <p>
+                <label for="">Genre <span class="required">*</span></label>
+                <select>
+                    <option>-</option>
+                    <option>Rock</option>
+                    <option>Jazz</option>
+                </select>
+            </p>
+            <p>
+                <label for="">Tags</label>
+                <input type="text" class="input-block-level" placeholder="" value="">
+                <span class="help-block">Les tags doivent être séparés par des virgules. 5 tags maximum. Exemple : <strong>pop, cool, fun, délire montagnard</strong></span>
+            </p>
+            <p>
+                <label for="">Langue des paroles (si il y en a!)</label>
+                <select>
+                    <option>-</option>
+                    <option>Français</option>
+                    <option>Deutsch</option>
+                    <option>Autres</option>
+                </select>
+            </p>
+            <p>
+                <label for="">Année de création</label>
+                <input type="text" class="input-mini" placeholder="" value="">
+            </p>
+            <p>
+                <label for="">Label</label>
+                <input type="text" class="input-block-level" placeholder="" value="">
+            </p>
+            <p>
+                <label for="">Compositeur (important pour les droits d‘auteur SUISA)</label>
+                <input type="text" class="input-xlarge" placeholder="" value="">
+            </p>
+            <p>
+                <label for="">Auteur du texte (important pour les droits d‘auteur SUISA)</label>
+                <input type="text" class="input-xlarge" placeholder="" value="">
+            </p>
+            <p>
+                <label for="">Arrangeur</label>
+                <input type="text" class="input-xlarge" placeholder="" value="">
+            </p>
+            <p>
+                <label for="">Crédits et remerciements</label>
+                <textarea  rows="8" class="input-block-level" placeholder=""></textarea>
+            </p>
+            <p>
+                <label for="">Album</label>
+                <input type="text" class="input-block-level" placeholder="" value="">
+            </p>
+            <p>
+                <label class="checkbox">
+                    <input type="checkbox" value="">
+                    En téléchargement libre
+                </label>
+            </p>
+            <p>
+                <label class="checkbox">
+                    <input type="checkbox" value="">
+                    Présent sur la liste SUISA
+                </label>
+            </p>
+            <div class="form-actions">
+                <p>
+                    <label class="checkbox">
+                        <input type="checkbox" value="">
+                        <a href="#">J'accepte les conditions légales</a>
+                    </label>
+                </p>
+                <button class="btn btn-primary"><i class="icon-upload-cloud"></i> Charger le single</button> <button class="btn">Cancel</button>
+            </div>
+        </form>
 
         <ul class="account-track-list">
             <li>

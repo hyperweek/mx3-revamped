@@ -19,4 +19,18 @@ $(function() {
         $(this).tab('show');
     });
 
+    /* ===== Below is code just for prototype purpose ===== */
+
+    // Single upload
+
+    $('.account-track-upload').on('click', function () {
+        $('.account-track-upload-form').show();
+        $(this).hide();
+    });
+
+    $('.account-track-upload-form').on('click', '.form-cancel', function () {
+        $('.account-track-upload').show();
+        $(this).parent().hide();
+    });
+
 });
