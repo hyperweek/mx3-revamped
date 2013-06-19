@@ -87,6 +87,129 @@
 }
 
 
+//
+// Concerts
+// --------------------------------------------------
+
+.account-concerts-header {
+    margin: 20px 0 30px 0;
+}
+
+.account-concerts-year-filter {
+    float: right;
+    margin: 0;
+    width: 25%;
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+    li {
+        margin-bottom: 2px;
+    }
+    .active a {
+        background: @linkColor;
+        color: white !important;
+    }
+    a {
+        background: @grayLighter;
+        .border-radius(2px);
+        color: @textColor;
+        display: block;
+        padding: 7px 10px;
+        .count {
+            color: @grayLight;
+        }
+        &:hover {
+            color: @linkColorHover;
+            text-decoration: none;
+        }
+    }
+}
+
+.account-concerts-list {
+    .clearfix();
+    float: left;
+    margin-bottom: 40px;
+    width: 70%;
+}
+
+.account-concerts-title {
+    background: @grayLighter;
+    font-size: 18px;
+    margin-top: 0;
+    padding: 2px 10px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    a {
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .count {
+        color: @grayLight;
+    }
+    i {
+        float: right;
+    }
+    &.next-concerts {
+        background: @concertDateBackground;
+        color: white;
+    }
+}
+
+.account-concerts {
+    ul {
+        list-style: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+    .date {
+        float: left;
+        font-size: @baseFontSize - 1;
+        padding: 2px 0;
+        //-webkit-font-smoothing: antialiased;
+    }
+    .concert {
+        clear: both;
+        height: auto;
+        margin-left: 0;
+        &:hover {
+            .concert-actions {
+                display: block;
+            }
+        }
+    }
+    .concert-venue {
+        font-size: @baseFontSize + 2;
+        line-height: 1.5em;
+    }
+    .concert-info {
+        height: auto;
+        padding: 7px 10px;
+    }
+    .concert-artist {
+        display: none;
+    }
+    li {
+        clear: both;
+        margin-bottom: 10px;
+    }
+}
+
+.account-past-concerts {
+    display: none;
+}
+
+.add-concert-form {
+    border: 3px solid lighten(@grayLight,30%);
+    .border-radius(3px);
+    display: none;
+    margin: 10px 0 40px 0;
+    padding: 20px;
+    position: relative;
+}
+
 
 //
 // Account profile
