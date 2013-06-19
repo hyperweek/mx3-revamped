@@ -19,17 +19,33 @@ $(function() {
         $(this).tab('show');
     });
 
-    /* ===== Below is code just for prototype purpose ===== */
+    /* ===== Below is code just for the prototype ===== */
 
     // Single upload
 
-    $('.account-track-upload').on('click', function () {
+    $('.account-track-upload').on('click', function (event) {
+        event.preventDefault();
         $('.account-track-upload-form').show();
         $(this).hide();
     });
 
-    $('.account-track-upload-form').on('click', '.form-cancel', function () {
+    $('.account-track-upload-form').on('click', '.form-cancel', function (event) {
+        event.preventDefault();
         $('.account-track-upload').show();
+        $(this).parent().hide();
+    });
+
+    $('.toggle-past-concerts').on('click', function (event) {
+        event.preventDefault();
+        $('.account-past-concerts').slideToggle('fast');
+    });
+
+    $('.toggle-add-concert-form').on('click', function (event) {
+        $('.add-concert-form').toggle();
+    });
+
+    $('.add-concert-form').on('click', '.form-cancel', function (event) {
+        event.preventDefault();
         $(this).parent().hide();
     });
 

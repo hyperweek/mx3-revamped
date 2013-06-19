@@ -720,8 +720,10 @@ html {
 }
 
 .page-content {
+    .clearfix();
     width: 100%;
     > div {
+        .clearfix();
         border-left: 1px solid @grayLighter;
         margin-left: 239px;
         padding: 20px 30px;
@@ -1097,44 +1099,59 @@ html {
             color: @white;
         }
     }
-    .concert-cover {
-        background-size: 100%;
-        background-position: center center;
-        height: 80px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 120px;
-    }
-    .concert-hour {
-        background: @darkBackground;
-        .border-radius(0 10px 10px 0);
-        color: @white;
-        font-size: @baseFontSize - 3;
-        font-weight: bold;
-        left: 0;
-        padding: 0 6px 0 4px;
-        position: absolute;
-        top: 7px;
-    }
-    .concert-info {
-        height: 73px;
-        padding: 7px 5px 0 130px;
-    }
-    .concert-artist {
-        a {
-            color: @textColor;
-            font-weight: bold;
-            margin-bottom: 3px;
+    &.no-cover {
+        .concert-info {
+            padding-left: 10px;
         }
     }
-    .concert-venue {
-        font-size: @baseFontSize - 1;
+}
+.concert-actions {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    a {
+        margin: 0 2px;
+        vertical-align: top;
     }
-    .concert-venue-location {
-        color: @gray;
-        font-size: @baseFontSize - 2;
+}
+.concert-cover {
+    background-size: 100%;
+    background-position: center center;
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 120px;
+}
+.concert-hour {
+    background: @darkBackground;
+    .border-radius(0 10px 10px 0);
+    color: @white;
+    font-size: @baseFontSize - 3;
+    font-weight: bold;
+    left: 0;
+    padding: 0 6px 0 4px;
+    position: absolute;
+    top: 7px;
+}
+.concert-info {
+    height: 73px;
+    padding: 7px 5px 0 130px;
+}
+.concert-artist {
+    a {
+        color: @textColor;
+        font-weight: bold;
+        margin-bottom: 3px;
     }
+}
+.concert-venue {
+    font-size: @baseFontSize - 1;
+}
+.concert-venue-location {
+    color: @gray;
+    font-size: @baseFontSize - 2;
 }
 
 .concert-list {
