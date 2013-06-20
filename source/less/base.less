@@ -16,6 +16,8 @@
 @playerTimelineBackground: #CCC;
 @playerTimelineColor: @linkColor;
 
+@centralPlayerControlsBackground: #222;
+
 @trackBackground: #EEE;
 @bandBackground: #EEE;
 @concertBackground: #EEE;
@@ -812,7 +814,7 @@ html {
     background: @trackBackground;
     .clearfix();
     height: 80px;
-    margin: 0 30px 20px 0;
+    margin: 0 0 20px 0;
     position: relative;
     .btn-play {
         display: none;
@@ -874,7 +876,8 @@ html {
             color: @green;
         }
     }
-    .btn-video {
+    .btn-video,
+    .btn-free-download {
         float: right;
         font-size: 18px;
         position: absolute;
@@ -882,6 +885,18 @@ html {
         top: 4px;
         &:hover {
             text-decoration: none;
+        }
+    }
+    .btn-free-download {
+        color: @grayLight;
+        border-bottom: 2px solid @grayLight;
+        font-size: 17px;
+        height: 17px;
+        margin-right: 2px;
+        width: 14px;
+        &:hover {
+            color: @green;
+            border-color: @green;
         }
     }
     &.playing {
@@ -910,6 +925,9 @@ html {
     > li {
         float: left;
         width: 33.33333%;
+    }
+    .track {
+        margin-right: 30px;
     }
 }
 
@@ -1267,6 +1285,41 @@ html {
 
 .news-excerpt {
     color: @grayLight;
+}
+
+
+//
+// Comments
+// --------------------------------------------------
+
+.comment-list {
+    list-style: none;
+    margin: 0 0 40px 0;
+}
+
+.comment {
+    margin-bottom: 20px;
+    position: relative;
+    .user-avatar {
+        height: 50px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50px;
+    }
+}
+
+.comment-content {
+    padding-left: 60px;
+}
+
+.comment-date {
+    color: @grayLight;
+    float: right;
+}
+
+.comment-body {
+    padding: 5px 0;
 }
 
 

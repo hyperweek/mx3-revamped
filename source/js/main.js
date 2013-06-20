@@ -10,7 +10,7 @@ $(function() {
 
     $('form.compact-search').compactSearch();
 
-    $('a.tip').tooltip();
+    $('.tip').tooltip();
 
     $('.toggle-block').toggleBlock();
 

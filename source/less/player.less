@@ -109,7 +109,33 @@
 
 
 //
-// Player
+// Timeline button
+// -----------------------------------------------------
+
+
+.btn-timeline-control {
+    background: @white;
+    .border-radius(10px);
+    .box-shadow(0 1px 1px rgba(0,0,0,.3));
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    span {
+        background: @playerTimelineColor;
+        .border-radius(5px);
+        display: block;
+        height: 6px;
+        left: 5px;
+        position: absolute;
+        top: 5px;
+        width: 6px;
+    }
+}
+
+
+//
+// Player (header)
 // -----------------------------------------------------
 
 .player {
@@ -242,7 +268,7 @@
         z-index: 2;
         .player-volume-line {
             background: @playerTimelineBackground;
-            .box-shadow(~'inset 0 1px 1px rgba(0,0,0,.2)');
+            .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
             height:82px;
             left: 15px;
             position: absolute;
@@ -443,5 +469,114 @@
     }
     .player-actions {
         border-left: 0;
+    }
+}
+
+
+//
+// Central Player
+// -----------------------------------------------------
+
+.central-player {
+    background: @grayDark;
+    height: 390px;
+    position: relative;
+    width: 100%;
+}
+
+.central-player-controls {
+    background: @centralPlayerControlsBackground;
+    color: @white;
+    bottom: 0;
+    height: 36px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        font-size: @baseFontSize + 2;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+    }
+}
+
+.central-player-timeline {
+    background: @playerTimelineBackground;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.3));
+    height: 6px;
+    position: relative;
+    width: 100%;
+
+    .btn-timeline-control {
+        left: 32%;
+        position: absolute;
+        top: -5px;
+    }
+}
+
+.central-player-timeline-pct {
+    background: @playerTimelineColor;
+    height: 6px;
+    width: 34%;
+}
+
+.central-player-buttons {
+    border-right: 1px solid rgba(255,255,255,.2);
+    float: left;
+    padding: 0 5px;
+
+    a {
+        color: @white;
+        display: inline-block;
+        height: 30px;
+        font-size: 20px !important;
+        line-height: 29px !important;
+        padding: 0 !important;
+        text-align: center;
+        width: 30px;
+        &.disabled {
+            color: @gray;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.central-player-time {
+    float: left;
+    font-size: @baseFontSize - 2;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 17px;
+    .light {
+        color: @grayLight;
+    }
+}
+
+.central-player-hd {
+    border-left: 1px solid rgba(255,255,255,.2);
+    float: right;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-style: italic;
+    font-size: @baseFontSize + 2;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    &.active {
+        color: @blue;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.central-player-fullscreen {
+    border-left: 1px solid rgba(255,255,255,.2);
+    float: right;
+    &:hover {
+        cursor: pointer;
     }
 }
