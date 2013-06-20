@@ -1,5 +1,98 @@
+.central-player-wrapper {
+    background: @darkBackground;
+    padding: 0 30px;
+}
+
+.playlist-info-wrapper {
+    height: 420px;
+    position: relative;
+}
+
+.playlist-info {
+    bottom: 12px;
+    color: @white;
+    left: 0;
+    margin-right: -20px;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+
+    .playlist-info-title {
+        color: @grayLight;
+        font-size: @baseFontSize - 1;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+    .playlist-cover {
+        width: 100%;
+    }
+    .playlist-title {
+        font-size: 24px;
+        line-height: 1.25;
+        margin: 0 0 5px 0;
+    }
+    .playlist-author {
+        color: @grayLight;
+    }
+    .playlist-actions {
+        padding: 30px 0 0 0;
+        a {
+            color: @white;
+            display: inline-block;
+            font-size: @baseFontSize;
+            padding: 2px 0;
+            &:hover {
+                color: @linkColorDarkBgHover;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.central-player-wrapper {
+    .player-track-list {
+        margin: 0 -30px;
+    }
+    .player-track-list-item-count {
+        color: @gray;
+        float: left;
+        margin-left: -10px;
+        padding: 8px 3px 0 0;
+        text-align: center;
+        width: 20px;
+    }
+    .player-track-list-item {
+        border-bottom: 1px solid @grayDark;
+        &:hover {
+            background: @grayDark;
+        }
+        &.active {
+            background: @grayDark;
+            .player-track-list-item-count {
+                color: @grayLight;
+            }
+        }
+    }
+    .player-track-list-item-title,
+    .player-track-list-item-artist {
+        color: @white;
+        width: 225px;
+    }
+    .player-track-list-item-artist {
+        color: @grayLight;
+    }
+}
+
+.single-info-comments {
+    > div {
+        border-left: 1px solid @grayLight;
+        margin: -30px 0 -20px 0;
+        padding: 20px 0 20px 30px;
+    }
+}
+
 .single-info {
-    border-bottom: 1px solid @grayLight;
+    border-bottom: 1px solid @grayLighter;
     margin-bottom: 20px;
     padding: 10px 0 40px 0;
     position: relative;
