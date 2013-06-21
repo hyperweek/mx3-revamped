@@ -1,0 +1,141 @@
+.central-player-wrapper {
+    background: @darkBackground;
+    .clearfix();
+    > div {
+        margin: 0 0 0 5%;
+    }
+}
+
+.playlist-info {
+    background: @darkBackground;
+    color: @white;
+    display: block;
+    padding: 20px 5% 20px 293px;
+    -webkit-font-smoothing: antialiased;
+
+    .playlist-info-title {
+        color: @grayLight;
+        font-size: @baseFontSize - 1;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+    .playlist-cover {
+        float: left;
+        height: 80px;
+        margin-left: -90px;
+        width: 80px;
+    }
+    .playlist-title {
+        font-size: 28px;
+        line-height: 1.2em;
+        margin: 0 0 5px 0;
+    }
+    .playlist-author {
+        color: @grayLight;
+    }
+    .playlist-actions {
+        float: right;
+        margin-top: -70px;
+        a {
+            color: @white;
+            display: inline-block;
+            font-size: @baseFontSize + 2;
+            padding: 5px 0;
+            &:hover {
+                color: @linkColorDarkBgHover;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.central-player-wrapper {
+    .central-player {
+        float: left;
+    }
+    .central-player-playlist {
+        border-right: 1px solid rgba(255,255,255,.1);
+        float: left;
+        height: 450px;
+    }
+    .playlist-track-list {
+        height: 419px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        //.nice-scrollbar();
+    }
+    .btn-list-scrolldown {
+        border-top: 1px solid @gray;
+        .box-shadow(0 -14px 15px -7px rgba(0,0,0,.8));
+        color: @grayLight;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        &:hover {
+            background: @grayDark;
+            color: @white;
+        }
+    }
+}
+
+.single-info-comments {
+    float: left;
+    margin: 0 0 0 5%;
+    width: 800px;
+    > div {
+        border: 1px solid @grayLight;
+        border-width: 0 1px;
+        padding: 20px 30px;
+    }
+}
+
+.single-info {
+    border-bottom: 1px solid @grayLighter;
+    margin-bottom: 20px;
+    padding: 0 0 40px 0;
+    position: relative;
+}
+
+.single-title {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+}
+
+.single-band {
+    padding-left: 70px;
+}
+
+.single-band-avatar {
+    float: left;
+    margin-left: -70px;
+}
+
+.single-band-name {
+    font-size: @baseFontSize + 4;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0 0 4px 0;
+}
+
+.single-band-genre {
+    color: @gray;
+    font-size: @baseFontSize - 2;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.single-band-stats {
+    color: @grayLight;
+    font-size: @baseFontSize - 1;
+    margin-top: 2px;
+}
+
+.single-recommendations {
+    float: left;
+    margin: 40px 0 0 30px;
+}

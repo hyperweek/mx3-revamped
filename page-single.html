@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Use title if it's in the page YAML frontmatter -->
-        <title>Ta musique > Singles</title>
+        <title>single page</title>
         <meta name="description" content="">
         <meta name="viewport" content="">
 
@@ -210,198 +210,234 @@
 
     <div id="content">
 
-        <header class="page-header">
-    <h1>Ta musique <i class="icon-right-open-mini"></i> <em>Concerts</em></h1>
+        <header class="playlist-info">
+    <img src="img/fake-content/playlist-cover1.jpg" class="playlist-cover" alt="">
+    <div class="playlist-info-title">Playlist</div>
+    <h1 class="playlist-title">Fête de la musique 2013</h1>
+    <div class="playlist-author">par <a href="#" class="link-dark-bg">kassav54</a></div>
+
+    <ul class="playlist-actions unstyled">
+        <li>
+            <a href="#"><i class="icon-export"></i> Partager cette playlist</a>
+        </li>
+        <li>
+            <a href="#"><i class="icon-heart-empty"></i> Ajouter aux favoris</a>
+        </li>
+    </ul>
 </header>
 
-<div class="page-nav">
-
-    <nav>
-        <ul>
-            <li class="user-booking">
-                <a href="user-booking.html"><i class="icon-alert"></i>2 demandes de booking!</a>
-            </li>
-        </ul>
-        <div class="page-nav-title">Musique</div>
-        <ul>
-            <li>
-                <a href="user-singles.html"><i class="icon-note-beamed"></i>Singles</a>
-            </li>
-            <li>
-                <a href="user-playlists.html"><i class="icon-list"></i>Playlists</a>
-            </li>
-            <liclass="active">
-                <a href="user-concerts.html"><i class="icon-calendar"></i>Concerts</a>
-            </li>
-            <li>
-                <a href="account-news.html"><i class="icon-doc-text"></i>News</a>
-            </li>
-        </ul>
-        <div class="page-nav-title">Compte</div>
-        <ul>
-            <li>
-                <a href="account-profile.html"><i class="icon-vcard"></i>Profil</a>
-            </li>
-            <li>
-                <a href="account-settings.html"><i class="icon-cog"></i>Réglages</a>
-            </li>
-        </ul>
-    </nav>
-
-</div>
-
-<div class="page-content">
+<div class="central-player-wrapper">
     <div>
 
-        <p class="account-concerts-header">
-            <a href="#add-concert-form" class="toggle-add-concert-form btn btn-large btn-primary">Ajouter un concert</a>
-        </p>
-
-        <div class="account-concerts-year-filter">
-            <ul>
-                <li class="active"><a href="#">Concerts de 2013 <span class="count">(12)</span></a></li>
-                <li><a href="#">2012 <span class="count">(18)</span></a></li>
-                <li><a href="#">2011 <span class="count">(5)</span></a></li>
-                <li><a href="#">2010 <span class="count">(8)</span></a></li>
-            </ul>
+        <div class="central-player" style="background: url(img/fake-content/bg-vid.jpg) center center no-repeat">
+            <div class="central-player-controls">
+                <div class="central-player-timeline">
+                    <div class="btn-timeline-control"><span></span></div>
+                    <div class="central-player-timeline-pct"></div>
+                </div>
+                <div class="central-player-buttons">
+                    <a href="#" class="btn-previous icon-to-start disabled"></a><a href="#" class="icon-play"></a><a href="#" class="btn-next icon-to-end"></a>
+                </div>
+                <div class="central-player-time">
+                    2:03 <span class="light">/ 5:24</span>
+                </div>
+                <div class="central-player-fullscreen icon-resize-full"></div>
+                <div class="central-player-volume icon-volume"></div>
+                <div class="central-player-hd active">HD</div>
+            </div>
         </div>
 
-        <div class="account-concerts-list">
-
-            <h2 class="account-concerts-title"><a href="#" class="toggle-past-concerts">Concerts précédents <span class="count">(7)</span><i class="icon-down-dir"></i></a></h2>
-
-            <div class="account-concerts account-past-concerts">
-                <ul>
-                    <li>
-                        <div class="date">Lundi <strong>20 Février 2013</strong> – 21h30</div>
-                        <div class="concert no-cover">
-                            <div class="concert-actions">
-                                <a href="" class="btn-icon-action icon-pencil"></a> <a href="" class="btn-delete">&times;</a>
-                            </div>
-                            <div class="concert-info">
-                                <div class="concert-artist"><a href="#">March</a></div>
-                                <div class="concert-venue"><a href="#">Le Cabinet</a></div>
-                                <div class="concert-venue-location">Genève - VD</div>
-                            </div>
+        <div class="central-player-playlist">
+            <ul class="playlist-track-list">
+                <li class="playlist-track active">
+                    <div class="playlist-track-count icon-play"></div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover3.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Motoculture de Plaisance
                         </div>
-                    </li>
-                    <li>
-                        <div class="date">Mardi <strong>22 Février 2013</strong> – 22h</div>
-                        <div class="concert no-cover">
-                            <div class="concert-actions">
-                                <a href="" class="btn-icon-action icon-pencil"></a> <a href="" class="btn-delete">&times;</a>
-                            </div>
-                            <div class="concert-info">
-                                <div class="concert-artist"><a href="#">March</a></div>
-                                <div class="concert-venue"><a href="#">Le Lido Comedy & Club</a></div>
-                                <div class="concert-venue-location">Lausanne - VD</div>
-                            </div>
+                        <div class="playlist-track-artist">
+                            Les Poissons Autistes
                         </div>
-                    </li>
-                </ul>
-            </div>
-
-            <h2 class="account-concerts-title next-concerts">Concerts à venir <span class="count">(5)</span></h2>
-
-            <div class="account-concerts account-next-concerts">
-                <ul>
-                    <li>
-                        <div class="date">Samedi <strong>23 Février 2013</strong> – 21h30</div>
-                        <div class="concert no-cover">
-                            <div class="concert-actions">
-                                <a href="" class="btn-icon-action icon-pencil"></a> <a href="" class="btn-delete">&times;</a>
-                            </div>
-                            <div class="concert-info">
-                                <div class="concert-artist"><a href="#">March</a></div>
-                                <div class="concert-venue"><a href="#">Le Cabinet</a></div>
-                                <div class="concert-venue-location">Genève - VD</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="date">Lundi <strong>25 Février 2013</strong> – 22h</div>
-                        <div class="concert no-cover">
-                            <div class="concert-actions">
-                                <a href="" class="btn-icon-action icon-pencil"></a> <a href="" class="btn-delete">&times;</a>
-                            </div>
-                            <div class="concert-info">
-                                <div class="concert-artist"><a href="#">March</a></div>
-                                <div class="concert-venue"><a href="#">Le Lido Comedy & Club</a></div>
-                                <div class="concert-venue-location">Lausanne - VD</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="date">Mardi <strong>26 Février 2013</strong> – 21h30</div>
-                        <div class="concert no-cover">
-                            <div class="concert-actions">
-                                <a href="" class="btn-icon-action icon-pencil"></a> <a href="" class="btn-delete">&times;</a>
-                            </div>
-                            <div class="concert-info">
-                                <div class="concert-artist"><a href="#">March</a></div>
-                                <div class="concert-venue"><a href="#">Le Cabinet</a></div>
-                                <div class="concert-venue-location">Genève - VD</div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="date">Mercredi <strong>28 Février 2013</strong> – 22h</div>
-                        <div class="concert no-cover">
-                            <div class="concert-actions">
-                                <a href="" class="btn-icon-action icon-pencil"></a> <a href="" class="btn-delete">&times;</a>
-                            </div>
-                            <div class="concert-info">
-                                <div class="concert-artist"><a href="#">March</a></div>
-                                <div class="concert-venue"><a href="#">Fri-son</a></div>
-                                <div class="concert-venue-location">Fribourg - FR</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <a href="#add-concert-form" class="toggle-add-concert-form btn btn-large btn-primary">Ajouter un concert</a>
-
-            <form id="add-concert-form" class="add-concert-form">
-                <a href="#" class="form-cancel">&times;</a>
-                <div>
-                    <label for="">Date du concert <span class="required">*</span></label>
-                    <div class="input-append date" id="datetimepicker1">
-                        <input data-format="dd/MM/yyyy hh:mm:ss" type="text">
-                        <span class="add-on">
-                            <i data-date-icon="icon-calendar" data-time-icon="icon-time" class="icon-calendar"></i>
-                        </span>
                     </div>
-                </div>
-                <p>
-                    <label for="">Scène mx3 <span class="required">*</span></label>
-                    <input type="text" class="input-block-level" value="">
-                </p>
-                <div class="well">
-                    <p>Si la salle de concert ou le festival n‘existe pas encore sur mx3, crées-le maintenant.</p>
-                    <a href="#" class="btn">Créer une nouvelle scène</a>
-                </div>
-                <p>
-                    <label for="">Nom de l‘évènement (facultatif)</label>
-                    <input type="text" class="input-block-level" value="">
-                </p>
-                <p>
-                    <label for="">Billeterie en ligne</label>
-                    <input type="text" class="input-block-level" placeholder="http://" value="">
-                </p>
-                <p>
-                    <label for="">Tags</label>
-                    <input type="text" class="input-block-level" value="">
-                    <span class="help-block">Les tags doivent être séparés par des virgules. 5 tags maximum. Exemple : <strong>lausanne, big-band, été, festival</strong></span>
-                </p>
-                <div class="form-actions">
-                    <button class="btn btn-primary">Créer le concert</button> <a href="#" class="btn">Cancel</a>
-                </div>
-            </form>
-
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">2</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover4.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Boys Do Cry<span class="icon-video"></span>
+                        </div>
+                        <div class="playlist-track-artist">
+                            Fure
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">3</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover2.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Poissons Turfistes
+                        </div>
+                        <div class="playlist-track-artist">
+                            Les Poissons Futés
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">4</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover1.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Pussy Kat Kill KIll<span class="icon-video"></span>
+                        </div>
+                        <div class="playlist-track-artist">
+                            Chetah Woman (feat. Moogli)
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">5</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover2.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Naked And Gasoline
+                        </div>
+                        <div class="playlist-track-artist">
+                            Pavez
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">6</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover3.jpg" alt="">
+                        <div class="playlist-track-title">
+                            The Secret Of The Zombies
+                        </div>
+                        <div class="playlist-track-artist">
+                            Kid Caramel
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">7</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover2.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Poissons Turfistes
+                        </div>
+                        <div class="playlist-track-artist">
+                            Les Poissons Futés
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">8</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover1.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Pussy Kat Kill KIll<span class="icon-video"></span>
+                        </div>
+                        <div class="playlist-track-artist">
+                            Chetah Woman (feat. Moogli)
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="btn-list-scrolldown"><i class="icon-down-open"></i></a>
         </div>
 
     </div>
+</div>
+
+<div class="clearfix">
+
+    <div class="single-info-comments">
+        <div>
+
+            <div class="single-info">
+
+                <h2 class="single-title">Queen Louise</h2>
+
+                <div class="single-band">
+                    <a href="#"><img src="img/fake-content/track-cover2.jpg" class="user-avatar single-band-avatar" width="60" height="60" alt=""></a>
+                    <div class="single-band-name"><a href="#" title="Aller sur la page du groupe">Magicrays</a></div>
+                    <div class="single-band-genre">Rock</div>
+                    <div class="single-band-stats">9 singles</div>
+                </div>
+
+            </div>
+
+            <div class="single-comments">
+
+                <h3>Commentaires</h3>
+
+                <ul class="comment-list">
+                    <li class="comment">
+                        <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
+                        <div class="comment-content">
+                            <time datetime="" class="comment-date">35 min</time>
+                            <a href="#" class="comment-author">Gaël Zucchini</a>
+                            <div class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi hic facilis doloribus ipsum repudiandae maxime harum repellendus iusto fugit sed tempore error possimus voluptatem culpa iure unde provident aliquid.</div>
+                        </div>
+                    </li>
+                    <li class="comment">
+                        <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
+                        <div class="comment-content">
+                            <time datetime="" class="comment-date">35 min</time>
+                            <a href="#" class="comment-author">Gaël Zucchini</a>
+                            <div class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi hic facilis doloribus ipsum repudiandae maxime harum repellendus iusto fugit sed tempore error possimus voluptatem culpa iure unde provident aliquid.</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <form class="comment-form">
+                    <textarea class="input-block-level">Laisse un commentaire sur ce single</textarea>
+                    <button class="btn">Envoyer !</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="single-recommendations">
+
+        <h4 class="section-title">Recommandés !</h4>
+
+        <div class="track" data-href="#">
+            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+            <div class="btn-play btn-play-medium">
+                <i class="icon-play"></i>
+            </div>
+            <div class="track-info">
+                <div class="track-info-overlay">
+                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                    <div class="track-genre">Pop</div>
+                </div>
+            </div>
+            <a href="#" class="btn-options icon-dot-3"></a>
+        </div>
+        <div class="track" data-href="#">
+            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+            <div class="btn-play btn-play-medium">
+                <i class="icon-play"></i>
+            </div>
+            <div class="track-info">
+                <div class="track-info-overlay">
+                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                    <div class="track-genre">Pop</div>
+                </div>
+            </div>
+            <a href="#" class="btn-options icon-dot-3"></a>
+        </div>
+
+    </div>
+
 </div>
 
     </div>

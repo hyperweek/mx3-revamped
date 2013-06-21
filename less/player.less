@@ -109,7 +109,33 @@
 
 
 //
-// Player
+// Timeline button
+// -----------------------------------------------------
+
+
+.btn-timeline-control {
+    background: @white;
+    .border-radius(10px);
+    .box-shadow(0 1px 1px rgba(0,0,0,.3));
+    display: block;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    span {
+        background: @playerTimelineColor;
+        .border-radius(5px);
+        display: block;
+        height: 6px;
+        left: 5px;
+        position: absolute;
+        top: 5px;
+        width: 6px;
+    }
+}
+
+
+//
+// Player (header)
 // -----------------------------------------------------
 
 .player {
@@ -242,7 +268,7 @@
         z-index: 2;
         .player-volume-line {
             background: @playerTimelineBackground;
-            .box-shadow(~'inset 0 1px 1px rgba(0,0,0,.2)');
+            .box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
             height:82px;
             left: 15px;
             position: absolute;
@@ -444,4 +470,191 @@
     .player-actions {
         border-left: 0;
     }
+}
+
+
+//
+// Central Player
+// -----------------------------------------------------
+
+.central-player {
+    background: @grayDark;
+    height: 450px;
+    position: relative;
+    width: 800px;
+}
+
+.central-player-controls {
+    background: @centralPlayerControlsBackground;
+    color: @white;
+    bottom: 0;
+    height: 36px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+        font-size: @baseFontSize + 2;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+    }
+}
+
+.central-player-timeline {
+    background: @gray;
+    height: 6px;
+    position: relative;
+    width: 100%;
+
+    .btn-timeline-control {
+        left: 33%;
+        position: absolute;
+        top: -5px;
+    }
+}
+
+.central-player-timeline-pct {
+    background: @playerTimelineColor;
+    height: 6px;
+    width: 34%;
+}
+
+.central-player-buttons {
+    border: 1px solid rgba(255,255,255,.1);
+    border-width: 0 1px 0 1px;
+    float: left;
+    padding: 0 5px;
+
+    a {
+        color: @white;
+        display: inline-block;
+        height: 30px;
+        font-size: 20px !important;
+        line-height: 29px !important;
+        padding: 0 !important;
+        text-align: center;
+        width: 30px;
+        &.disabled {
+            color: @gray;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.central-player-time {
+    float: left;
+    font-size: @baseFontSize - 2;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    .light {
+        color: @grayLight;
+    }
+}
+
+.central-player-hd {
+    float: right;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-style: italic;
+    font-size: @baseFontSize + 2;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    &.active {
+        color: @blue;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.central-player-volume {
+    border-left: 1px solid rgba(255,255,255,.1);
+    float: right;
+}
+
+.central-player-fullscreen {
+    border: 1px solid rgba(255,255,255,.1);
+    border-width: 0 1px 0 1px;
+    float: right;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//
+// Central Player Playlist
+// -----------------------------------------------------
+
+.playlist-track-list {
+    list-style: none;
+    margin: 0;
+    li {
+        border-bottom: 1px solid @grayDark;
+        .clearfix();
+    }
+}
+
+.playlist-track {
+    background: @playlistTrackBackground;
+    padding: 10px 0;
+    position: relative;
+    img {
+        float: left;
+        height: 35px;
+        margin: 0 0 0 -45px;
+        width: 35px;
+    }
+    .icon-video {
+        color: @linkColorDarkBg;
+        font-size: @baseFontSize + 2;
+        margin-left: 5px;
+        position: absolute;
+        right: 6px;
+        top: 8px;
+    }
+    &.active {
+        background: @gray;
+        border-color: @gray;
+        .playlist-track-count {
+            color: @white;
+        }
+    }
+    &:hover {
+        background: @grayDark;
+        cursor: pointer;
+    }
+}
+
+.playlist-track-count {
+    color: @grayLight;
+    float: left;
+    font-size: @baseFontSize - 2;
+    line-height: 35px;
+    text-align: center;
+    width: 30px !important;
+    &.icon-play {
+        font-size: @baseFontSize + 1;
+    }
+}
+
+.playlist-track-content {
+    padding-left: 75px;
+}
+
+.playlist-track-title {
+    color: @white;
+    font-size: @baseFontSize - 1;
+    line-height: 1.2em;
+    padding: 2px 30px 4px 0;
+}
+
+.playlist-track-artist {
+    color: @grayLight;
+    font-size: @baseFontSize - 2;
+    line-height: 1.2em;
 }
