@@ -479,9 +479,9 @@
 
 .central-player {
     background: @grayDark;
-    height: 420px;
+    height: 450px;
     position: relative;
-    width: 100%;
+    width: 800px;
 }
 
 .central-player-controls {
@@ -522,7 +522,8 @@
 }
 
 .central-player-buttons {
-    border-right: 1px solid rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.1);
+    border-width: 0 1px 0 1px;
     float: left;
     padding: 0 5px;
 
@@ -556,7 +557,6 @@
 }
 
 .central-player-hd {
-    border-left: 1px solid rgba(255,255,255,.1);
     float: right;
     font-family: "Arial Black", Arial, sans-serif;
     font-style: italic;
@@ -572,10 +572,89 @@
     }
 }
 
-.central-player-fullscreen {
+.central-player-volume {
     border-left: 1px solid rgba(255,255,255,.1);
+    float: right;
+}
+
+.central-player-fullscreen {
+    border: 1px solid rgba(255,255,255,.1);
+    border-width: 0 1px 0 1px;
     float: right;
     &:hover {
         cursor: pointer;
     }
+}
+
+//
+// Central Player Playlist
+// -----------------------------------------------------
+
+.playlist-track-list {
+    list-style: none;
+    margin: 0;
+    li {
+        border-bottom: 1px solid @grayDark;
+        .clearfix();
+    }
+}
+
+.playlist-track {
+    background: @playlistTrackBackground;
+    padding: 10px 0;
+    position: relative;
+    img {
+        float: left;
+        height: 35px;
+        margin: 0 0 0 -45px;
+        width: 35px;
+    }
+    .icon-video {
+        color: @linkColorDarkBg;
+        font-size: @baseFontSize + 2;
+        margin-left: 5px;
+        position: absolute;
+        right: 6px;
+        top: 8px;
+    }
+    &.active {
+        background: @gray;
+        border-color: @gray;
+        .playlist-track-count {
+            color: @white;
+        }
+    }
+    &:hover {
+        background: @grayDark;
+        cursor: pointer;
+    }
+}
+
+.playlist-track-count {
+    color: @grayLight;
+    float: left;
+    font-size: @baseFontSize - 2;
+    line-height: 35px;
+    text-align: center;
+    width: 30px !important;
+    &.icon-play {
+        font-size: @baseFontSize + 1;
+    }
+}
+
+.playlist-track-content {
+    padding-left: 75px;
+}
+
+.playlist-track-title {
+    color: @white;
+    font-size: @baseFontSize - 1;
+    line-height: 1.2em;
+    padding: 2px 30px 4px 0;
+}
+
+.playlist-track-artist {
+    color: @grayLight;
+    font-size: @baseFontSize - 2;
+    line-height: 1.2em;
 }

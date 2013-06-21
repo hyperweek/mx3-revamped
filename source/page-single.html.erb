@@ -3,222 +3,230 @@ title: single page
 layout: layout-authenticated
 ---
 
-<div class="central-player-wrapper dark-section">
+<header class="playlist-info">
+    <img src="img/fake-content/playlist-cover1.jpg" class="playlist-cover" alt="">
+    <div class="playlist-info-title">Playlist</div>
+    <h1 class="playlist-title">Fête de la musique 2013</h1>
+    <div class="playlist-author">par <a href="#" class="link-dark-bg">kassav54</a></div>
 
-    <div class="row-fluid mq">
+    <ul class="playlist-actions unstyled">
+        <li>
+            <a href="#"><i class="icon-export"></i> Partager cette playlist</a>
+        </li>
+        <li>
+            <a href="#"><i class="icon-heart-empty"></i> Ajouter aux favoris</a>
+        </li>
+    </ul>
+</header>
 
-        <div class="playlist-info-wrapper span2">
+<div class="central-player-wrapper">
+    <div>
 
-            <header class="playlist-info">
-                <div class="playlist-info-title">Playlist</div>
-                <!--<img src="img/fake-content/playlist-cover1.jpg" class="playlist-cover" alt="">-->
-                <h1 class="playlist-title">Fête de la musique 2013</h1>
-                <div class="playlist-author">par <a href="#" class="link-dark-bg">kassav54</a></div>
-
-                <ul class="playlist-actions unstyled">
-                    <li>
-                        <a href="#"><i class="icon-export"></i> Partager</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="icon-plus"></i> Ajouter à mes préférées</a>
-                    </li>
-                </ul>
-            </header>
-
-        </div>
-
-        <div class="span7">
-
-            <div class="central-player" style="background: url(img/fake-content/bg-vid.jpg) center center no-repeat">
-                <div class="central-player-controls">
-                    <div class="central-player-timeline">
-                        <div class="btn-timeline-control"><span></span></div>
-                        <div class="central-player-timeline-pct"></div>
-                    </div>
-                    <div class="central-player-buttons">
-                        <a href="#" class="btn-previous icon-to-start disabled"></a><a href="#" class="icon-play"></a><a href="#" class="btn-next icon-to-end"></a>
-                    </div>
-                    <div class="central-player-time">
-                        2:03 <span class="light">/ 5:24</span>
-                    </div>
-                    <div class="central-player-fullscreen icon-resize-full"></div>
-                    <div class="central-player-hd active">HD</div>
+        <div class="central-player" style="background: url(img/fake-content/bg-vid.jpg) center center no-repeat">
+            <div class="central-player-controls">
+                <div class="central-player-timeline">
+                    <div class="btn-timeline-control"><span></span></div>
+                    <div class="central-player-timeline-pct"></div>
                 </div>
+                <div class="central-player-buttons">
+                    <a href="#" class="btn-previous icon-to-start disabled"></a><a href="#" class="icon-play"></a><a href="#" class="btn-next icon-to-end"></a>
+                </div>
+                <div class="central-player-time">
+                    2:03 <span class="light">/ 5:24</span>
+                </div>
+                <div class="central-player-fullscreen icon-resize-full"></div>
+                <div class="central-player-volume icon-volume"></div>
+                <div class="central-player-hd active">HD</div>
             </div>
-
         </div>
 
-        <div class="span3">
-
-            <div class="player-track-list">
-
-                <ul>
-                    <li class="player-track-list-item active">
-                        <div class="player-track-list-item-count">1</div>
+        <div class="central-player-playlist">
+            <ul class="playlist-track-list">
+                <li class="playlist-track active">
+                    <div class="playlist-track-count icon-play"></div>
+                    <div class="playlist-track-content">
                         <img src="img/fake-content/track-cover3.jpg" alt="">
-                        <div class="player-track-list-item-title">
+                        <div class="playlist-track-title">
                             Motoculture de Plaisance
                         </div>
-                        <div class="player-track-list-item-artist">
+                        <div class="playlist-track-artist">
                             Les Poissons Autistes
                         </div>
-                    </li>
-                    <li class="player-track-list-item">
-                        <div class="player-track-list-item-count">2</div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">2</div>
+                    <div class="playlist-track-content">
                         <img src="img/fake-content/track-cover4.jpg" alt="">
-                        <div class="player-track-list-item-title">
-                            Boys Do Cry<a href="#" class="btn-video icon-video" title="View the video"></a>
+                        <div class="playlist-track-title">
+                            Boys Do Cry<span class="icon-video"></span>
                         </div>
-                        <div class="player-track-list-item-artist">
+                        <div class="playlist-track-artist">
                             Fure
                         </div>
-                    </li>
-                    <li class="player-track-list-item">
-                        <div class="player-track-list-item-count">3</div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">3</div>
+                    <div class="playlist-track-content">
                         <img src="img/fake-content/track-cover2.jpg" alt="">
-                        <div class="player-track-list-item-title">
+                        <div class="playlist-track-title">
                             Poissons Turfistes
                         </div>
-                        <div class="player-track-list-item-artist">
+                        <div class="playlist-track-artist">
                             Les Poissons Futés
                         </div>
-                    </li>
-                    <li class="player-track-list-item">
-                        <div class="player-track-list-item-count">4</div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">4</div>
+                    <div class="playlist-track-content">
                         <img src="img/fake-content/track-cover1.jpg" alt="">
-                        <div class="player-track-list-item-title">
-                            Pussy Kat Kill KIll<a href="#" class="btn-video icon-video" title="View the video"></a>
+                        <div class="playlist-track-title">
+                            Pussy Kat Kill KIll<span class="icon-video"></span>
                         </div>
-                        <div class="player-track-list-item-artist">
+                        <div class="playlist-track-artist">
                             Chetah Woman (feat. Moogli)
                         </div>
-                    </li>
-                    <li class="player-track-list-item">
-                        <div class="player-track-list-item-count">5</div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">5</div>
+                    <div class="playlist-track-content">
                         <img src="img/fake-content/track-cover2.jpg" alt="">
-                        <div class="player-track-list-item-title">
+                        <div class="playlist-track-title">
                             Naked And Gasoline
                         </div>
-                        <div class="player-track-list-item-artist">
+                        <div class="playlist-track-artist">
                             Pavez
                         </div>
-                    </li>
-                    <li class="player-track-list-item">
-                        <div class="player-track-list-item-count">6</div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">6</div>
+                    <div class="playlist-track-content">
                         <img src="img/fake-content/track-cover3.jpg" alt="">
-                        <div class="player-track-list-item-title">
+                        <div class="playlist-track-title">
                             The Secret Of The Zombies
                         </div>
-                        <div class="player-track-list-item-artist">
+                        <div class="playlist-track-artist">
                             Kid Caramel
                         </div>
-                    </li>
-                </ul>
-
-            </div>
-
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">7</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover2.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Poissons Turfistes
+                        </div>
+                        <div class="playlist-track-artist">
+                            Les Poissons Futés
+                        </div>
+                    </div>
+                </li>
+                <li class="playlist-track">
+                    <div class="playlist-track-count">8</div>
+                    <div class="playlist-track-content">
+                        <img src="img/fake-content/track-cover1.jpg" alt="">
+                        <div class="playlist-track-title">
+                            Pussy Kat Kill KIll<span class="icon-video"></span>
+                        </div>
+                        <div class="playlist-track-artist">
+                            Chetah Woman (feat. Moogli)
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="btn-list-scrolldown"><i class="icon-down-open"></i></a>
         </div>
 
     </div>
-
 </div>
 
-<div class="content-wrapper">
+<div class="clearfix">
 
-    <div class="row-fluid mq">
+    <div class="single-info-comments">
+        <div>
 
-        <div class="span2">
-            <div>
+            <div class="single-info">
 
+                <h2 class="single-title">Queen Louise</h2>
 
-
-            </div>
-        </div>
-
-        <div class="single-info-comments span7">
-            <div>
-
-                <div class="single-info">
-
-                    <h2 class="single-title">Queen Louise</h2>
-
-                    <div class="single-band">
-                        <a href="#"><img src="img/fake-content/track-cover2.jpg" class="user-avatar single-band-avatar" width="60" height="60" alt=""></a>
-                        <div class="single-band-name"><a href="#" title="Aller sur la page du groupe">Magicrays</a></div>
-                        <div class="single-band-genre">Rock</div>
-                        <div class="single-band-stats">9 singles</div>
-                    </div>
-
-                </div>
-
-                <div class="single-comments">
-
-                    <h3>Commentaires</h3>
-
-                    <ul class="comment-list">
-                        <li class="comment">
-                            <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
-                            <div class="comment-content">
-                                <time datetime="" class="comment-date">35 min</time>
-                                <a href="#" class="comment-author">Gaël Zucchini</a>
-                                <div class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi hic facilis doloribus ipsum repudiandae maxime harum repellendus iusto fugit sed tempore error possimus voluptatem culpa iure unde provident aliquid.</div>
-                            </div>
-                        </li>
-                        <li class="comment">
-                            <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
-                            <div class="comment-content">
-                                <time datetime="" class="comment-date">35 min</time>
-                                <a href="#" class="comment-author">Gaël Zucchini</a>
-                                <div class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi hic facilis doloribus ipsum repudiandae maxime harum repellendus iusto fugit sed tempore error possimus voluptatem culpa iure unde provident aliquid.</div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <form class="comment-form">
-                        <textarea class="input-block-level">Laisse un commentaire sur ce single</textarea>
-                        <button class="btn">Envoyer !</button>
-                    </form>
-
+                <div class="single-band">
+                    <a href="#"><img src="img/fake-content/track-cover2.jpg" class="user-avatar single-band-avatar" width="60" height="60" alt=""></a>
+                    <div class="single-band-name"><a href="#" title="Aller sur la page du groupe">Magicrays</a></div>
+                    <div class="single-band-genre">Rock</div>
+                    <div class="single-band-stats">9 singles</div>
                 </div>
 
             </div>
-        </div>
 
-        <div class="span3">
-            <div>
+            <div class="single-comments">
 
-                <h4 class="section-title">Recommandés !</h4>
+                <h3>Commentaires</h3>
 
-                <div class="track" data-href="#">
-                    <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
-                    <div class="btn-play btn-play-medium">
-                        <i class="icon-play"></i>
-                    </div>
-                    <div class="track-info">
-                        <div class="track-info-overlay">
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
-                            <div class="track-genre">Pop</div>
+                <ul class="comment-list">
+                    <li class="comment">
+                        <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
+                        <div class="comment-content">
+                            <time datetime="" class="comment-date">35 min</time>
+                            <a href="#" class="comment-author">Gaël Zucchini</a>
+                            <div class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi hic facilis doloribus ipsum repudiandae maxime harum repellendus iusto fugit sed tempore error possimus voluptatem culpa iure unde provident aliquid.</div>
                         </div>
-                    </div>
-                    <a href="#" class="btn-options icon-dot-3"></a>
-                </div>
-                <div class="track" data-href="#">
-                    <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
-                    <div class="btn-play btn-play-medium">
-                        <i class="icon-play"></i>
-                    </div>
-                    <div class="track-info">
-                        <div class="track-info-overlay">
-                            <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
-                            <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
-                            <div class="track-genre">Pop</div>
+                    </li>
+                    <li class="comment">
+                        <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
+                        <div class="comment-content">
+                            <time datetime="" class="comment-date">35 min</time>
+                            <a href="#" class="comment-author">Gaël Zucchini</a>
+                            <div class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi hic facilis doloribus ipsum repudiandae maxime harum repellendus iusto fugit sed tempore error possimus voluptatem culpa iure unde provident aliquid.</div>
                         </div>
-                    </div>
-                    <a href="#" class="btn-options icon-dot-3"></a>
-                </div>
+                    </li>
+                </ul>
+
+                <form class="comment-form">
+                    <textarea class="input-block-level">Laisse un commentaire sur ce single</textarea>
+                    <button class="btn">Envoyer !</button>
+                </form>
 
             </div>
+
+        </div>
+    </div>
+
+    <div class="single-recommendations">
+
+        <h4 class="section-title">Recommandés !</h4>
+
+        <div class="track" data-href="#">
+            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+            <div class="btn-play btn-play-medium">
+                <i class="icon-play"></i>
+            </div>
+            <div class="track-info">
+                <div class="track-info-overlay">
+                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                    <div class="track-genre">Pop</div>
+                </div>
+            </div>
+            <a href="#" class="btn-options icon-dot-3"></a>
+        </div>
+        <div class="track" data-href="#">
+            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+            <div class="btn-play btn-play-medium">
+                <i class="icon-play"></i>
+            </div>
+            <div class="track-info">
+                <div class="track-info-overlay">
+                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                    <div class="track-genre">Pop</div>
+                </div>
+            </div>
+            <a href="#" class="btn-options icon-dot-3"></a>
         </div>
 
     </div>

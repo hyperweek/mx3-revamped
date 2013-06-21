@@ -1,19 +1,16 @@
 .central-player-wrapper {
     background: @darkBackground;
-    padding: 0 30px;
-}
-
-.playlist-info-wrapper {
-    height: 420px;
-    position: relative;
+    .clearfix();
+    > div {
+        margin: 0 0 0 5%;
+    }
 }
 
 .playlist-info {
-    bottom: 12px;
+    background: @darkBackground;
     color: @white;
-    left: 0;
-    margin-right: -20px;
-    position: absolute;
+    display: block;
+    padding: 20px 5% 20px 293px;
     -webkit-font-smoothing: antialiased;
 
     .playlist-info-title {
@@ -24,23 +21,27 @@
         margin-bottom: 2px;
     }
     .playlist-cover {
-        width: 100%;
+        float: left;
+        height: 80px;
+        margin-left: -90px;
+        width: 80px;
     }
     .playlist-title {
-        font-size: 24px;
-        line-height: 1.25;
+        font-size: 28px;
+        line-height: 1.2em;
         margin: 0 0 5px 0;
     }
     .playlist-author {
         color: @grayLight;
     }
     .playlist-actions {
-        padding: 30px 0 0 0;
+        float: right;
+        margin-top: -70px;
         a {
             color: @white;
             display: inline-block;
-            font-size: @baseFontSize;
-            padding: 2px 0;
+            font-size: @baseFontSize + 2;
+            padding: 5px 0;
             &:hover {
                 color: @linkColorDarkBgHover;
                 text-decoration: none;
@@ -50,51 +51,52 @@
 }
 
 .central-player-wrapper {
-    .player-track-list {
-        margin: 0 -30px;
-    }
-    .player-track-list-item-count {
-        color: @gray;
+    .central-player {
         float: left;
-        margin-left: -10px;
-        padding: 8px 3px 0 0;
-        text-align: center;
-        width: 20px;
     }
-    .player-track-list-item {
-        border-bottom: 1px solid @grayDark;
+    .central-player-playlist {
+        border-right: 1px solid rgba(255,255,255,.1);
+        float: left;
+        height: 450px;
+    }
+    .playlist-track-list {
+        height: 419px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        //.nice-scrollbar();
+    }
+    .btn-list-scrolldown {
+        border-top: 1px solid @gray;
+        .box-shadow(0 -14px 15px -7px rgba(0,0,0,.8));
+        color: @grayLight;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        position: relative;
+        width: 100%;
         &:hover {
             background: @grayDark;
+            color: @white;
         }
-        &.active {
-            background: @grayDark;
-            .player-track-list-item-count {
-                color: @grayLight;
-            }
-        }
-    }
-    .player-track-list-item-title,
-    .player-track-list-item-artist {
-        color: @white;
-        width: 225px;
-    }
-    .player-track-list-item-artist {
-        color: @grayLight;
     }
 }
 
 .single-info-comments {
+    float: left;
+    margin: 0 0 0 5%;
+    width: 800px;
     > div {
-        border-left: 1px solid @grayLight;
-        margin: -30px 0 -20px 0;
-        padding: 20px 0 20px 30px;
+        border: 1px solid @grayLight;
+        border-width: 0 1px;
+        padding: 20px 30px;
     }
 }
 
 .single-info {
     border-bottom: 1px solid @grayLighter;
     margin-bottom: 20px;
-    padding: 10px 0 40px 0;
+    padding: 0 0 40px 0;
     position: relative;
 }
 
@@ -131,4 +133,9 @@
     color: @grayLight;
     font-size: @baseFontSize - 1;
     margin-top: 2px;
+}
+
+.single-recommendations {
+    float: left;
+    margin: 40px 0 0 30px;
 }

@@ -19,9 +19,9 @@ $(function() {
         $(this).tab('show');
     });
 
-    /* ===== Below is code just for the prototype ===== */
+    /* ===== Below is ugly code just for the interactions to work ===== */
 
-    // Single upload
+    // File upload
 
     $('.account-track-upload').on('click', function (event) {
         event.preventDefault();
@@ -48,5 +48,21 @@ $(function() {
         event.preventDefault();
         $(this).parent().hide();
     });
+
+    // Central player playlist
+
+    var setPlaylistWidth = function () {
+        var windowWidth = $(window).width(),
+            centralPlayerWidth = 800,
+            centralPlayerWrapperWidth = $('.central-player-wrapper > div').width(),
+            playlistWidth = centralPlayerWrapperWidth - centralPlayerWidth - windowWidth*0.05;
+
+        $('.central-player-wrapper .central-player-playlist').width(playlistWidth);
+    };
+
+    setPlaylistWidth();
+
+    $(window).on('resize', setPlaylistWidth);
+
 
 });
