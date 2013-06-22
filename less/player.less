@@ -478,17 +478,24 @@
 // -----------------------------------------------------
 
 .central-player {
-    background: @grayDark;
+    background: @centralPlayerBackground;
     height: 450px;
     position: relative;
     width: 800px;
 }
 
+.central-player-header {
+    background: @centralPlayerBackground;
+    border: 1px solid lighten(@centralPlayerBackground,5%);
+    border-bottom: 0;
+    height: 34px;
+}
+
 .central-player-controls {
-    background: @centralPlayerControlsBackground;
+    background: @centralPlayerBackground;
     color: @white;
     bottom: 0;
-    height: 36px;
+    height: 40px;
     left: 0;
     position: absolute;
     width: 100%;
@@ -496,8 +503,8 @@
     [class^="icon-"],
     [class*=" icon-"] {
         font-size: @baseFontSize + 2;
-        height: 30px;
-        line-height: 30px;
+        height: 34px;
+        line-height: 34px;
         padding: 0 10px;
     }
 }
@@ -522,7 +529,7 @@
 }
 
 .central-player-buttons {
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid lighten(@centralPlayerBackground,5%);
     border-width: 0 1px 0 1px;
     float: left;
     padding: 0 5px;
@@ -530,12 +537,12 @@
     a {
         color: @white;
         display: inline-block;
-        height: 30px;
-        font-size: 20px !important;
-        line-height: 29px !important;
+        height: 38px;
+        font-size: 26px !important;
+        line-height: 34px !important;
         padding: 0 !important;
         text-align: center;
-        width: 30px;
+        width: 38px;
         &.disabled {
             color: @gray;
         }
@@ -545,11 +552,16 @@
     }
 }
 
+.central-player-volume {
+    border-right: 1px solid lighten(@centralPlayerBackground,5%);
+    float: left;
+}
+
 .central-player-time {
     float: left;
     font-size: @baseFontSize - 2;
-    height: 30px;
-    line-height: 30px;
+    height: 34px;
+    line-height: 34px;
     padding: 0 15px;
     .light {
         color: @grayLight;
@@ -561,8 +573,8 @@
     font-family: "Arial Black", Arial, sans-serif;
     font-style: italic;
     font-size: @baseFontSize + 2;
-    height: 30px;
-    line-height: 30px;
+    height: 34px;
+    line-height: 34px;
     padding: 0 10px;
     &.active {
         color: @blue;
@@ -572,13 +584,8 @@
     }
 }
 
-.central-player-volume {
-    border-left: 1px solid rgba(255,255,255,.1);
-    float: right;
-}
-
 .central-player-fullscreen {
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid lighten(@centralPlayerBackground,5%);
     border-width: 0 1px 0 1px;
     float: right;
     &:hover {
@@ -590,12 +597,72 @@
 // Central Player Playlist
 // -----------------------------------------------------
 
+.playlist-header {
+    background: @centralPlayerBackground;
+    .box-shadow(0 7px 14px -7px rgba(0,0,0,.6));
+    height: 34px;
+    position: relative;
+    z-index: 2; // for the shadow to be over the tracks
+
+    .playlist-controls {
+        float: left;
+    }
+    .playlist-previous-track,
+    .playlist-next-track {
+        color: @white;
+        display: block;
+        float: left;
+        font-size: @baseFontSize + 6;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        width: 40px;
+        &.disabled {
+            color: @gray;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .playlist-track-counter {
+        color: @white;
+        display: block;
+        float: left;
+        padding: 0 3px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+    }
+    .playlist-actions {
+        float: right;
+        height: 34px;
+        a {
+            color: @white;
+            display: block;
+            font-size: 16px;
+            height: 34px;
+            float: right;
+            line-height: 34px;
+            text-align: center;
+            width: 34px;
+            &:hover {
+                color: @linkColorHover;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 .playlist-track-list {
+    background: @playlistTrackBackground;
     list-style: none;
     margin: 0;
     li {
         border-bottom: 1px solid @grayDark;
         .clearfix();
+        &:last-child {
+            border-bottom: 0;
+        }
     }
 }
 

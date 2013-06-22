@@ -51,10 +51,25 @@ $(function() {
 
     // Central player playlist
 
-    var setPlaylistWidth = function () {
+    var $centralPlayerPlaylist = $('.central-player-playlist').on('click', '.btn-expand-playlist', function (event) {
+        event.preventDefault();
+        var $list = $centralPlayerPlaylist.find('.playlist-track-list')
+            $this = $(this),
+            $icon = $this.find('i');
+
+        if ($list.hasClass('is-expanded')) {
+            $icon.addClass('icon-down-open').removeClass('icon-up-open');
+        }
+        else {
+            $icon.removeClass('icon-down-open').addClass('icon-up-open');
+        }
+        $list.toggleClass('is-expanded');
+    });
+
+    /*var setPlaylistWidth = function () {
         var windowWidth = $(window).width(),
             centralPlayerWidth = 800,
-            centralPlayerWrapperWidth = $('.central-player-wrapper > div').width(),
+            centralPlayerWrapperWidth = $('.central-player-wrapper').width(),
             playlistWidth = centralPlayerWrapperWidth - centralPlayerWidth - windowWidth*0.05;
 
         $('.central-player-wrapper .central-player-playlist').width(playlistWidth);
@@ -62,7 +77,7 @@ $(function() {
 
     setPlaylistWidth();
 
-    $(window).on('resize', setPlaylistWidth);
+    $(window).on('resize', setPlaylistWidth);*/
 
 
 });
