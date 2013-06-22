@@ -3,44 +3,59 @@ title: single page
 layout: layout-authenticated
 ---
 
-<header class="playlist-info">
-    <img src="img/fake-content/playlist-cover1.jpg" class="playlist-cover" alt="">
-    <div class="playlist-info-title">Playlist</div>
-    <h1 class="playlist-title">Fête de la musique 2013</h1>
-    <div class="playlist-author">par <a href="#" class="link-dark-bg">kassav54</a></div>
+<div class="banner-central-player">
 
-    <ul class="playlist-actions unstyled">
-        <li>
-            <a href="#"><i class="icon-export"></i> Partager cette playlist</a>
-        </li>
-        <li>
-            <a href="#"><i class="icon-heart-empty"></i> Ajouter aux favoris</a>
-        </li>
-    </ul>
-</header>
+    <header class="playlist-info">
+        <div>
+            <div class="playlist-info-title">Playlist</div>
+            <img src="img/fake-content/playlist-cover1.jpg" class="playlist-cover" alt="">
+            <h1 class="playlist-title">Fête de la musique 2013</h1>
+            <div class="playlist-author">par <a href="#" class="link-dark-bg">kassav54</a></div>
 
-<div class="central-player-wrapper">
-    <div>
+            <ul class="playlist-actions unstyled">
+                <li>
+                    <a href="#"><i class="icon-heart-empty"></i> Ajouter aux favoris</a>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-share"></i> Partager cette playlist</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="central-player-wrapper">
 
         <div class="central-player" style="background: url(img/fake-content/bg-vid.jpg) center center no-repeat">
+            <div class="central-player-header"></div>
             <div class="central-player-controls">
                 <div class="central-player-timeline">
                     <div class="btn-timeline-control"><span></span></div>
                     <div class="central-player-timeline-pct"></div>
                 </div>
                 <div class="central-player-buttons">
-                    <a href="#" class="btn-previous icon-to-start disabled"></a><a href="#" class="icon-play"></a><a href="#" class="btn-next icon-to-end"></a>
+                    <a href="#" class="icon-play"></a>
                 </div>
+                <div class="central-player-volume icon-volume"></div>
                 <div class="central-player-time">
                     2:03 <span class="light">/ 5:24</span>
                 </div>
                 <div class="central-player-fullscreen icon-resize-full"></div>
-                <div class="central-player-volume icon-volume"></div>
                 <div class="central-player-hd active">HD</div>
             </div>
         </div>
 
         <div class="central-player-playlist">
+            <div class="playlist-header">
+                <div class="playlist-controls">
+                    <a class="playlist-previous-track icon-to-start disabled"></a>
+                    <span class="playlist-track-counter">1/8</span>
+                    <a class="playlist-next-track icon-to-end"></a>
+                </div>
+                <div class="playlist-actions">
+                    <a href="#" class="icon-share" title="Partager cette playlist"></a>
+                    <a href="#" class="icon-heart-empty" title="Ajouter aux playlists favorites"></a>
+                </div>
+            </div>
             <ul class="playlist-track-list">
                 <li class="playlist-track active">
                     <div class="playlist-track-count icon-play"></div>
@@ -139,7 +154,7 @@ layout: layout-authenticated
                     </div>
                 </li>
             </ul>
-            <a href="#" class="btn-list-scrolldown"><i class="icon-down-open"></i></a>
+            <a href="#" class="btn-expand-playlist"><i class="icon-down-open"></i></a>
         </div>
 
     </div>
@@ -154,6 +169,8 @@ layout: layout-authenticated
 
                 <h2 class="single-title">Queen Louise</h2>
 
+                <div class="single-stats">1236 écoutes</div>
+
                 <div class="single-band">
                     <a href="#"><img src="img/fake-content/track-cover2.jpg" class="user-avatar single-band-avatar" width="60" height="60" alt=""></a>
                     <div class="single-band-name"><a href="#" title="Aller sur la page du groupe">Magicrays</a></div>
@@ -161,11 +178,23 @@ layout: layout-authenticated
                     <div class="single-band-stats">9 singles</div>
                 </div>
 
+                <ul class="single-actions">
+                    <li><a href="#"><i class="icon-down"></i> Télécharger</a></li>
+                    <li><a href="#"><i class="icon-basket"></i> Acheter</a></li>
+                    <li><a href="#"><i class="icon-note-beamed"></i> Smartlist</a></li>
+                    <li><a href="#"><i class="icon-list-add"></i> Ajouter</a></li>
+                    <li><a href="#"><i class="icon-share"></i> Partager</a></li>
+                </ul>
+
+                <div class="single-more-info">
+                    <a href="#">Plus d‘infos sur ce single <i class="icon-down-dir"></i></a>
+                </div>
+
             </div>
 
             <div class="single-comments">
 
-                <h3>Commentaires</h3>
+                <h3 class="single-comments-title">Commentaires</h3>
 
                 <ul class="comment-list">
                     <li class="comment">
@@ -197,38 +226,54 @@ layout: layout-authenticated
     </div>
 
     <div class="single-recommendations">
+        <div>
 
-        <h4 class="section-title">Recommandés !</h4>
+            <h4 class="section-title">Recommandations</h4>
 
-        <div class="track" data-href="#">
-            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
-            <div class="btn-play btn-play-medium">
-                <i class="icon-play"></i>
-            </div>
-            <div class="track-info">
-                <div class="track-info-overlay">
-                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
-                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
-                    <div class="track-genre">Pop</div>
+            <div class="track" data-href="#">
+                <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
+                <div class="btn-play btn-play-medium">
+                    <i class="icon-play"></i>
                 </div>
-            </div>
-            <a href="#" class="btn-options icon-dot-3"></a>
-        </div>
-        <div class="track" data-href="#">
-            <img src="img/fake-content/track-cover3.jpg" class="track-cover" alt="">
-            <div class="btn-play btn-play-medium">
-                <i class="icon-play"></i>
-            </div>
-            <div class="track-info">
-                <div class="track-info-overlay">
-                    <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
-                    <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
-                    <div class="track-genre">Pop</div>
+                <div class="track-info">
+                    <div class="track-info-overlay">
+                        <div class="track-title"><a href="#" title="Aller sur la page du morceau">Balanced Guys</a></div>
+                        <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Groove Druids</a></div>
+                        <div class="track-genre">Rock</div>
+                    </div>
                 </div>
+                <a href="#" class="btn-options icon-dot-3"></a>
             </div>
-            <a href="#" class="btn-options icon-dot-3"></a>
-        </div>
+            <div class="track" data-href="#">
+                <img src="img/fake-content/track-cover2.jpg" class="track-cover" alt="">
+                <div class="btn-play btn-play-medium">
+                    <i class="icon-play"></i>
+                </div>
+                <div class="track-info">
+                    <div class="track-info-overlay">
+                        <div class="track-title"><a href="#" title="Aller sur la page du morceau">Let's Party</a></div>
+                        <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Tweek</a></div>
+                        <div class="track-genre">Hip-Hop</div>
+                    </div>
+                </div>
+                <a href="#" class="btn-options icon-dot-3"></a>
+            </div>
+            <div class="track" data-href="#">
+                <img src="img/fake-content/track-cover4.jpg" class="track-cover" alt="">
+                <div class="btn-play btn-play-medium">
+                    <i class="icon-play"></i>
+                </div>
+                <div class="track-info">
+                    <div class="track-info-overlay">
+                        <div class="track-title"><a href="#" title="Aller sur la page du morceau">Un matin d'été dans le coin</a></div>
+                        <div class="track-artist"><a href="#" title="Aller sur la page du groupe">Mister Brungle</a></div>
+                        <div class="track-genre">Rock</div>
+                    </div>
+                </div>
+                <a href="#" class="btn-options icon-dot-3"></a>
+            </div>
 
+        </div>
     </div>
 
 </div>

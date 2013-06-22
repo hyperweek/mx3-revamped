@@ -1,29 +1,34 @@
-.central-player-wrapper {
+.banner-central-player {
     background: @darkBackground;
-    .clearfix();
-    > div {
-        margin: 0 0 0 5%;
-    }
+    height: 450px;
+    padding-top: 60px;
+    position: relative;
 }
 
 .playlist-info {
     background: @darkBackground;
     color: @white;
     display: block;
-    padding: 20px 5% 20px 293px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 18%;
     -webkit-font-smoothing: antialiased;
+
+    > div {
+        padding: 0 20px 15px 30px;
+    }
 
     .playlist-info-title {
         color: @grayLight;
-        font-size: @baseFontSize - 1;
+        font-size: @baseFontSize;
         text-transform: uppercase;
         font-weight: bold;
-        margin-bottom: 2px;
+        margin-bottom: 10px;
     }
     .playlist-cover {
-        float: left;
         height: 80px;
-        margin-left: -90px;
+        margin-bottom: 10px;
         width: 80px;
     }
     .playlist-title {
@@ -35,12 +40,11 @@
         color: @grayLight;
     }
     .playlist-actions {
-        float: right;
-        margin-top: -70px;
+        margin-top: 60px;
         a {
             color: @white;
             display: inline-block;
-            font-size: @baseFontSize + 2;
+            font-size: @baseFontSize;
             padding: 5px 0;
             &:hover {
                 color: @linkColorDarkBgHover;
@@ -51,30 +55,47 @@
 }
 
 .central-player-wrapper {
+    background: @darkBackground;
+    .clearfix();
+
     .central-player {
         float: left;
+        margin-left: 18%;
+        width: 50%;
     }
     .central-player-playlist {
-        border-right: 1px solid rgba(255,255,255,.1);
+        border: 1px solid lighten(@centralPlayerBackground,5%);
+        border-width: 1px 1px 0 0;
         float: left;
         height: 450px;
+        width: 30%;
     }
     .playlist-track-list {
-        height: 419px;
+        height: 380px;
         overflow-x: hidden;
         overflow-y: auto;
-        //.nice-scrollbar();
+        .nice-scrollbar();
+        .playlist-dark-scrollbar();
+        &.is-expanded {
+            .box-shadow(0 36px 4px rgba(0,0,0,.3));
+            height: auto;
+            position: relative;
+            z-index: 1; // for the shadow to be over the recommended track items below
+        }
     }
-    .btn-list-scrolldown {
-        border-top: 1px solid @gray;
-        .box-shadow(0 -14px 15px -7px rgba(0,0,0,.8));
+    .btn-expand-playlist {
+        background: @centralPlayerBackground;
+        border-top: 1px solid lighten(@centralPlayerBackground,5%);
+        .box-shadow(0 -7px 14px -7px rgba(0,0,0,.6));
         color: @grayLight;
         display: block;
-        height: 30px;
-        line-height: 30px;
+        font-size: @baseFontSize + 2;
+        height: 34px;
+        line-height: 34px;
         text-align: center;
         position: relative;
         width: 100%;
+        z-index: 1; // to be over recommendation track items
         &:hover {
             background: @grayDark;
             color: @white;
@@ -84,19 +105,20 @@
 
 .single-info-comments {
     float: left;
-    margin: 0 0 0 5%;
-    width: 800px;
+    margin: 0 0 0 18%;
+    width: 50%;
     > div {
         border: 1px solid @grayLight;
         border-width: 0 1px;
+        margin-top: -1px;
         padding: 20px 30px;
     }
 }
 
 .single-info {
     border-bottom: 1px solid @grayLighter;
-    margin-bottom: 20px;
-    padding: 0 0 40px 0;
+    .clearfix();
+    margin-bottom: 30px;
     position: relative;
 }
 
@@ -104,6 +126,32 @@
     font-size: 34px;
     line-height: 1.2;
     margin: 0 0 15px 0;
+}
+
+.single-stats {
+    color: @grayLight;
+    float: right;
+}
+
+.single-actions {
+    clear: both;
+    .clearfix();
+    list-style: none;
+    margin: 30px 0 10px 0;
+    li {
+        float: left;
+    }
+    a {
+        color: @textColor;
+        display: block;
+        font-size: @baseFontSize + 1;
+        //font-weight: bold;
+        padding: 4px 20px 4px 0;
+        &:hover {
+            color: @linkColorHover;
+            text-decoration: none;
+        }
+    }
 }
 
 .single-band {
@@ -135,7 +183,21 @@
     margin-top: 2px;
 }
 
+.single-more-info {
+    border-top: 1px solid @grayLighter;
+    padding: 15px 0;
+    text-align: left;
+}
+
+.single-comments-title {
+    margin: 0 0 20px 0;
+}
+
 .single-recommendations {
     float: left;
-    margin: 40px 0 0 30px;
+    width: 30%;
+
+    > div {
+        padding: 30px 0 40px 30px;
+    }
 }

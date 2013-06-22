@@ -16,7 +16,7 @@
 @playerTimelineBackground: #CCC;
 @playerTimelineColor: @linkColor;
 
-@centralPlayerControlsBackground: #111;
+@centralPlayerBackground: #222;
 
 @trackBackground: #EEE;
 @bandBackground: #EEE;
@@ -357,10 +357,10 @@ html {
     .main-nav {
         float: left;
         font-size: @baseFontSize + 1;
-        margin: 0 0 0 184px;
+        margin: 0 0 0 18%;
         > ul {
             list-style: none;
-            margin: 0;
+            margin: 0 0 0 -18px;
             > li {
                 float: left;
                 > a {
@@ -589,7 +589,7 @@ html {
 // --------------------------------------------------
 
 #content {
-    margin-top: 68px; // header height
+    padding-top: 68px; // header height
     position: relative;
 }
 
@@ -691,7 +691,7 @@ html {
     left: 0;
     padding: 0 0 0 30px;
     position: absolute;
-    top: 118px;
+    top: 174px;
     width: 210px;
     ul {
         list-style: none;
@@ -1347,7 +1347,7 @@ html {
         display: block;
     }
     &::-webkit-scrollbar-track {
-        border: 2px solid transparent;
+        //border: 2px solid transparent;
         border-radius: 4.5px;
         background: rgba(0, 0, 0, .15);
         :disabled {
@@ -1357,7 +1357,6 @@ html {
     &::-webkit-scrollbar-thumb {
         border-radius: 4.5px;
         background: rgba(0, 0, 0, .25);
-        -webkit-transition: background-color 2.5s linear;
     }
     &:hover::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, .35);
@@ -1366,6 +1365,18 @@ html {
         background: rgba(0, 0, 0, .55);
     }
 
+}
+
+.playlist-dark-scrollbar() {
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, .1);
+    }
+    &:hover::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, .5);
+    }
 }
 
 
@@ -1412,6 +1423,7 @@ html {
         .main-nav {
             margin-left: 155px;
             > ul {
+                margin: 0;
                 > li {
                     > a {
                         padding: 0 15px;
