@@ -1,8 +1,8 @@
 $(function() {
 
-    $('#header').affix({
+    /*$('#header').affix({
         offset: $('.ad-space-top').outerHeight()
-    });
+    });*/
 
     $('.main-nav').mainNav();
 
