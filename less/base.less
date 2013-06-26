@@ -64,7 +64,7 @@ a [class*=" icon-"] {
 
 .nav-tabs-upper {
     border: 0;
-    font-size: @baseFontSize;
+    font-size: @baseFontSize + 1;
     margin-bottom: 25px;
     text-transform: uppercase;
     > li {
@@ -212,7 +212,7 @@ a [class*=" icon-"] {
 }
 
 .section-title {
-    font-size: @baseFontSize + 1;
+    font-size: @baseFontSize + 2;
     line-height: @baseLineHeight + 2;
     font-weight: bold;
     margin: 4px 0 20px;
@@ -365,7 +365,7 @@ html {
     .main-nav {
         float: left;
         font-size: @baseFontSize + 1;
-        margin: 0 0 0 18%;
+        margin: 0 0 0 195px;
         > ul {
             list-style: none;
             margin: 0 0 0 -18px;
@@ -676,7 +676,7 @@ html {
     border: 0;
     color: @white;
     margin: 0;
-    padding: 36px 0 10px 270px;
+    padding: 36px 0 10px 195px;
     -webkit-font-smoothing: antialiased;
     h1 {
         font-weight: normal;
@@ -1208,6 +1208,72 @@ html {
     }
 }
 
+.concert-mini {
+    background: @grayLighter;
+    position: relative;
+    .btn-options {
+        .concert > .btn-options;
+    }
+    &:hover {
+        .concert-mini-date {
+            background: @linkColor;
+            color: @white;
+        }
+        .concert-mini-actions {
+            display: block;
+        }
+    }
+}
+
+.concert-mini-actions {
+    display: none;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    a {
+        margin: 0 2px;
+        vertical-align: top;
+    }
+}
+
+.concert-mini-date {
+    background: @darkBackground;
+    .box-sizing(border-box);
+    color: @grayLight;
+    float: left;
+    font-size: @baseFontSize - 2;
+    height: 100%;
+    left: 0;
+    line-height: 1.4em;
+    padding: 4px 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 60px;
+    //-webkit-font-smoothing: antialiased;
+}
+
+.concert-mini-date-day {
+    color: @white;
+    display: block;
+    font-weight: bold;
+    font-size: @baseFontSize - 1;
+}
+
+.concert-mini-info {
+    min-height: 48px;
+    padding: 8px 5px 0 70px;
+}
+
+.concert-mini-venue {
+    font-weight: bold;
+}
+
+.concert-mini-location {
+    color: @gray;
+    font-size: @baseFontSize - 2;
+}
+
 
 //
 // News item
@@ -1469,7 +1535,7 @@ html {
     }
 
     .page-header {
-        padding-left: 250px;
+        padding-left: 195px;
     }
 
     .page-nav {
