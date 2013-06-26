@@ -84,6 +84,52 @@
     font-size: @baseFontSize + 1;
     line-height: 1.5em;
     margin-bottom: 18px;
+    position: relative;
+}
+
+.profile-bio-full {
+    background: @white;
+    .background-clip(padding-box);
+    border: 1px solid @grayLight;
+    border: 1px solid rgba(0,0,0,.2);
+    .border-radius(3px);
+    .box-shadow(0 1px 3px rgba(0,0,0,.2));
+    color: @textColor;
+    display: none;
+    font-size: @baseFontSize + 1;
+    line-height: 1.5em;
+    left: -10px;
+    padding:  20px 30px;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    -webkit-font-smoothing: subpixel-antialiased;
+    &.is-open {
+        display: block;
+    }
+
+    .btn-close {
+        color: @textColor;
+        display: block;
+        float: right;
+        font-size: 36px;
+        font-weight: bold;
+        height: 40px;
+        line-height: 40px;
+        margin: -20px -30px 5px 5px;
+        text-align: center;
+        width: 40px;
+        &:hover {
+            color: @linkColorHover;
+            text-decoration: none;
+        }
+    }
+    footer {
+        border-top: 1px solid @grayLighter;
+        margin-top: 20px;
+        padding-top: 15px;
+        text-align: center;
+    }
 }
 
 .profile-genre-location {
@@ -124,7 +170,7 @@
 }
 
 .profile-top-tracks-title {
-    font-size: @baseFontSize - 1;
+    font-size: @baseFontSize + 1;
     line-height: 1em;
     margin: 0 0 8px 0;
     text-transform: uppercase;
@@ -182,25 +228,8 @@
 .profile-concert-list {
     list-style: none;
     margin: 0;
-    .concert-artist {
-        display: none;
-    }
     li {
-        margin-bottom: 10px;
-    }
-    .date {
-        font-size: @baseFontSize - 1;
-        margin-bottom: 2px;
-    }
-    .concert {
-        height: auto;
-    }
-    .concert-info {
-        height: auto;
-        padding: 7px 10px;
-    }
-    .concert-venue {
-        font-weight: bold;
+        margin-bottom: 1px;
     }
 }
 
@@ -237,6 +266,18 @@
 
 @media screen and (max-width: 900px) {
 
+    .profile {
+        .radio-badge {
+            background-size: 80%;
+            background-position: left top;
+            height: 40px;
+        }
+    }
+
+    .profile-avatar-wrapper .radio-badges {
+        bottom: 65px;
+    }
+
     .profile-name {
         font-size: 42px;
         margin-bottom: 10px;
@@ -248,6 +289,10 @@
 
     .profile-bio-excerpt {
         display: none;
+    }
+
+    .profile-bio-full {
+        font-size: @baseFontSize;
     }
 
 }

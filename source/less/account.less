@@ -109,6 +109,9 @@
     .active a {
         background: @linkColor;
         color: white !important;
+        .count {
+            color: @grayLighter;
+        }
     }
     a {
         background: @grayLighter;
@@ -164,36 +167,9 @@
         margin: 0 0 20px 0;
         padding: 0;
     }
-    .date {
-        float: left;
-        font-size: @baseFontSize - 1;
-        padding: 2px 0;
-        //-webkit-font-smoothing: antialiased;
-    }
-    .concert {
-        clear: both;
-        height: auto;
-        margin-left: 0;
-        &:hover {
-            .concert-actions {
-                display: block;
-            }
-        }
-    }
-    .concert-venue {
-        font-size: @baseFontSize + 2;
-        line-height: 1.5em;
-    }
-    .concert-info {
-        height: auto;
-        padding: 7px 10px;
-    }
-    .concert-artist {
-        display: none;
-    }
     li {
         clear: both;
-        margin-bottom: 10px;
+        margin-bottom: 1px;
     }
 }
 
