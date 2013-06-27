@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <!-- Use title if it's in the page YAML frontmatter -->
-        <title>ton compte</title>
+        <title>concert page</title>
         <meta name="description" content="">
         <meta name="viewport" content="">
 
@@ -210,131 +210,134 @@
 
     <div id="content">
 
-        <header class="page-header">
-    <h1>Ton compte <i class="icon-right-open-mini"></i> <em>Réglages</em></h1>
-</header>
-
-<div class="page-nav">
-
-    <nav>
-        <ul>
-            <li class="user-booking">
-                <a href="user-booking.html"><i class="icon-alert"></i>2 demandes de booking!</a>
-            </li>
-        </ul>
-        <div class="page-nav-title">Musique</div>
-        <ul>
-            <li>
-                <a href="user-singles.html"><i class="icon-note-beamed"></i>Singles</a>
-            </li>
-            <li>
-                <a href="user-playlists.html"><i class="icon-list"></i>Playlists</a>
-            </li>
-            <li>
-                <a href="user-concerts.html"><i class="icon-calendar"></i>Concerts</a>
-            </li>
-            <li>
-                <a href="account-news.html"><i class="icon-doc-text"></i>News</a>
-            </li>
-        </ul>
-        <div class="page-nav-title">Compte</div>
-        <ul>
-            <li>
-                <a href="account-profile.html"><i class="icon-vcard"></i>Profil</a>
-            </li>
-            <li class="active">
-                <a href="account-settings.html"><i class="icon-cog"></i>Réglages</a>
-            </li>
-        </ul>
-    </nav>
-
-</div>
-
-<div class="page-content">
+        <div class="banner-profile" style="background-image: url(img/fake-content/concert-background.jpg)">
     <div>
 
-        <form class="account-settings-form">
+        <div class="banner-profile-wrapper">
 
-            <fieldset class="last">
-                <legend>E-mail et pseudonyme</legend>
+            <div class="profile-avatar-wrapper">
+                <img src="img/fake-content/band-avatar2.png" class="profile-avatar" alt="">
+                <div class="profile-play-all">
+                    <a href="#" class="btn-play btn-play-xlarge"><i class="icon-play"></i></a>
+                    <span class="btn-play-label">Jouer les top singles</span>
+                </div>
+            </div>
 
-                <p>
-                    <label>E-mail <span class="required">*</span></label>
-                    <input type="text" class="input-xlarge" value="deadoralive@swissbeatz.ch">
-                </p>
+            <div class="concert-card-info">
 
-                <p>
-                    <label>Pseudonyme <span class="required">*</span></label>
-                    <input type="text" class="input-xlarge" value="deadoralive">
-                </p>
+                <div class="concert-card-date-artist">
+                    <h1 class="concert-card-date">
+                        <span class="concert-card-date-day">Samedi 28 Mai 2013 <span class="concert-card-time">– 22h</span></span>
+                        <span class="concert-card-venue"><a href="#" title="Aller sur la page du club">Le Romandie</a></span>
+                    </h1>
 
-            </fieldset>
+                    <h2 class="concert-card-artist">
+                        <span class="concert-card-artist-name"><a href="#" title="Aller sur la page du groupe">Rootwords</a></span>
+                        <span class="concert-card-artist-genre">Hip-Hop</span>
+                    </h2>
+                </div>
 
-        </form>
+                <div class="concert-card-actions">
+                    <p>
+                        <a href="#" class="btn btn-large btn-inverse" title="Ajoute ce concert à ta sélection"><i class="icon-plus"></i> Ajouter</a>
+                        <a href="#" class="btn btn-large btn-inverse btn-buy-online" title="Achter un billet en ligne">Acheter un billet</a>
+                    </p>
+                    <p class="concert-card-participants">
+                        <a href="#"><img src="img/fake-content/user-avatar3.png" class="user-avatar tip" title="Ben" alt=""></a>
+                        <a href="#"><img src="img/fake-content/user-avatar2.png" class="user-avatar tip" title="Yoshi le suisse" alt=""></a>
+                        <a href="#"><img src="img/fake-content/user-avatar3.png" class="user-avatar tip" title="Ben" alt=""></a>
+                        <a href="#"><img src="img/fake-content/user-avatar2.png" class="user-avatar tip" title="Yoshi le suisse" alt=""></a>
+                        <a href="#"><img src="img/fake-content/user-avatar3.png" class="user-avatar tip" title="Ben" alt=""></a>
+                        <a href="#"><img src="img/fake-content/user-avatar2.png" class="user-avatar tip" title="Yoshi le suisse" alt=""></a>
+                        <span class="concert-participants-others">et 15 autres…</span>
+                    </p>
+                </div>
 
-        <form class="account-password-form">
+            </div>
 
-            <fieldset class="last">
-                <legend>Changement de mot de passe</legend>
+        </div>
 
-                <p>
-                    <label>Nouveau mot de passe</label>
-                    <input type="password" class="input-xlarge" value="">
-                    <span class="help-block">Au minimum 4 caractères et pas d’espace</span>
-                </p>
+    </div>
+</div>
 
-                <p>
-                    <label>Confirmer le nouveau mot de passe</label>
-                    <input type="password" class="input-xlarge" value="">
-                </p>
+<div class="content-wrapper">
+    <div class="row-fluid">
 
-            </fieldset>
+        <div class="span8 concert-main-content">
 
-        </form>
+            <section class="concert-info-more">
 
-        <form class="account-notifications-form">
+                <div class="concert-poster">
+                    <a href="#"><img src="img/fake-content/concert-flyer.png" alt="Flyer"></a>
+                </div>
 
-            <fieldset class="last">
-                <legend>Notifications e-mail</legend>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores laudantium amet placeat rem aut velit eveniet cum saepe sapiente corporis deserunt excepturi neque et cumque ut sint repudiandae assumenda unde.
-                </p>
+                <div class="concert-description">
+                    <p>A chacune de leur performance scénique, les texans de The Black Angels nous entraîne dans un véritable trip psychédélique. A coup de brûlots enflammés, de riffs néo-psychés et de jams hallucinées à souhait, la clique d’Austin nous fait revivre l’époque où le rock se conjuguait inévitablement avec l’évasion sensorielle. Leur nouvel album, Indigo Meadow, exalte ainsi le passé kaléidoscopique du genre psychédélique tout en l’inscrivant simultanément dans un futur qui reste encore à inventer.</p>
 
-                <p>
-                    <label class="checkbox">
-                        <input type="checkbox" value="">
-                        Option one is this and that—be sure to include why it's great
-                    </label>
-                    <label class="checkbox">
-                        <input type="checkbox" value="">
-                        Option one is this and that—be sure to include why it's great
-                    </label>
-                </p>
-            </fieldset>
+                    <p>Toujours aussi intense émotionnellement, la musique de ces anges noirs nous emportera, cet été, une fois de plus dans une transe à l’expérimentation sans limites.</p>
 
-        </form>
+                    <p>Portes 19:00  / Début 20:00</p>
 
-        <form class="account-language-form">
+                    <p>Première partie par John Dear (ex Zorg) [CH]</p>
+                </div>
 
-            <fieldset class="last">
-                <legend>Langue</legend>
+            </section>
 
-                <p>
-                    <label>Dans quelle langue veux-tu afficher mx3 ?</label>
-                    <select>
-                        <option>Deutsch</option>
-                        <option>English</option>
-                        <option selected>Français</option>
-                        <option>Italiano</option>
-                        <option>Rumantsch</option>
-                    </select>
-                </p>
-            </fieldset>
+            <section class="concert-comments">
 
-        </form>
+                <h3 class="section-title">Commentaires</h3>
 
-        <div class="form-actions">
-            <button type="submit" class="btn btn-large btn-primary">Sauver les changements</button>
+                <form class="comment-form">
+                    <a href="#"><img src="img/fake-content/user-avatar.png" class="user-avatar" width="50" height="50" alt=""></a>
+                    <textarea class="input-block-level">Laisse un commentaire sur cet artiste</textarea>
+                    <button class="btn">Envoyer !</button>
+                </form>
+
+                <ul class="comment-list">
+                    <li class="comment">
+                        <a href="#"><img src="img/fake-content/user-avatar3.png" class="user-avatar" width="50" height="50" alt=""></a>
+                        <div class="comment-content">
+                            <time datetime="" class="comment-date">35 min</time>
+                            <a href="#" class="comment-author">Ben</a>
+                            <div class="comment-body">Super musique Rootwords! ca fait lgtemps que javais pas decouvert du bon hiphop comme ça! Quelques influencess jamaicaines non?</div>
+                        </div>
+                    </li>
+                    <li class="comment">
+                        <a href="#"><img src="img/fake-content/user-avatar2.png" class="user-avatar" width="50" height="50" alt=""></a>
+                        <div class="comment-content">
+                            <time datetime="" class="comment-date">Hier</time>
+                            <a href="#" class="comment-author">Yoshi le suisse</a>
+                            <div class="comment-body">Découvert par hasard à la fête de la musique à Lausanne. SUper son et préesence sur scène. J ene manquerai pas d'aller au MJF revoir ça!!</div>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+
+        <div class="span4">
+
+            <section class="concert-venue-info">
+
+                <h2 class="section-title">Club info</h2>
+
+                <div class="concert-venue-info-name">
+                    <a href="#">Le Romandie</a>
+                </div>
+                <div class="concert-venue-info-address">
+                    <div>Place de l’Europe 1A</div>
+                    <div>1003 Lausanne</div>
+                </div>
+
+                <div class="concert-venue-info-map">
+                    <a href="#" target="_blank" title="Open Google Maps"><img src="https://mts0.google.com/vt/data=m_Vf7PrihP9wbqgGNFI-ke6ZhuFy1kiuLg9_eXJN6NZFRyuAy8MdFGj8b5SX9YR3enw647CCpJlktGkZlZtDE4vxD3vE-z_o_Q" width="100%" alt="">
+                </div>
+
+                <a href="#">Aller sur la page du club</a>
+
+            </section>
+
         </div>
 
     </div>

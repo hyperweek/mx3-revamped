@@ -1,0 +1,196 @@
+.concert-card-info {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 66.666666%;
+}
+
+.concert-card-date-artist {
+    border-bottom: 1px solid @grayLight;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    bottom: 127px;
+    .box-sizing(border-box);
+    left: 0;
+    padding: 0 30px 20px 30px;
+    position: absolute;
+    width: 100%;
+}
+
+.concert-card-date {
+    margin: 0 0 15px 0;
+}
+
+.concert-card-date-day {
+    background: @white;
+    border-radius: 1px;
+    color: @textColor;
+    display: inline-block;
+    font-size: 22px;
+    line-height: 1.4em;
+    margin: 0 0 4px 2px;
+    padding: 0 5px;
+}
+
+.concert-card-venue {
+    display: block;
+    font-size: 46px;
+    line-height: 1em;
+    a {
+        color: @white;
+        &:hover {
+            color: @linkColorDarkBgHover;
+            text-decoration: none;
+        }
+    }
+}
+
+.concert-card-artist {
+    margin: 0;
+}
+
+.concert-card-artist-name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 62px;
+    line-height: 1em;
+    a {
+        color: @linkColorDarkBg;
+        &:hover {
+            color: @linkColorDarkBgHover;
+            text-decoration: none;
+        }
+    }
+}
+
+.concert-card-artist-genre {
+    color: @grayLight;
+    display: block;
+    font-size: @baseFontSize + 2;
+    line-height: 1em;
+    padding-left: 2px;
+    text-transform: uppercase;
+}
+
+.concert-card-actions {
+    bottom: 5px;
+    left: 0;
+    padding-left: 30px;
+    position: absolute;
+    width: 100%;
+    .btn-buy-online {
+        float: right;
+        margin-right: 30px;
+    }
+}
+
+.concert-card-participants {
+    .user-avatar {
+        height: 40px;
+        margin-right: 10px;
+        width: 40px;
+    }
+}
+
+.concert-main-content {
+    padding-right: 30px;
+}
+
+.concert-poster {
+    float: left;
+    margin: 5px 20px 10px 0;
+    width: 25%;
+}
+
+.concert-description {
+    font-size: @baseFontSize + 1;
+    line-height: 1.5em;
+}
+
+.concert-venue-info-name {
+    font-size: @baseFontSize + 8;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+}
+
+.concert-venue-info-address {
+    color: @gray;
+    margin-bottom: 20px;
+}
+
+.concert-venue-info-map {
+    margin-bottom: 20px;
+}
+
+
+//
+// Mediaqueries
+// --------------------------------------------------
+
+// 1200
+
+@media screen and (max-width: 1200px) {
+
+    .concert-card-date {
+        margin: 0 0 10px 0;
+    }
+
+    .concert-card-date-day {
+        font-size: 20px;
+    }
+
+    .concert-card-venue {
+        font-size: 38px;
+    }
+
+    .concert-card-artist-name {
+        font-size: 50px;
+    }
+
+}
+
+// 1000
+
+@media screen and (max-width: 1000px) {
+
+    .concert-card-date {
+        margin: 0 0 8px 0;
+    }
+
+    .concert-card-date-day {
+        font-size: 18px;
+    }
+
+    .concert-card-venue {
+        font-size: 34px;
+    }
+
+    .concert-card-artist-name {
+        font-size: 45px;
+    }
+
+    .concert-description {
+        font-size: @baseFontSize;
+    }
+
+}
+
+// 900
+
+@media screen and (max-width: 900px) {
+
+    .concert-card-date-day {
+        font-size: 16px;
+    }
+
+    .concert-card-venue {
+        font-size: 30px;
+    }
+
+    .concert-card-artist-name {
+        font-size: 40px;
+    }
+
+}
+
