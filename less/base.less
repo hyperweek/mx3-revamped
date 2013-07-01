@@ -2,6 +2,8 @@
 @htmlBackground: #DDD;
 @darkBackground: #111;
 
+@graySoft: #D9D9D9;
+
 @headerBackground: white;
 @contentBackground: white;
 @footerBackground: @htmlBackground;
@@ -19,6 +21,7 @@
 @centralPlayerBackground: #222;
 
 @trackBackground: #EEE;
+@trackInverseBackground: lighten(@darkBackground,5%);
 @bandBackground: #EEE;
 @concertBackground: #EEE;
 @concertDateBackground: #111;
@@ -264,6 +267,13 @@ html {
     margin: 0 auto;
     max-width: 1200px;
     padding: 30px 30px 20px 30px;
+}
+
+.dark-section {
+    color: @white;
+    .section-title {
+        -webkit-font-smoothing: antialiased;
+    }
 }
 
 .sidebar-ad-space {
@@ -851,25 +861,25 @@ html {
             display: inline-block;
             line-height: 16px;
         }
-        .track-title {
-            font-weight: bold;
-            line-height: 17px;
-            margin: 0 24px 1px 0;
-            a {
-                color: @textColor;
-            }
+    }
+    .track-title {
+        font-weight: bold;
+        line-height: 17px;
+        margin: 0 24px 1px 0;
+        a {
+            color: @textColor;
         }
-        .track-artist {
-            font-size: @baseFontSize - 1;
-            line-height: 16px;
-            margin-bottom: 1px;
-        }
-        .track-genre {
-            color: @gray;
-            font-size: @baseFontSize - 4;
-            line-height: 16px;
-            text-transform: uppercase;
-        }
+    }
+    .track-artist {
+        font-size: @baseFontSize - 1;
+        line-height: 16px;
+        margin-bottom: 1px;
+    }
+    .track-genre {
+        color: @gray;
+        font-size: @baseFontSize - 4;
+        line-height: 16px;
+        text-transform: uppercase;
     }
     .btn-options {
         background: @white;
@@ -925,6 +935,32 @@ html {
         .btn-play,
         .btn-options {
             display: block;
+        }
+    }
+}
+
+.track-inverse {
+    background: @trackInverseBackground;
+    .track-title {
+        a {
+            color: @white;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+    .track-artist {
+        a {
+            color: @linkColorDarkBgHover;
+        }
+    }
+    .track-genre {
+        color: @grayLight;
+    }
+    .btn-options {
+        background: @grayDark;
+        color: @white;
+        &:hover {
+            background: @gray;
+            color: @white;
         }
     }
 }
