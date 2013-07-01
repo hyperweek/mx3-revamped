@@ -12,7 +12,7 @@
     bottom: 127px;
     .box-sizing(border-box);
     left: 0;
-    padding: 0 30px 20px 30px;
+    padding: 0 30px 20px 0;
     position: absolute;
     width: 100%;
 }
@@ -73,27 +73,30 @@
 }
 
 .concert-card-actions {
-    bottom: 5px;
+    bottom: 7px;
     left: 0;
-    padding-left: 30px;
+    min-height: 100px;
     position: absolute;
     width: 100%;
     .btn-buy-online {
         float: right;
-        margin-right: 30px;
     }
 }
 
 .concert-card-participants {
     .user-avatar {
-        height: 40px;
+        height: 35px;
         margin-right: 10px;
-        width: 40px;
+        width: 35px;
     }
 }
 
 .concert-main-content {
     padding-right: 30px;
+}
+
+.concert-info-more {
+    .clearfix();
 }
 
 .concert-poster {
