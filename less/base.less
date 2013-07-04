@@ -840,10 +840,14 @@ html {
     margin: 0 0 20px 0;
     position: relative;
     .btn-play {
-        display: none;
+        //display: none;
         left: 22px;
         position: absolute;
         top: 21px;
+    }
+    .btn-play-video {
+        left: 38px;
+        top: 22px;
     }
     .track-cover {
         //.border-radius(40px);
@@ -885,7 +889,7 @@ html {
         background: @white;
         bottom: 1px;
         color: @gray;
-        display: none;
+        //display: none;
         position: absolute;
         right: 1px;
         &:hover {
@@ -912,7 +916,7 @@ html {
     }
     .btn-free-download {
         color: @grayLight;
-        border-bottom: 2px solid @grayLight;
+        border-bottom: 1px solid @grayLight;
         font-size: 17px;
         height: 17px;
         margin-right: 2px;
@@ -936,6 +940,15 @@ html {
         .btn-options {
             display: block;
         }
+    }
+}
+
+.track-video {
+    .track-cover {
+        width: 120px;
+    }
+    .track-info {
+        padding-left: 130px;
     }
 }
 
