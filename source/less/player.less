@@ -34,6 +34,7 @@
         border-color: @white;
         .box-shadow(none);
         color: @linkColorHover !important;
+        .opacity(100);
         text-shadow: none;
         //.scale(1.1);
     }
@@ -95,6 +96,34 @@
     &.on-pause {
         padding-left: 0;
         width: 58px;
+    }
+}
+
+.btn-play-light {
+    border-color: transparent;
+    .box-shadow(none);
+    //.opacity(80);
+}
+
+// play button for video track
+.btn-play-video {
+    .border-radius(4px);
+    font-size: 30px;
+    padding: 0;
+    .icon-video {
+        position: relative;
+    }
+    &:active {
+        line-height: 36px;
+    }
+}
+
+.btn-play-medium.btn-play-video {
+    font-size: 30px;
+    height: 32px;
+    width: 40px;
+    .icon-video {
+        top: -1px;
     }
 }
 

@@ -3,7 +3,8 @@
     background-position: center center;
     background-size: 100%;
     > div {
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8), #111);
+        background: transparent url(../img/bg-gradient.png) left bottom repeat-x; // fallback
+        //background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8), #111);
         .clearfix();
         color: @white;
         padding: 100px 30px 0 30px;
@@ -34,7 +35,8 @@
 }
 
 .profile-play-all {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    background: transparent url(../img/bg-gradient-small.png) left bottom repeat-x; // fallback
+    //background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     bottom: 0;
     left: 0;
     font-size: @baseFontSize + 1;
