@@ -1251,6 +1251,15 @@ html {
     }
 }
 
+.concert-mini-list {
+    > li {
+        position: relative;
+    }
+    .btn-options {
+        .concert > .btn-options;
+    }
+}
+
 .concert-grid {
     .clearfix();
     list-style: none;
@@ -1262,26 +1271,17 @@ html {
 
 .concert-mini {
     background: @grayLighter;
-    position: relative;
-    .btn-options {
-        .concert > .btn-options;
-    }
+    display: block;
     &:hover {
-        .concert-mini-date {
-            background: @linkColor;
-            color: @white;
-        }
-        .concert-mini-actions {
-            display: block;
-        }
+        background: darken(@grayLighter,5%);
+        text-decoration: none;
     }
 }
 
 .concert-mini-actions {
-    display: none;
     position: absolute;
     right: 4px;
-    top: 4px;
+    top: 6px;
     a {
         margin: 0 2px;
         vertical-align: top;
@@ -1289,41 +1289,35 @@ html {
 }
 
 .concert-mini-date {
-    background: @darkBackground;
-    .box-sizing(border-box);
-    color: @grayLight;
-    float: left;
-    font-size: @baseFontSize - 2;
-    height: 100%;
+    color: @textColor;
+    font-weight: bold;
     left: 0;
-    line-height: 1.4em;
-    padding: 4px 0;
+    padding: 10px 15px 10px 10px;
     position: absolute;
-    text-align: center;
     top: 0;
-    width: 60px;
-    //-webkit-font-smoothing: antialiased;
 }
 
-.concert-mini-date-day {
-    color: @white;
+.concert-mini-date-year {
+    color: lighten(@grayLight,10%);
     display: block;
-    font-weight: bold;
     font-size: @baseFontSize - 1;
+    font-weight: normal;
 }
 
 .concert-mini-info {
-    min-height: 48px;
-    padding: 8px 5px 0 70px;
+    display: block;
+    padding: 10px 10px 10px 60px;
 }
 
 .concert-mini-venue {
+    display: block;
     font-weight: bold;
 }
 
 .concert-mini-location {
     color: @gray;
-    font-size: @baseFontSize - 2;
+    display: block;
+    font-size: @baseFontSize - 1;
 }
 
 
