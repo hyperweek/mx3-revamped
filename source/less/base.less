@@ -158,6 +158,7 @@ a [class*=" icon-"] {
     //font-weight: bold;
     line-height: 1;
     padding: 4px 6px 4px 4px;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
 }
@@ -299,12 +300,14 @@ html {
 .carousel-nav {
     float: left;
     height: 430px;
+    overflow-x: hidden;
+    overflow-y: auto;
     width: 25%;
 }
 .carousel-item-mini {
     a {
         display: block;
-        height: 87px;
+        height: 123px; //87px;
         padding: 10px;
     }
 }
@@ -872,13 +875,35 @@ html {
             display: inline-block;
             line-height: 16px;
         }
+        .onair {
+            .border-radius(10px 0 0 10px);
+            padding: 4px 5px;
+            position: absolute;
+            right: 0;
+            top: 33px;
+            .count {
+                color: @onAirColor;
+                font-weight: bold;
+                left: -33px;
+                position: absolute;
+                text-align: right;
+                top: 4px;
+                width: 30px;
+            }
+        }
     }
     .track-title {
         font-weight: bold;
+        height: 17px;
         line-height: 17px;
         margin: 0 24px 1px 0;
+
         a {
             color: @textColor;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
         }
     }
     .track-artist {
